@@ -25,6 +25,45 @@
     \end{multicols}
 \end{frame}
 
+\section{Courte présentation}
+
+\subsection{But du projet}
+
+\begin{frame}
+ Créer une structure composée de ballons contenant un gaz plus léger que l’air qui soutient une partie ou la totalité du poids d'un drone.
+\end{frame}
+
+
+\subsection{Objectifs}
+
+\begin{frame}
+ Augmenter l’autonomie, la sécurité et les possibilités d’un drone de petite taille
+\end{frame}
+
+
+\subsection{Contraintes imposées au projet}
+\begin{frame}
+  \begin{itemize}
+    \item Être simple d’utilisation, garder la manœuvrabilité du drone au possible pour le drone, voler le plus longtemps possible.
+    \item Consommer le moins d’énergie possible, ne pas présenter de danger pour le public et économiser le gaz et les matériaux de fabrication.
+    \item Le modèle du drone imposé
+    \item Rayon d’action de minimum 15 mètres
+    \item Ballon de type dirigeable
+  \end{itemize}
+\end{frame}
+
+\subsection{Contraintes légales supplémentaires}
+\begin{frame}
+  \begin{itemize}
+    \item 1: Le drone \\
+	    Catégorie A : limitations non contraignantes
+    \item 2: Le ballon \\
+	    Catégorie « Léger » \\
+	    La ficelle supportant la charge doit casser au dessus de 23 kg
+ \end{itemize}
+\end{frame}
+
+
 \section{Structure}
 
 \subsection{Gyroscope et axes}
@@ -103,7 +142,38 @@
 
 \section{Aérodynamisme}
 
-\subsection{Forme et calculs}
-\subsection{Portance}
+\subsection{Équation de traînée}
+\begin{frame}
+ But : que le drone soit le moins sensible à l'air possible \\
+ Force de traînée matérialisée par l'équation \\
+ \begin{center}
+  $\frac12 \rho S Cx V^2$
+ \end{center}
+\end{frame}
+
+\subsection{Calcul de Cx pour la forme retenue 1/2}
+\begin{frame}
+ Forme la plus proche : sphère \\
+ Dépend du type d'écoulement : le nombre de reynolds \\
+ \begin{center}
+  \begin{tabular}{lll}
+   $Re < 1$ & $Cx = $ & $\frac{24}{Re}$ \\
+   $1 < Re < 10^3$ & $Cx = $ & $\frac{18.5}{Re^0.6}$ \\
+   $10^3 < Re < 5.10^5$ & $Cx = $ & $0.44$
+  \end{tabular}
+ \end{center}
+\end{frame}
+
+\subsection{Calcul de Cx pour la forme retenue 2/2}
+\begin{frame}
+ \begin{center}
+  $Re = \frac{VL}{\nu}$
+ \end{center}
+ Avec : \\
+ V Vitesse du fluide en m/s \\
+ L Diamètre en m \\
+ $\nu$ Viscosité cinématique en $m^2/s$ \\
+ ($\nu = 15.6*10^6$ pour l'air)
+\end{frame}
 
 \end{document}
