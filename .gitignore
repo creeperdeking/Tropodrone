@@ -1,0 +1,13 @@
+*.blend1
+*.blend2
+
+*.aux
+*.log
+*.nav
+*.out
+*.pdf
+*.toc
+*.fls
+*.fdb_latexmk
+*.snm
+*.synctex.gz
