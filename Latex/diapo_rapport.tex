@@ -1,5 +1,6 @@
 \documentclass{beamer}
 
+\usepackage{gensymb}
 \input{entete_beamer_pdflatex}
 
 \useoutertheme{infolines}
@@ -97,8 +98,10 @@
       \item Mylar~:
       \begin{itemize}
         \item Facile à trouver dans le commerce~;
+        \item Resistant à la traction~;
         \item Peu être assembler~;
-        \item Peu élastique.
+        \item Peu élastique~;
+        \item Fragile au cisaillement.
       \end{itemize}
     \end{itemize}
   \end{multicols}
@@ -131,8 +134,38 @@
 \subsection{Poussé d'archimède}
 \subsection{Dilatation des gaz}
 
-\begin{frame}
-  
+\begin{frame}{Loi de Charles}
+  \begin{center}
+    $\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)$
+    \bigbreak
+    $V_3 = f(P, n) \times T_3$
+  \end{center}
+  \bigbreak
+  $V_q$~: volume du gaz à la température $T_q$. $P$~: pression du gaz. $n$~: quantité de matière. $f(P, n)$~: rapport constant entre volume et température.
+\end{frame}
+
+\begin{frame}{Application à l'hélium}
+  Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
+  \medbreak
+  \begin{center}
+    $f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}$
+    \bigbreak
+  \end{center}
+  Pour $T_{200} = 200 \degree C = 473.25 K$~:
+  \begin{center}
+    \medbreak
+    $V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}$
+  \end{center}
+  Augmentation du volume de $1.59$.
+\end{frame}
+
+\begin{frame}{Résultat de la poussé d'archimède}
+  \begin{center}
+    $F_{T_0} = P_{air} - P_{helium} = 10.90 N$
+    \bigbreak
+    $F_{T_{200}} = P_{air} - \frac{P_{helium}}{1.59} = 11.57 N$ \\
+  \end{center}
+  Les resultats sont négligables. $F < P_{air}$
 \end{frame}
 
 \section{Drone}

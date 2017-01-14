@@ -4,7 +4,7 @@ tempc = float(input("temperature:"))
 temp = tempc + 273.15
 
 # Constante calculé avec V/T
-fpn = 22.414 / 273.25
+fpn = 22.414e-3 / 273.25
 print("fpn: %f" % fpn)
 
 vol = fpn * temp
