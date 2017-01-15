@@ -3,6 +3,7 @@
 \usepackage{gensymb}
 \input{entete_beamer_pdflatex}
 \usepackage{listings}
+\usepackage[babel=true]{csquotes}
 \lstset{language=Python, tabsize=2, breaklines=true, showstringspaces=false}
 
 \useoutertheme{infolines}
@@ -178,6 +179,20 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 \section{Calculs d'élévation}
 
 \subsection{Poussé d'archimède}
+
+\begin{frame}{Définition}
+  \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
+  \bigbreak
+  \begin{center}
+    $\vv{P_A} = -M_F \times \vv{g}$
+  \end{center}
+  $\vv{P_A}$~: La poussé d'archimède. $M_F$ La masse du fluide contenue dans le volume déplacé. $\vv{g}$ La valeur du champ de pesanteur.
+\end{frame}
+
+\begin{frame}{Aplication aux gaz}
+  
+\end{frame}
+
 \subsection{Dilatation des gaz}
 
 \begin{frame}{Loi de Charles}
