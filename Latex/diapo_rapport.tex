@@ -94,7 +94,7 @@
 \begin{frame}{Calcul des dimensions}
   Volume ballon~:
   \begin{center}
-    $\displaystyle{V = b^3 \sin \frac{\pi}{3} \times \frac{1}{3} + b^2}$ \\
+    \boxed{\displaystyle{V = b^3 \sin \frac{\pi}{3} \times \frac{1}{3} + b^2}} \\
     $\displaystyle{V = b^3 \frac{\sqrt{3}}{6} + b^2}$ \\
     $\displaystyle{b^3 \frac{\sqrt{3}}{6} + b^2 - 0.25 = 0}$
   \end{center}
@@ -184,7 +184,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
   \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
   \bigbreak
   \begin{center}
-    $\vv{P_A} = -M_F \times \vv{g}$
+    \boxed{\vv{P_A} = -M_F \times \vv{g}}
   \end{center}
   $\vv{P_A}$~: La poussé d'archimède. $M_F$ La masse du fluide contenue dans le volume déplacé. $\vv{g}$ La valeur du champ de pesanteur.
 \end{frame}
@@ -208,7 +208,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 \begin{frame}{Loi de Charles}
   \begin{center}
-    $\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}$
+    \boxed{\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}} \\
     $\displaystyle{V_3 = f(P, n) \times T_3}$
   \end{center}
   $V_q$~: volume du gaz à la température $T_q$. $P$~: pression du gaz. $n$~: quantité de matière. $f(P, n)$~: rapport constant entre volume et température.
@@ -228,11 +228,11 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 \begin{frame}{Résultat de la poussé d'archimède}
   \begin{center}
-    $\displaystyle{F_{T_0} = P_{air} - P_{helium} = 10.90 N}$
+    $\displaystyle{F_{T_0} = P_{A_{air}} - P_{helium} = 10.90 N}$
     \bigbreak
-    $\displaystyle{F_{T_{200}} = P_{air} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
+    $\displaystyle{F_{T_{200}} = P_{A_{air}} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
   \end{center}
-  Les resultats sont négligables. $F < P_{air}$
+  Les resultats sont négligables. $F < P_{A_{air}}$
 \end{frame}
 
 \section{Drone}
@@ -260,7 +260,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  But : que le drone soit le moins sensible à l'air possible \\
  Force de traînée matérialisée par l'équation \\
  \begin{center}
-  $\displaystyle{\frac12 \rho S Cx V^2}$
+  \boxed{\displaystyle{\frac12 \rho S Cx V^2}}
  \end{center}
 \end{frame}
 
@@ -280,7 +280,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 \subsection{Calcul de Cx pour la forme retenue 2/2}
 \begin{frame}{Calcul de Cx pour la forme retenue 2/2}
  \begin{center}
-  $\displaystyle{Re = \frac{VL}{\nu}}$
+  \boxed{\displaystyle{Re = \frac{VL}{\nu}}}
  \end{center}
  Avec : \\
  V Vitesse du fluide en m/s \\
