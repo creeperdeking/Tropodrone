@@ -127,28 +127,33 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \begin{itemize}
       \item Latex~:
       \begin{itemize}
-        \item Facile à trouver dans le commerce,
-        \item Seulement en forme sphèrique,
-        \item Peu étanche~;
+        \item facile à trouver dans le commerce,
+        \item seulement en forme sphèrique,
+        \item peu étanche~;
       \end{itemize}
       \item Chloroprène~:
       \begin{itemize}
-        \item Introuvable dans le commerce~;
+        \item introuvable dans le commerce~;
       \end{itemize}
       \item Butyle~:
       \begin{itemize}
-        \item Introuvable dans le commerce~;
+        \item introuvable dans le commerce~;
+      \end{itemize}
+      \item Hypalon~:
+      \begin{itemize}
+        \item introuvable dans le commerce,
+        \item fragile aux ultraviolets.
       \end{itemize}
     \end{itemize}
     \newpage
     \begin{itemize}
       \item Mylar~:
       \begin{itemize}
-        \item Facile à trouver dans le commerce~;
-        \item Resistant à la traction~;
-        \item Peu être assembler~;
-        \item Raide~;
-        \item Fragile au cisaillement.
+        \item facile à trouver dans le commerce,
+        \item resistant à la traction,
+        \item peu être assembler,
+        \item raide,
+        \item fragile au cisaillement et à la perforation.
       \end{itemize}
     \end{itemize}
   \end{multicols}
@@ -157,21 +162,36 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 \subsection{Collage}
 
 \begin{frame}
-  \begin{itemize}
-    \item Néoprène(Polychloroprène)
+  \begin{multicols}{2}
     \begin{itemize}
-      \item Etanche
-      \item Elastique
-      \item Adhèrent
-      \item Difficile à appliquer
+      \item Néoprène(Polychloroprène)
+      \begin{itemize}
+        \item étanche,
+        \item élastique,
+        \item adhèrent,
+        \item difficile à appliquer~;
+      \end{itemize}
+      \item 406(colle) et 770(primaire)
+      \begin{itemize}
+        \item adhèrent,
+        \item rigide,
+        \item difficile à appliquer~;
+      \end{itemize}
+      \item Acétone
+      \begin{itemize}
+        \item peu adhèrent~;
+      \end{itemize}
+      \item Colle blanche
+      \begin{itemize}
+        \item peu adhèrent.
+      \end{itemize}
     \end{itemize}
-    \item 406(colle) et 770(primaire)
-    \begin{itemize}
-      \item Adhèrent
-      \item Rigide
-      \item Difficile à appliquer
-    \end{itemize}
-  \end{itemize}
+    \newpage
+    \begin{center}
+      \includegraphics[width=5cm]{../Images/colle.JPG}
+    \end{center}
+    \captionof{figure}{A gauche la colle 406 et à droite la colle acétone.}
+  \end{multicols}
 \end{frame}
 
 \subsection{Gonflage}
@@ -211,7 +231,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \boxed{\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}} \\
     $\displaystyle{V_3 = f(P, n) \times T_3}$
   \end{center}
-  $V_q$~: volume du gaz à la température $T_q$. $P$~: pression du gaz. $n$~: quantité de matière. $f(P, n)$~: rapport constant entre volume et température.
+  $V_q$~: volume du gaz en $m^3$ à la température $T_q$ en K. $P$~: pression du gaz en Pa. $n$~: quantité de matière en mol. $f(P, n)$~: rapport constant entre volume et température.
 \end{frame}
 
 \begin{frame}{Application à l'hélium}
@@ -240,15 +260,22 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 \subsection{Modèle}
 
 \begin{frame}
-  \begin{itemize}
-    \item Le dronne est un xcsource (XCSOURCE® Fibre de Carbone Mini 250 FPV Quadcopter ) dont les plant sont en licence libre et notre modek obtenus auprès du fabricant officiel.
-
-    \item Il est fournis d’un chassie en carbone de dimention : 290mm de diagonale , 190 mm de long et 70mm de haut. Ce chassie et a deux nivaux pour faciliter l’ajout des différant composant de vol.
-
-    \item Les moteurs fournis sont des EMAX MT2204 2300KV Brushless Motor. Ils sont alimenter en courant triphasée.Il consomment au maximum en 12v  11,5 A soit 138w. Cette puissance est nécessaire pour faire décoller le drone , le maintenir face a des vents violent ou lui permettre de porter de lourde charge . c’est aussi cette puissance qui limite l’autonomie. Le kit en contiens 4 , 2 tournant en sens trigonométrique et deux tournant en sens anti-trigonométrique
-
-    \item La batterie que nous nous sommes procurés est une Accu Lipo Gens Ace 2200Mah 11.1V 25C 3S. Elle fournie donc 11,1 volt  plainne charge , est composé de 3 cllule de lithium polymere et peux délivrer au maximun
-  \end{itemize}
+  \begin{multicols}{2}
+    Drone XCSOURCE~: \\
+    \begin{itemize}
+      \item 290 mm diagonale~;
+      \item 190 mm longueur~;
+      \item 70 mm hauteur~;
+      \item moteur EMAX MT2204 2300KV Brushless Motor~;
+      \item Accu Lipo Gens Ace 2200Mah 11.1V 25C 3S~;
+      \item 450 g.
+    \end{itemize}
+    \newpage
+    \begin{center}
+      \includegraphics[width=6cm]{../Images/drone.JPG}
+    \end{center}
+    \captionof{figure}{Drone XCSOURCE.}
+  \end{multicols}
 \end{frame}
 
 \subsection{Capacité et poids}
@@ -260,7 +287,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  But : que le drone soit le moins sensible à l'air possible \\
  Force de traînée matérialisée par l'équation \\
  \begin{center}
-  \boxed{\displaystyle{\frac12 \rho S Cx V^2}}
+  \boxed{\displaystyle{\frac12 \times \rho \times S \times Cx \times V^2}}
  \end{center}
  Avec : \\
  $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^-3$ \\
@@ -276,7 +303,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  \begin{center}
   $\begin{array}{>{\displaystyle}l>{\displaystyle}l>{\displaystyle}l}
    Re < 1 & Cx = & \frac{24}{Re} \medbreak \\
-   1 < Re < 10^3 & Cx = & \frac{18.5}{Re^0.6} \medbreak \\
+   1 < Re < 10^3 & Cx = & \frac{18.5}{Re^{0.6}} \medbreak \\
    10^3 < Re < 5.10^5 & Cx = & 0.44
   \end{array}$
  \end{center}
@@ -287,11 +314,12 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  \begin{center}
   \boxed{\displaystyle{Re = \frac{VL}{\nu}}}
  \end{center}
- Avec : \\
- V Vitesse du fluide en m/s \\
- L Diamètre en m \\
- $\nu$ Viscosité cinématique en $m^2/s$ \\
- ($\nu = 15.6 \times 10^6$ pour l'air)
+ Avec~: \\
+ \begin{itemize}
+  \item V vitesse du fluide en $m.s^{-1}$~;
+  \item L diamètre en m~;
+  \item $\nu$ Viscosité cinématique en $m^2.s^{-1}$ ($\nu = 15.6 \times 10^6$ pour l'air).
+ \end{itemize} 
 \end{frame}
 
 \end{document}
