@@ -73,16 +73,16 @@
   \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
   \bigbreak
   \begin{center}
-    \boxed{\vv{P_A} = -M_F \times \vv{g}}
+    \boxed{\vv{Pa} = -M_F \times \vv{g}}
   \end{center}
   \begin{itemize}
-    \item $\vv{P_A}$~: la poussé d'archimède~;
+    \item $\vv{Pa}$~: la poussé d'archimède~;
     \item $M_F$~: la masse du fluide contenue dans le volume déplacé~;
     \item $\vv{g}$~: la valeur du champ de pesanteur.
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Aplication aux gaz}
+\begin{frame}{Application aux gaz}
   Deux forces appliquées sur le ballon~: \\
   \begin{center}
     $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Pa_{ballon}}}$ \\
@@ -93,7 +93,7 @@
   \end{center}
   Remarque~:\\
   \begin{center}
-    $F_{ballon} < P_{A_{ballon}}$
+    $F_{ballon} < Pa_{ballon}$
   \end{center}
 \end{frame}
 
@@ -120,7 +120,19 @@
   \end{center}
   Pour $T_{200} = 200 \degree C = 473.25 K$~:
   \begin{center}
-    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}}$
+    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}} m^3.mol^{-1}$
+  \end{center}
+  Augmentation du volume de $1.59$.
+\end{frame}
+
+\begin{frame}{Application à l'hydrogène}
+  Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
+  \begin{center}
+    $\displaystyle{f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}}$
+  \end{center}
+  Pour $T_{200} = 200 \degree C = 473.25 K$~:
+  \begin{center}
+    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}} m^3.mol^{-1}$
   \end{center}
   Augmentation du volume de $1.59$.
 \end{frame}
@@ -136,13 +148,42 @@
 
 \section{Structure}
 
-\subsection{Gyroscope et axes}
+\subsection{Piloter le drone}
 
 \begin{frame}
-  
+  La structure~: piloter le drone.
+  Les contraintes~:
+  \begin{itemize}
+    \item mobilité~;
+    \item rigidité~;
+    \item légerté~;
+    \item légalité.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Les solutions techniques}
+  Légerté et rigidité~: fibres de carbonne Répartition des matériaux et expériences.
+  \begin{center}
+    \includegraphics[width=8cm]{../Images/plan_structure.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Mobilité}
+  Forme triangulaire des ballons, centre de gravité, le même que celui du drone, quantité d'hélium. \\
+  Structure gyroscopique.
+  \begin{center}
+    \includegraphics[width=7cm]{../Images/plan_structure.jpg}
+  \end{center}
 \end{frame}
 
 \subsection{Attaches et modélisation}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[width=10cm]{../Images/fixation.jpg}
+  \end{center}
+  \captionof{figure}{Fixation triangle-premier cercle.}
+\end{frame}
 
 \section{Ballon}
 
@@ -254,13 +295,19 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \end{itemize}
     \newpage
     \begin{center}
-      \includegraphics[width=5cm]{../Images/colle.JPG}
+      \includegraphics[width=5cm]{../Images/colle2.jpg}
     \end{center}
     \captionof{figure}{A gauche la colle 406 et à droite la colle acétone.}
   \end{multicols}
 \end{frame}
 
-\subsection{Gonflage}
+\subsection{Modèle}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[width=10cm]{../Images/ballon3.jpg}
+  \end{center}
+\end{frame}
 
 \section{Drone}
 
@@ -298,28 +345,15 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  \end{center}
  Avec~:
  \begin{itemize}
-  \item $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^-3$~;
+  \item $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^{-3}$~;
   \item S la surface~;
   \item Cx le coefficient de traînée~;
-  \item V la vitesse relative du mobile par rapport au fluide en $m.s^-1$.
+  \item V la vitesse relative du mobile par rapport au fluide en $m.s^{-1}$.
  \end{itemize} 
 \end{frame}
 
-\subsection{Calcul de Cx pour la forme retenue 1/2}
-\begin{frame}{Calcul de Cx pour la forme retenue 1/2}
- Forme la plus proche : sphère \\
- Dépend du type d'écoulement : le nombre de reynolds \\
- \begin{center}
-  $\begin{array}{>{\displaystyle}l>{\displaystyle}l>{\displaystyle}l}
-   Re < 1 & Cx = & \frac{24}{Re} \medbreak \\
-   1 < Re < 10^3 & Cx = & \frac{18.5}{Re^{0.6}} \medbreak \\
-   10^3 < Re < 5.10^5 & Cx = & 0.44
-  \end{array}$
- \end{center}
-\end{frame}
-
-\subsection{Calcul de Cx pour la forme retenue 2/2}
-\begin{frame}{Calcul de Cx pour la forme retenue 2/2}
+\subsection{Calcul de Cx}
+\begin{frame}{Nombre de Reynolds}
  \begin{center}
   \boxed{\displaystyle{Re = \frac{VL}{\nu}}}
  \end{center}
@@ -331,13 +365,25 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  \end{itemize} 
 \end{frame}
 
+\begin{frame}{Calcul de Cx pour la forme retenue}
+ Forme la plus proche : sphère \\
+ Dépend du type d'écoulement : le nombre de reynolds \\
+ \begin{center}
+  $\begin{array}{>{\displaystyle}l>{\displaystyle}l>{\displaystyle}l}
+   Re < 1 & Cx = & \frac{24}{Re} \medbreak \\
+   1 < Re < 10^3 & Cx = & \frac{18.5}{Re^{0.6}} \medbreak \\
+   10^3 < Re < 5.10^5 & Cx = & 0.44
+  \end{array}$
+ \end{center}
+\end{frame}
+
 \section{Taches à faire}
 \begin{frame}
   \begin{itemize}
-    \item terminer les pièces de ballon~;
+    \item terminer les pièces du ballon~;
     \item assembler la structure~;
     \item assembler les ballons~;
-    \item tester l'aérodynamisme~;
+    \item tester et calculer l'aérodynamisme~;
     \item calibrer le drone~;
     \item acheter l'helium.
   \end{itemize}
