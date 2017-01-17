@@ -206,17 +206,21 @@ print("volume = %f, diametre = %f" % (vol, largeur))
   \begin{center}
     \boxed{\vv{P_A} = -M_F \times \vv{g}}
   \end{center}
-  $\vv{P_A}$~: La poussé d'archimède. $M_F$ La masse du fluide contenue dans le volume déplacé. $\vv{g}$ La valeur du champ de pesanteur.
+  \begin{itemize}
+    \item $\vv{P_A}$~: la poussé d'archimède~;
+    \item $M_F$~: la masse du fluide contenue dans le volume déplacé~;
+    \item $\vv{g}$~: la valeur du champ de pesanteur.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Aplication aux gaz}
   Deux forces appliquées sur le ballon~: \\
   \begin{center}
-    $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{P_{A_{ballon}}}}$ \\
+    $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Pa_{ballon}}}$ \\
   \end{center}
-  Si $P_{ballon} < P_{A_{ballon}}$ la force d'élévation est~:
+  Si $P_{ballon} < Pa_{ballon}$ la force d'élévation est~:
   \begin{center}
-    $\displaystyle{F_{ballon} = P_{A_{ballon}} - P_{ballon}}$ \\
+    $\displaystyle{F_{ballon} = Pa_{ballon} - P_{ballon}}$ \\
   \end{center}
   Remarque~:\\
   \begin{center}
@@ -231,7 +235,13 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \boxed{\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}} \\
     $\displaystyle{V_3 = f(P, n) \times T_3}$
   \end{center}
-  $V_q$~: volume du gaz en $m^3$ à la température $T_q$ en K. $P$~: pression du gaz en Pa. $n$~: quantité de matière en mol. $f(P, n)$~: rapport constant entre volume et température.
+  Avec~:
+  \begin{itemize}
+    \item $V_q$~: volume du gaz en $m^3$ à la température $T_q$ en K~;
+    \item $P$~: pression du gaz en Pa~;
+    \item $n$~: quantité de matière en mol~;
+    \item $f(P, n)$~: rapport constant entre volume et température.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}{Application à l'hélium}
@@ -248,11 +258,11 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 \begin{frame}{Résultat de la poussé d'archimède}
   \begin{center}
-    $\displaystyle{F_{T_0} = P_{A_{air}} - P_{helium} = 10.90 N}$
+    $\displaystyle{F_{T_0} = Pa_{air} - P_{helium} = 10.90 N}$
     \bigbreak
-    $\displaystyle{F_{T_{200}} = P_{A_{air}} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
+    $\displaystyle{F_{T_{200}} = Pa_{air} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
   \end{center}
-  Les resultats sont négligables. $F < P_{A_{air}}$
+  Les resultats sont négligables. $F < Pa_{air}$
 \end{frame}
 
 \section{Drone}
