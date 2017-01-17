@@ -67,6 +67,74 @@
  \end{itemize}
 \end{frame}
 
+\section{Calculs d'élévation}
+
+\subsection{Poussé d'archimède}
+
+\begin{frame}{Définition}
+  \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
+  \bigbreak
+  \begin{center}
+    \boxed{\vv{P_A} = -M_F \times \vv{g}}
+  \end{center}
+  \begin{itemize}
+    \item $\vv{P_A}$~: la poussé d'archimède~;
+    \item $M_F$~: la masse du fluide contenue dans le volume déplacé~;
+    \item $\vv{g}$~: la valeur du champ de pesanteur.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Aplication aux gaz}
+  Deux forces appliquées sur le ballon~: \\
+  \begin{center}
+    $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Pa_{ballon}}}$ \\
+  \end{center}
+  Si $P_{ballon} < Pa_{ballon}$ la force d'élévation est~:
+  \begin{center}
+    $\displaystyle{F_{ballon} = Pa_{ballon} - P_{ballon}}$ \\
+  \end{center}
+  Remarque~:\\
+  \begin{center}
+    $F_{ballon} < P_{A_{ballon}}$
+  \end{center}
+\end{frame}
+
+\subsection{Dilatation des gaz}
+
+\begin{frame}{Loi de Charles}
+  \begin{center}
+    \boxed{\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}} \\
+    $\displaystyle{V_3 = f(P, n) \times T_3}$
+  \end{center}
+  Avec~:
+  \begin{itemize}
+    \item $V_q$~: volume du gaz en $m^3$ à la température $T_q$ en K~;
+    \item $P$~: pression du gaz en Pa~;
+    \item $n$~: quantité de matière en mol~;
+    \item $f(P, n)$~: rapport constant entre volume et température.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Application à l'hélium}
+  Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
+  \begin{center}
+    $\displaystyle{f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}}$
+  \end{center}
+  Pour $T_{200} = 200 \degree C = 473.25 K$~:
+  \begin{center}
+    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}}$
+  \end{center}
+  Augmentation du volume de $1.59$.
+\end{frame}
+
+\begin{frame}{Résultat de la poussé d'archimède}
+  \begin{center}
+    $\displaystyle{F_{T_0} = Pa_{air} - P_{helium} = 10.90 N}$
+    \bigbreak
+    $\displaystyle{F_{T_{200}} = Pa_{air} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
+  \end{center}
+  Les resultats sont négligables. $F < Pa_{air}$
+\end{frame}
 
 \section{Structure}
 
@@ -196,75 +264,6 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 \subsection{Gonflage}
 
-\section{Calculs d'élévation}
-
-\subsection{Poussé d'archimède}
-
-\begin{frame}{Définition}
-  \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
-  \bigbreak
-  \begin{center}
-    \boxed{\vv{P_A} = -M_F \times \vv{g}}
-  \end{center}
-  \begin{itemize}
-    \item $\vv{P_A}$~: la poussé d'archimède~;
-    \item $M_F$~: la masse du fluide contenue dans le volume déplacé~;
-    \item $\vv{g}$~: la valeur du champ de pesanteur.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Aplication aux gaz}
-  Deux forces appliquées sur le ballon~: \\
-  \begin{center}
-    $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Pa_{ballon}}}$ \\
-  \end{center}
-  Si $P_{ballon} < Pa_{ballon}$ la force d'élévation est~:
-  \begin{center}
-    $\displaystyle{F_{ballon} = Pa_{ballon} - P_{ballon}}$ \\
-  \end{center}
-  Remarque~:\\
-  \begin{center}
-    $F_{ballon} < P_{A_{ballon}}$
-  \end{center}
-\end{frame}
-
-\subsection{Dilatation des gaz}
-
-\begin{frame}{Loi de Charles}
-  \begin{center}
-    \boxed{\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}} \\
-    $\displaystyle{V_3 = f(P, n) \times T_3}$
-  \end{center}
-  Avec~:
-  \begin{itemize}
-    \item $V_q$~: volume du gaz en $m^3$ à la température $T_q$ en K~;
-    \item $P$~: pression du gaz en Pa~;
-    \item $n$~: quantité de matière en mol~;
-    \item $f(P, n)$~: rapport constant entre volume et température.
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Application à l'hélium}
-  Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
-  \begin{center}
-    $\displaystyle{f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}}$
-  \end{center}
-  Pour $T_{200} = 200 \degree C = 473.25 K$~:
-  \begin{center}
-    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}}$
-  \end{center}
-  Augmentation du volume de $1.59$.
-\end{frame}
-
-\begin{frame}{Résultat de la poussé d'archimède}
-  \begin{center}
-    $\displaystyle{F_{T_0} = Pa_{air} - P_{helium} = 10.90 N}$
-    \bigbreak
-    $\displaystyle{F_{T_{200}} = Pa_{air} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
-  \end{center}
-  Les resultats sont négligables. $F < Pa_{air}$
-\end{frame}
-
 \section{Drone}
 
 \subsection{Modèle}
@@ -299,12 +298,12 @@ print("volume = %f, diametre = %f" % (vol, largeur))
  \begin{center}
   \boxed{\displaystyle{\frac12 \times \rho \times S \times Cx \times V^2}}
  \end{center}
- Avec : \\
+ Avec~:
  \begin{itemize}
-  \item $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^-3$ \\
-  \item S la surface \\
-  \item Cx le coefficient de traînée \\
-  \item V la vitesse relative du mobile par rapport au fluide en $m.s^-1$
+  \item $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^-3$~;
+  \item S la surface~;
+  \item Cx le coefficient de traînée~;
+  \item V la vitesse relative du mobile par rapport au fluide en $m.s^-1$.
  \end{itemize} 
 \end{frame}
 
