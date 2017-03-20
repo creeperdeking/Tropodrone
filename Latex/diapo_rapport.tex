@@ -46,22 +46,22 @@
 \subsection{Contraintes imposées au projet}
 \begin{frame}{Contraintes imposées au projet}
   \begin{itemize}
-    \item Être simple d’utilisation, garder la manœuvrabilité du drone au possible, voler le plus longtemps possible.
-    \item Consommer le moins d’énergie possible, ne pas présenter de danger pour le public et économiser le gaz et les matériaux de fabrication.
-    \item Le modèle du drone imposé
-    \item Rayon d’action de minimum 15 mètres
-    \item Ballon de type dirigeable
+    \item être simple d’utilisation, garder la manœuvrabilité du drone au possible, voler le plus longtemps possible~;
+    \item consommer le moins d’énergie possible, ne pas présenter de danger pour le public et économiser le gaz et les matériaux de fabrication~;
+    \item le modèle du drone imposé~;
+    \item rayon d’action de minimum 15 mètres~;
+    \item ballon de type dirigeable.
   \end{itemize}
 \end{frame}
 
 \subsection{Contraintes légales supplémentaires}
 \begin{frame}{Contraintes légales supplémentaires}
   \begin{itemize}
-    \item 1: Le drone \\
-	    Catégorie A : limitations non contraignantes
-    \item 2: Le ballon \\
-	    Catégorie « Léger » \\
-	    La ficelle supportant la charge doit casser au dessus de 23 kg
+    \item 1~: Le drone \\
+	    catégorie A~: limitations non contraignantes~;
+    \item 2~: Le ballon \\
+	    catégorie « Léger » \\
+	    la ficelle supportant la charge doit casser au dessus de 23 kg.
  \end{itemize}
 \end{frame}
 
@@ -97,6 +97,21 @@
   \end{center}
 \end{frame}
 
+\begin{frame}{Hydrogène et hélium}
+	\begin{center}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Gaz & Air & Hydrogène & Hélium \\
+			\hline
+			Masse Volumique $(kg.m^3)$ & 1.29 & 0.08988 & 0.1785 \\ 
+			\hline
+			Force d'élévation $(N.m^3)$ & 0 & 10.90 & 11.77 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+
 \subsection{Dilatation des gaz}
 
 \begin{frame}{Loi de Charles}
@@ -114,18 +129,6 @@
 \end{frame}
 
 \begin{frame}{Application à l'hélium}
-  Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
-  \begin{center}
-    $\displaystyle{f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}}$
-  \end{center}
-  Pour $T_{200} = 200 \degree C = 473.25 K$~:
-  \begin{center}
-    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}} m^3.mol^{-1}$
-  \end{center}
-  Augmentation du volume de $1.59$.
-\end{frame}
-
-\begin{frame}{Application à l'hydrogène}
   Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
   \begin{center}
     $\displaystyle{f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}}$
@@ -189,22 +192,30 @@
 
 \subsection{Contenance}
 
+\begin{frame}
+  Volume d'helium nécessaire~: $0.75 m^3$
+  
+  Volume des ballons~: $0.25 m^3$
+\end{frame}
+
 \subsection{Forme}
 
 \begin{frame}
-  Les ballon sont formés d'un parallèlépipède avec deux pyramides d'angle $60\degree$. \\
+  Les ballon sont formés d'un parallèlépipède de longueur 1m avec deux pyramides d'angle $60\degree$. Orientation de $45\degree$ \\
   \begin{center}
-    \includegraphics[width=10cm]{../Images/ballon.png}
+    \includegraphics[width=7cm]{../Images/ballon.png}
+    \includegraphics[width=4cm]{../Images/ballon3.png}
   \end{center}
 \end{frame}
 
 \begin{frame}{Calcul des dimensions}
   Volume ballon~:
   \begin{center}
-    \boxed{\displaystyle{V = 2(b^2 (b \sin \frac{\pi}{3} \times \frac{1}{3})) + b^2}} \\
-    $\displaystyle{V = b^3 \frac{\sqrt{3}}{3} + b^2}$ \\
-    $\displaystyle{b^3 \frac{\sqrt{3}}{3} + b^2 - 0.25 = 0}$
+    \boxed{\displaystyle{V = 2(\sqrt{2b^2} \times \tan \frac{\pi}{3} \times \frac{1}{3} \times b^2) + b^2}} \\
+    $\displaystyle{V = 2(\frac{\sqrt{6}}{3} \times b^3) + b^2 }$ \\
+    $\displaystyle{b^3 \frac{2\sqrt{6}}{3} + b^2 - 0.25 = 0}$
   \end{center}
+  Où $b$ est la largeur du parallèlépipède. \\
   Polynome du troisième degrée, résolution par bissection ou dichotomie.
 \end{frame}
 
@@ -225,6 +236,14 @@ while abs(vol - cible) > epsilon:
 
 print("volume = %f, diametre = %f" % (vol, largeur))
   \end{lstlisting}
+\end{frame}
+
+\subsection{Patron du ballon}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[width=7cm]{../Images/plan_ballon.png}
+  \end{center}
 \end{frame}
 
 \subsection{Enveloppe}
@@ -254,7 +273,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \end{itemize}
     \newpage
     \begin{itemize}
-      \item Mylar~:
+      \item Mylar (polyéthylène téréphtalate, PET)~:
       \begin{itemize}
         \item facile à trouver dans le commerce,
         \item resistant à la traction,
@@ -278,34 +297,84 @@ print("volume = %f, diametre = %f" % (vol, largeur))
         \item adhèrent,
         \item difficile à appliquer~;
       \end{itemize}
-      \item 406(colle) et 770(primaire)
+      \item 406 (cyanoacrylate d'ethyle) et 770 (primaire)
       \begin{itemize}
         \item adhèrent,
         \item rigide,
-        \item difficile à appliquer~;
+        \item peu résistant à l'eau,
+        \item facile à appliquer~;
+      \end{itemize}
+      \item 401 (cyanoacrylate) et 770 (primaire)
+      \begin{itemize}
+        \item adhèrent,
+        \item rigide,
+        \item peu résistant à l'eau,
+        \item facile à appliquer.
+      \end{itemize}
+    \end{itemize}
+
+    \newpage
+
+    \begin{itemize}
+      \item 330 et activateur
+      \begin{itemize}
+        \item peu adhèrent,
+        \item élastique~;
+      \end{itemize}
+      \item Polyester
+      \begin{itemize}
+        \item peu adhèrent~;
+      \end{itemize}
+      \item Polyuréthane
+      \begin{itemize}
+        \item peu adhèrent~;
       \end{itemize}
       \item Acétone
       \begin{itemize}
         \item peu adhèrent~;
       \end{itemize}
-      \item Colle blanche
+      \item Vinylique
       \begin{itemize}
         \item peu adhèrent.
       \end{itemize}
     \end{itemize}
-    \newpage
-    \begin{center}
-      \includegraphics[width=5cm]{../Images/colle2.jpg}
-    \end{center}
-    \captionof{figure}{A gauche la colle 406 et à droite la colle acétone.}
+    %\begin{center}
+    %  \includegraphics[width=5cm]{../Images/colle2.jpg}
+    %\end{center}
+    %\captionof{figure}{A gauche la colle 406 et à droite la colle acétone.}
   \end{multicols}
 \end{frame}
 
-\subsection{Modèle}
+\subsection{Performance d'un collage}
+
+\begin{frame}{Contrainte d'une colle}
+  Différents types de contraintes sur une colle:
+  \begin{center}
+    \includegraphics[width=10cm]{../Images/colle_contraintes.png}
+  \end{center}
+\end{frame}
 
 \begin{frame}
+  Collage du ballon extérieur: contrainte de pellage.
   \begin{center}
-    \includegraphics[width=10cm]{../Images/ballon3.jpg}
+    \includegraphics[width=5cm]{../Images/colle_pelage.png}
+    \includegraphics[width=5cm]{../Images/colle_cisaillement.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Tests 401 (cyanoacrylate)}
+  \begin{center}
+    \begin{tabular}{|c|c|}
+      \hline
+      Pelage & Cisaillement \\
+      \hline
+      $0.45 N.cm^{-2}$ & $12.1 N.cm^{-2}$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \begin{center}
+    \includegraphics[width=5cm]{../Images/test_cisaillement.png}
+    \includegraphics[width=5cm]{../Images/test_pelage.png}
   \end{center}
 \end{frame}
 

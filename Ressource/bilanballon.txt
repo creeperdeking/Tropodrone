@@ -2,7 +2,7 @@ La forme du ballon était originellement un simple cylindre avec des bord plats,
 
 Premièrement la forme nécessite une pression a l'intérieur du ballon car a une pression similaire à celle exterieur rend le ballon totalement plat.
 Une pression dans la ballon veut ainsi dire une augmentation de la concentration de l'helium et donc du poid.
-Deuxièmement le volume d'une forme ressemblant a une coque de bateau est très difficile a calculer de plus que la forme change en finction de la pression à l'intérieur du ballon.
+Deuxièmement le volume d'une forme ressemblant a une coque de bateau est très difficile a calculer de plus que la forme change en fonction de la pression à l'intérieur du ballon.
 
 Une forme cubique à bouts pyramidal est choisi car son volume est simple à calculer et cette forme est facile a assembler.
 Le volume total est:
