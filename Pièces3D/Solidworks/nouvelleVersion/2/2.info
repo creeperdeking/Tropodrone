@@ -1,0 +1,106 @@
+
+    Informations système
+                Etat:   Calcul terminé.
+                Produit:   Flow Simulation 2016 SP4.0. Build: 3501
+                Nom de l'ordinateur:   THIBAUT-PC
+                Nom d'utilisateur:   Thibaut
+                Processeurs:   Intel(R) Pentium(R) CPU 3550M @ 2.30GHz
+                Mémoire:   4016 Mo / 8388607 Mo
+                Système d'exploitation:   Windows 7 Service Pack 1 (Version 6.1.7601)
+                Version CAO:   SOLIDWORKS 2016 SP4.0
+                Vitesse UC:   2300 (2093) MHz
+
+    Informations générales
+                Modèle:   AssemblageNEW.SLDASM
+                Nom du projet:   - 10 km.h-1
+                Chemin du projet:   C:\Users\Thibaut\Documents\TropodroneNEW\2
+                Système d'unités:   SI (m-kg-s)
+                Type d'analyse:   Externe (sans exclure les espaces intérieurs)
+                Exclure les cavités sans conditions d'écoulement :   Désactivé
+                Système de coordonnées:   Système de coordonnées global
+                Axe de référence:   X
+
+    Caractéristiques physiques
+                Conduction thermique dans les solides:   Désactivé
+                Transitoire:   Désactivé
+                Effets gravitationnels:   Désactivé
+                Type d'écoulement:   Laminaire et turbulent
+                Ecoulement à nombre de Mach élevé:   Désactivé
+                Humidité:   Désactivé
+                Rugosité par défaut:   0 micromètre
+                Conditions par défaut des parois:   Paroi adiabatique
+
+    Domaine de calcul
+
+        Taille
+                X min:   -1.676 m
+                X max:   2.117 m
+                Y min:   -1.398 m
+                Y max:   0.435 m
+                Z min:   -1.688 m
+                Z max:   1.631 m
+
+    Calcul du maillage
+
+        Dimensions du maillage basique
+                Nombre de cellules suivant X:   18
+                Nombre de cellules suivant Y:   10
+                Nombre de cellules suivant Z:   16
+
+        Nombre de cellules
+                Cellules:   4466
+                Cellules fluides:   4466
+                Cellules irrégulières:   0
+                Cellules ajustées:   0
+                Niveau de raffinement maximal:   1
+
+    Objectifs
+
+        Objectifs globaux
+
+            forceDeTrainée
+                Type:   Objectif global
+                Type d'objectif:   Force (X)
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+            vitesseMax
+                Type:   Objectif global
+                Type d'objectif:   Vitesse
+                Calculer:   Valeur maximale
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+        Equations d'objectifs
+
+            CX
+                Type:   Equation d'objectifs
+                Formule:   (2*forceDeTrainée)/(1.204*0.92868486*vitesseMax^2)
+                Dimension:   Vitesse
+                Utiliser pour la convergence :   Activé
+
+    Objectifs
+                
+                Nom              	Unité   	Valeur   	Progression   	Critères   	Delta           	Utiliser pour la convergence 
+                forceDeTrainée   	N       	-2.215   	0             	0          	0.0372017542    	Désactivé                    
+                vitesseMax       	m/s     	3.301    	0             	0          	0.00243064884   	Désactivé                    
+                CX               	m/s     	-0.364   	0             	0          	0.00568166001   	Désactivé                    
+
+    Informations générales
+                Itérations:   160
+                Temps de calcul:   433 s
+
+        Log
+                Génération du maillage démarrée:   11:04:08 , Apr 11
+                Génération du maillage terminée avec succès:   11:04:15 , Apr 11
+                Préparation des données pour le calcul:   11:04:16 , Apr 11
+                Calcul démarré	0:   11:04:22 , Apr 11
+                Le calcul a convergé puisque les critères suivants sont respectés:	54:   11:08:04 , Apr 11
+                    Les objectifs ont convergé	54:   
+                Calcul terminé	55:   11:08:05 , Apr 11
+                Préparation des données pour le calcul:   11:09:41 , Apr 11
+                Calcul démarré	55:   11:09:44 , Apr 11
+                Le calcul a convergé puisque les critères suivants sont respectés:	159:   11:13:09 , Apr 11
+                    Transfert max. atteint	159:   
+                Calcul terminé	160:   11:13:09 , Apr 11
+                Avertissements:   Critère non défini	Il existe un ou plusieurs objectifs sans critère défini. Ces objectifs ne seront pas pris en compte dans la convergence des objectifs., 		, 

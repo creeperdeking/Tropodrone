@@ -1,0 +1,71 @@
+07/11/16 séance 1:
+
+Noé : après avoir fait une brève liste des prix des bouteilles d'hélium en vante libre dans le comerce , je me suis aperçu que les volumes proposer étaient insufisant.
+Je me suis tourner vers air liquide . Il ne propose pas de vendre directement aux particulier mais propose une liste détailler de revendeur sur chambéry.
+J'ais donc décider de les contacctez , en comenceant par CEDEO auprès de qui j'ais laisser mes coordoné pour plus d'information.
+Tristan: J'ai cherché différents types de matériaux pour les ballon, les caractéristique voulu sont l'étanchéité et la solidité: dans ce domaine le latex, le chloroprene, le mylar et le butyle sont retenues. Malheureusement le butyle ne se trouve pas dans le commerce autre que dans des balles gonflable.
+Thibaut : je me suis intéressé aux autorisations nécessaires pour faire voler un drone et il se trouve que les limitations ne devraient pas nous gêner
+J'ai également rédigé une lettre à l'attention du lycée afin que celui-ci nous autorise à faire nos tests dans l'enceinte de l'établissement
+Ensuite, je me suis renseigné sur les autorisations liées aux ballons et même si les limitations sont bien plus contraignantes, elles ne devraient également pas nous gêner
+
+15/11/16 séance 2:
+
+Noé :
+Tristan : J'ai rechercher les possbilités de chauffer l'helium pour augmenter la force acsensionnelle, les résultats montrent que pour doubler le volume d'hygrogèneil faut chaufer à 200C
+Alexis :
+Thibaut : J'ai pu récupérer un TPE de l'année dernière sur l'aéronautique contenant des recherches sur l'aérodynamisme qui m'ont servies afin de déterminer les formules à utiliser pour calculer la résistance à l'air.
+Ce TPE m'a aussi permis de déterminer la meilleure forme à donner à nos ballons afin d'obtenir la plus petite force de traînée possible
+
+22/11/16 séance 3:
+
+Tristan: Chauffer l'helium à 200C augmente la volume certe, mais la force d'ascension ne pourra pas dépasser Pair = 12.65 car Fa = Pair - Phe. Or l'helium a une force d'ascension de 10.90 donc le chauffer ne pourra que augmenter de 1.75 N soit 170g. Pour resumer, tout materiau sur un volume de 1m3 n'aura pas une force ascensionnelle supérieur à 12.65N = 1.29 kg.
+Noé : La ficelle se rompt comme prévus entre 15 et 20 kg , bien en dessous de la limite légale
+, Le mylard , lui se détériore entre 60 et 70 °C mais est quasi insensible au rayonnement des corps chaud proche, seul la température des matériaux en contacte importe.
+
+03/01/17
+Réunion pour redéfinir le design du drone
+Thibaut : Étant donné que le scotch a lâché, j'ai conçu les pièces visant à attacher les câbles en plastique en prenant en compte l'angle des câbles. J'ai aussi découpé un rectangle de quelques m^2 de surface, mais nous n'avions plus de temps pour nous en servir durant cette scéance. * Tristan l'a utilisé la scéance suivante
+
+
+10/01/17
+
+Thibaut : J'ai conçu les pièces en Y qui s'accrocheront au ballon et aux branches extérieures du support. J'ai également conçu l'accroche qui plaquera la barre principale sur le drone.
+Tristan: J'ai finalisé l'algorithme de volume des ballons et j'ai construit une maquette d'un ballon au 1/5. Les dimensions pour les ballons sont désormais de .446 * 1.76.
+La maquette a permis de confirmer la technique de collage: plis au lieu de recouvrement. La maquette s'est revellé suffisament étanche pour une faible pression.
+
+Alexis: J'ai tenté de modéliser une pièce, PLz, manque les finalisations
+
+Noé , j'ai retravailler les hélices imprimer en 3d a la fraise . Mais le modèle choisis a la base semble inappropriée pour le drone. J'  ais aussi participer a l'assemblage de la maquette de ballon et
+je me suis documenter sur les spécificités des chargeurs de batterie lipo dans le but d'en acheter une.
+
+24/01/17
+Thibaut : J'ai fini de concevoir sous solidworks les pièces, et nous avons dû modifier la taille des ballons car ils n'allaient pas ensemble sur le support.
+Je me suis ensuite heurté à des problèmes sous solidworks flow simulation
+
+
+31/01/17
+fin de la modelisation de la pièces PLx
+test des pièces PLY et PLz
+simulation e aérodynamisme du drone
+fabrication d'un prototype de ballon a l'échelle 1/2
+réalisation du patron des ballons
+
+14/02/17
+
+Tenté de faire de la colle liquide pour application plus facile (marche pas)
+mis de la néoprène en seringue, puis commencé réalisation des ballons
+Nous avons dû coller deux couvertures de survie car les dimensions indiquées se sont révélées fausses (2 indications contradictoires)
+La néoprène est étalée, elle sèche
+
+Le collage de la néoprène se faisait de deux manières différentes :
+    - Soit en encollantchacune des parties et en les laissant sécher séparément
+    - Soit en appliquant la néoprène, puis en pressant les deux bords directement
+L'avantage de la première technique fut son temps de séchage mais son inconvénient est faire des plis lors du collage
+L'avantage de la seconde technique est de réduire le nombre de plis mais son inconvéninent est son temps de séchage
+
+Heureusement, l'utilisation de papier sulfurisé comme masque pour la néoprène permet d'utiliser la première solution en réduisant l'impact de ses inconvénients.
+
+28/03/17
+4/04/17
+Thibaut : Fin de la conception du nouveau modèle SW
+11/04/17

@@ -1,0 +1,30 @@
+Ballon
+
+pour les matériaux: http://aeroballongaz.chez-alice.fr/Enveloppe2.htm
+construction ballon: http://www.airshoot-technologie.com/contents/fr/d38_ballons-photos-helium.html
+
+Rejeté:
+    - Hypalon:
+        résiste pas aux UV.
+    - baudruche:
+        éclate souvent et perd 0.2 % de gaz / heure
+
+
+Plusieurs petits ballons au lieu d'un unique sera choisi pour plusieurs raisons:
+    - le drone ne dépend pas du ballon pour "survivre" il peut donc se passer d'un ballon si celui ci éclate
+    - le coup de petits ballons et moins cher
+    - l'ajout ou la suppression peut aider a calibrer la capacité de levage
+
+    Aérodynamisme :
+        - Pour annuler les forces opposées au drone (poids et trainée), il faut dans l'idéal adopter une forme en "lentille"
+        Cette forme pourrait s'obtenir avec des ballons souples
+
+        Rapport des tests de résistances des matériaux:
+            -Le mylard résiste bien a la tension , mais très mal au cisaillement et a la perforation
+            --Quand il est chauffer a plus de 50 °C l’intégrité de la structure n'est plus sure et entre 60 et 70°C le mylard se repli sur lui même en fondant
+            -Cependant il n'est pas affecté par le rayonnement infrarouge de corps chaud , mais seulement a la température du matériaux en contacte (gaz)
+
+            La colle qui permet de tenir le mylar:
+
+                La colle neoprenne présente une bonne solidité et est facile a utiliser et de par sa consistance permet de limiter les fuites
+            UNE COUCHE DE 770 et utiliser de la 406

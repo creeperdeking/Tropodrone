@@ -1,0 +1,49 @@
+Elipsoide de révolution (aire): https://fr.wikipedia.org/wiki/Ellipso%C3%AFde_de_r%C3%A9volution#Aire
+Cylindre de révolution: https://fr.wikipedia.org/wiki/Cylindre_de_r%C3%A9volution
+
+Forme des ballons:
+    Le ballon utilise un cone avec un angle de 60° entre ses diagonal et ses arretes. Sa hauteur est donc:
+         h = diag / 2 * tan(pi / 3)
+    Son volume est donc:
+        V = largeur ** 2 * h / 3
+
+    Par bissection de la formule total du volume on trouve pour V = 0.25, largeur = 0.430140, h = 0.526811
+    Mais l'angle entre la base du cone et une de ses faces est:
+        alp = tan-1(h / largeur / 2)
+
+    La hauteur des triangle formant le cone sont:
+        ht = sqrt(h ** 2 + (largeur / 2) ** 2)
+
+    Nombre de degrès trouvés pour l'ange des ballons: 67.7940° (base vers faces)
+    Longueur totale des ballons = 52.6856*2+100 = 205,3712 cm
+    Volume de chaque ballon: 250dm^3
+    Quantité de mylar nécessaire par ballon
+
+
+
+
+340g + 180g = 520g
+
+forme des cercles centraux:
+    circulaire
+
+    dimension des arceaux centraux:
+        nombre: 2: plus petit = 45cm, plus grand = 48,5 cm
+        2 arceaux
+
+
+        2 lots de commandes:
+            1er lot:
+                1 arceaux 5 mm  plein 1m
+                2 arceaux 1m 4mm pleins
+                3 arceaux 1m 4mm pleins
+                3 arceaux 6mm creux
+
+
+
+un plant B si le système d'attache de cercle d'alexis avec des glissières ne fontionne pas:
+    on adapte le prioncipe du gyroscope avec trois cercles perpandiculaire et attacher avec deux liaisons rotules entre chaque
+    comme ça  https://www.youtube.com/watch?v=zc8b2Jo7mno
+
+
+    une idée de projet pour Noé   http://forum.netophonix.com/ftopic10614.html

@@ -1,0 +1,90 @@
+Résultats recherches sur les gaz
+
+Propriétés physiques:
+
+    Poids_X (N) = VolX * Masse_VolumiqueX * 9,81
+
+Force ascensionnelle : Poids_air - Poids_gaz
+
+Poid_Air = 1.29*9.81 = 12.65
+
+Masses volumiques  (Pression: 1013,25 hPa; 0°C),en kg.m^3:
+
+    hélium: 0,1785
+
+    hydrogène: 0,08988
+
+    air: 1,29
+
+
+Résultats des calculs:
+hélium: 10,90 N.m^3 soit 1,11 kg.m^3
+hydrogène: 11,77 N.m^3 soit 1,20 kg.m^3
+
+12.65 - (9.81*0,1785/augmentation de volume )
+
+Sources et ressources:
+
+    https://fr.wikipedia.org/wiki/Pesanteur
+
+    Poussée d’archimède et hélium: http://meteophysique.free.fr/pousse.htm
+
+    https://fr.wikipedia.org/wiki/Hydrog%C3%A8ne
+
+    https://fr.wikipedia.org/wiki/H%C3%A9lium
+
+
+
+
+================================== FAIRE CHAUFFER GAZ ===============================
+l'helium peut être chauffer pour augmenter la capacité de levage.
+Pour ce faire il faut un materiau résistant à la chaleur pour l'envelope du ballon, le choix ce porte sur le mylar:
+Sa  température de fusion est à 245C (supérieur au latex ?).
+
+Le chauffage peut être soit éléctrique soit avec une flamme.
+Flamme:
+    Avantages:
+        - independant
+        - facile à mettre en place
+    Desavantages:
+        - dangereux
+        - nécessite oxygène
+
+Thermoresistance:
+    Avantages:
+        - pas de feu
+    Desavantages:
+        - batterie supplémentaire
+        - commande electrique
+
+Le choix se porte sur la thermorésistance.
+
+La conception doit aussi prendre en compte l'integration de la plaque thermorésistance a l'interieur du ballon ce qui n'ecessite de construire le ballon, encore une fois le mylar est avantagé.
+
+la formule de la loi de charles dans les lois de gaz parfait pose l'equation:
+
+V1/T1 = V2/T2 = f(P,n)
+
+où f(P,n) est une constante dependant de la pression et de la quantité de matière.
+V1 et V2 le volume dans 2 situations en m3
+T1 et T2 la température dans 2 situations en kelvin
+
+L'helium a un volume de 3.33m3 à 0C = 273.15K
+Donc f(P,n) = V1/T1 = 3.33/273.15 = 0.0122
+
+V2 = f * T2
+Pour  une température de 20C  = 293.15K
+V2 = 0.0122 * 293.15 = 3.58m3
+
+Pour 60C: 4.06m3
+
+Pour une température de 200C = 533.15K
+V2 = 0.0122 * 533.15 = 6.50m3
+
+le rapport est de: 3.58/6.50 = 0.55
+
+on peut doubler le volume pour une même quantité de matière à 200C mais le chauffage de l'hélium ne peut pas être embarqué dans la drone pour maintenir une température de 200C
+On compte alors sur l'isolation du mylar et d'un chauffage secondaire par un resistance.
+
+
+une solution pour chauffer le ballon est d'utiliser des cartouches de chaufes commes celles ci https://www.imp3d-france.com/article/10/Cartouche-resistance-chauffante-pour-tecirc-te-40w-12v?gclid=CNrLpIOVq9ACFUHnGwodSQsC0A

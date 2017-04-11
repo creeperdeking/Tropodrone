@@ -1,0 +1,4 @@
+Methode nouvelle:
+    - Un fil passe par le centre de la structure pour relier le drone aux ballons en lui donnant une grande liberté de mouvement ce sera certanement un fil de pêche
+    On oublie les set px, py et pz
+    On les remplace par PTC

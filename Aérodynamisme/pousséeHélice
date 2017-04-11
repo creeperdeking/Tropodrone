@@ -1,0 +1,16 @@
+Voici le lien d'un blog super pour calculer la pousée d'une hélice
+http://aerotrash.over-blog.com/2015/01/calcul-de-la-poussee-d-une-helice.html
+
+formule de calcule de pousée ( pour avoir plus precis il faut un simulateur
+Poussée = 28,35 x Pas x Diamètre3 x (tr/min)2 x 10-10
+le résultat est en grame , les mesure , je sais pas en quoi elles sont
+
+longueur hélice 127mm
+largeur 14mm
+hauteur 4mm
+vitesse moteur 15590 tr/min (? a verifier)
+
+selon http://www.geeby22.fr/calcul-d-helice.html
+
+Diamètre 4.7 : en "     Pas  0.2 :  en "    Vitesse de rotation : 15590 rpm
+Puissance :     8.7 W     Vitesse :7.8 km/h     2.2 m/s     Traction : 38.5  gf

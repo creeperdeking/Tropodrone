@@ -1,0 +1,35 @@
+Contraintes de notre drone:
+    modifications faciles
+    poids
+    charge utils
+
+    408g ou moins
+
+    charge utiles 2kg, il devrait faire à peu près la taille d'une boite à chaussure
+    faire test de résistance mécanique pour la ficelle
+
+    -> l'intelligence artificielle n est pas prioritaire
+
+    limite égale 3kg sous le ballon
+
+    Meilleure forme possible: le cercle avec drone mobile à l'intérieur d'une sphère, troposhpère
+
+    Utiliser une dérive pour que la troposphère regarde toujours dans l direction de l'avant
+
+    Problème: complexité
+
+    Idées: faire le drone en bois, faire chauffer l'hélium...
+
+    Pour la rotation gyroscopique, on imagine des cercles concentriques reliés entre eux pour créer des axes
+
+    Compte rendu 2:
+        Forme du drone: triangle
+        Solution technique pour pouvoir tourner dans deux directions: 2 cercles concentriques reliés entre eux par des cordes
+        Solution technique collage ballon: cylindre collé en forme paquet de chips
+
+        Diamètre du drone: 35cm
+        Distance estimée entre chaque cercle concentrique
+
+        Une question en suspend: vau-il mieux utiliser du skotch ou des cables? Quel mode de transmission utiliser?
+
+        Cout total

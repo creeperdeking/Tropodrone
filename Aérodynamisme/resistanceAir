@@ -1,0 +1,38 @@
+RESISTANCE A L'AIR - CALCULS ET FORMULES
+
+4 axes :
+    - Portance - s'oppose au POIDS
+    - Trainée - s'oppose à la POUSSEE
+
+Formule de la portance :
+Fz = ½ ρ S V² Cz
+
+    ρ : masse volumique du fluide kg/m3
+
+      S : surface à l'air en m2
+
+    V : vitesse relative du fluide en m/s
+
+    Cz : coefficient de portance
+
+
+Formule de la traînée :
+Fx = ½ ρ S V² Cx
+
+    ρ : masse volumique du fluide en kg/m3
+
+    S : surface à l'air en m2
+
+    V : vitesse relative du fluide m/s
+
+    Cx : coefficient de traînée
+
+
+
+Calculé en considérant la température à 0°C et la pression à 1 atm
+
+Masse volumique de l'air
+air: 1,29
+
+Masse volumique de l'hélium
+0,1785 kg/m3
