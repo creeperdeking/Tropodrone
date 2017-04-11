@@ -38,40 +38,35 @@
 \section{Introduction}
 
 \subsection{Idée}
-
-\begin{frame}{}
+\begin{frame}{Idée}
  Fusionner un drone avec un dirigeable.
- 
+
  Pourquoi~?~:
  \begin{itemize}
-  \item augmenter l'autonomie du drone~;
-  \item reduir la dangerosité du drone~;
+  \item augmenter l'autonomie des drones~;
+  \item réduire la dangerosité des drones~;
   \item augmenter la charge utile.
  \end{itemize}
+\end{frame}
 
+\subsection{Objectif}
+\begin{frame}{Objectif du projet}
+  Créer une structure composée de ballons contenant un gaz plus léger que l’air qui soutient une partie ou la totalité du poids d'un drone.
 \end{frame}
 
 \subsection{Contraintes et besoins}
-
-\begin{frame}{}
+\begin{frame}{Contraintes et besoins}
 	\begin{itemize}
 		\item garder la manoeuvrabilité du drone~;
 		\item porter une charge utile~;
-		\item avoir des ballons rentables~;
+		\item ballons avec force d'élévation suffisante.
 	\end{itemize}
 
 \end{frame}
 
-
-\subsection{Objectifs}
-
-\begin{frame}{Objectifs du projet}
-  Créer une structure composée de ballons contenant un gaz plus léger que l’air qui soutient une partie ou la totalité du poids d'un drone.
-\end{frame}
-
 \subsection{Drone}
 
-\begin{frame}{Modèle drone}
+\begin{frame}{Modèle de drone choisi}
   \begin{multicols}{2}
     Drone XCSOURCE~: \\
     \begin{itemize}
@@ -94,11 +89,12 @@
 
 \subsection{Gaz}
 
-\begin{frame}{Calcule de la capacité d'élévation}
-	Gaz plus léger que l'air pour profiter de la poussée d'archimède. Calcul de la capacité d'élévation~:
+\begin{frame}{Calcul de la capacité d'élévation}
+	Gaz plus léger que l'air pour utiliser poussée d'archimède~(Pa).\\
+  Calcul de la capacité d'élévation (Ce)~:
 	\begin{center}
 		\boxed{Pa = Masse Volumique Air \times g}
-		\boxed{Ca = \frac{Pa - P}{g}}
+		\boxed{Ce = \frac{Pa - P}{g}}
 	\end{center}
 
 	\begin{tabular}{|l|c|c|c|}
@@ -113,27 +109,27 @@
 
 \end{frame}
 
-\section{Ballon}
+\section{Ballons}
 
-\subsection{Matériaux}
+\subsection{Matériau}
 
-\begin{frame}{Choix du materiaux}
+\begin{frame}{Choix du matériau}
 	\begin{tabular}{|l|p{0.35\linewidth}|p{0.35\linewidth}|}
 		\hline
-		Materiaux & Avantages & Inconvénients \\
+		Matériaux & Avantages & Inconvénients \\
 		\hline
 
-		Latex & 
-		facile à trouver dans le commerce &
-		seulement en forme sphèrique~; peu étanche \\
+		Latex &
+		Facile à trouver dans le commerce &
+		Seulement en forme sphérique~; peu étanche \\
 		\hline
 
-		Hypalon & étanche & introuvable dans le commerce~; fragile aux ultraviolets \\
+		Hypalon & Étanche & Introuvable dans le commerce~; fragile aux ultraviolets \\
 		\hline
-	
+
 		Mylar &
-		facile à trouver dans le commerce~; resistant à la traction~; peu être assembler~; léger~: $17 g.m^{-2}$ &
-		raide~; fragile au cisaillement et à la perforation\\
+		Facile à trouver dans le commerce~; résistant à la traction~; peut être assemblé~; léger~: $17 g.m^{-2}$ &
+		Raide~; fragile au cisaillement et à la perforation\\
 		\hline
 	\end{tabular}
 \end{frame}
@@ -145,11 +141,11 @@
 		\hline
 		Colles & \\
 		\hline
-		401 & adhèrent~; facile à appliquer~; peu résistant au pelage. \\
+		401 & adhérent~; Facile à appliquer~; Peu résistant au pelage. \\
 		\hline
-		Néoprène & difficile à appliquer~; résistant au pelage. \\
+		Néoprène & Difficile à appliquer~; Résistant au pelage. \\
 		\hline
-		330 & peu adhèrent. \\
+		330 & Peu adhérent. \\
 		\hline
  \end{tabular}
 
@@ -158,8 +154,8 @@
  \end{center}
 \end{frame}
 
-\begin{frame}{Problème de collage}
-  Collage du ballon extérieur: contrainte de pelage, pire situation.
+\begin{frame}{Problème du collage}
+  Collage du ballon extérieur~: contrainte de pelage, pire situation.
   \begin{center}
     \includegraphics[width=5cm]{../Images/colle_pelage.png}
     \includegraphics[width=5cm]{../Images/colle_cisaillement.png}
@@ -167,7 +163,7 @@
   Solution~: coller la couture sur le ballon.
 \end{frame}
 
-\begin{frame}{Tests de traction et pelage sur 401}
+\begin{frame}{Tests de traction et pelage avec 401}
    \begin{center}
     \begin{tabular}{|c|c|}
       \hline
@@ -185,7 +181,7 @@
 
 \subsection{Volume}
 
-\begin{frame}{Bilan de masses et volume}
+\begin{frame}{Bilan des masses et du volume}
 	\begin{center}
 		\begin{tabular}{|c|c|c|c|}
 			\hline
@@ -197,16 +193,16 @@
 
 	\end{center}
 
-  Volume d'helium nécessaire~: $0.75 m^3$
-  
+  Volume d'hélium nécessaire~: $0.75 m^3$
+
   Volume des ballons~: $0.25 m^3$
 \end{frame}
 
 
 \subsection{Forme}
 
-\begin{frame}{Choix et calcule de la forme}
-	Forme composée de deux cones et d'un parallèpipéde central. Angle de $60\degree$ entre les ballons.
+\begin{frame}{Choix et calcul de la forme}
+	Forme composée de deux cônes et d'un parallépipède central. Angle de $60\degree$ entre les ballons.
 	\begin{center}
 		\includegraphics[width=6.5cm]{../Images/ballon.png}
 		\includegraphics[width=3.5cm, angle=90]{../Images/plan_ballon.png}
@@ -235,8 +231,8 @@
   Contraintes de la structure~:
  \begin{itemize}
   \item 3 axes de liberté~;
-  \item adapté au drone~;
-  \item légerté.
+  \item adaptée au drone~;
+  \item légèreté.
  \end{itemize}
 
 \end{frame}
@@ -249,7 +245,7 @@
 	Drone suspendu au milieu d'un gyroscope.
   \includegraphics[width=8cm]{../Images/structure0_0.jpg}
  \end{center}
- Incovénients~: lourd et complexe.
+ Inconvénients~: lourd et complexe.
 \end{frame}
 
 
@@ -272,11 +268,36 @@
 
 \section{Aérodynamisme}
 
-\subsection{Simulation}
-
-\begin{frame}{}
+\subsection{Équation de traînée}
+\begin{frame}{Équation de traînée}
+ But : que le drone soit le moins sensible à l'air possible \\
+ Force de traînée matérialisée par l'équation \\
  \begin{center}
-		\includegraphics[width=10cm]{../Images/Capture.PNG}
+  \boxed{\displaystyle{\frac12 \times \rho \times S \times Cx \times V^2}}
+ \end{center}
+ Avec~:
+ \begin{itemize}
+  \item $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^{-3}$~;
+  \item S la surface~;
+  \item Cx le coefficient de traînée~;
+  \item V la vitesse relative du mobile par rapport au fluide en $m.s^{-1}$.
+ \end{itemize}
+\end{frame}
+
+\subsection{Résolution sous SW - 1}
+\begin{frame}{Résolution sous SW dans différentes conformations}
+	\begin{center}
+		\begin{tabular}{c}
+      \includegraphics[width=10cm]{../Images/Capture.PNG} \\
+			\includegraphics[width=8cm]{../Images/resultatsSimulationSW.png}
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+\subsection{Résolution sous SW - 2}
+\begin{frame}{Résolution sous SW dans différentes conformations}
+ \begin{center}
+	\includegraphics[width=10cm]{../Images/visualisationSimulationSW.PNG} \\
  \end{center}
 \end{frame}
 

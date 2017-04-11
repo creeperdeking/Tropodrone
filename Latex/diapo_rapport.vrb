@@ -6,12 +6,12 @@ vol = volume(largeur)
 cible = 0.25
 epsilon = 1e-4
 while abs(vol - cible) > epsilon:
-	if vol < cible:
-		largeur += etape
-	else:
-		largeur -= etape
-	etape /= 2
-	vol = volume(largeur)
+if vol < cible:
+largeur += etape
+else:
+largeur -= etape
+etape /= 2
+vol = volume(largeur)
 
 print("volume = %f, diametre = %f" % (vol, largeur))
   \end{lstlisting}
