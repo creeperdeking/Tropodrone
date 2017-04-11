@@ -1,7 +1,6 @@
 \documentclass{beamer}
 
 \usepackage{gensymb}
-\usepackage{transparent}
 \input{entete_beamer_pdflatex}
 \usepackage{listings}
 \usepackage[babel=true]{csquotes}
@@ -10,14 +9,9 @@
 \useoutertheme{infolines}
 \setbeamersize{text margin left=1cm,text margin right=1cm}
 
-\title{Presentation de projet de SI}
+\title{Rapport de projet de SI}
 \subtitle{Tropodrone}
 \author{Gueydan Noé, Manceau Thibaut, Gros Alexis, Porteries Tristan}
-
-\usebackgroundtemplate%
-{%
-    {\transparent{0.3}\includegraphics[width=\paperwidth,height=\paperheight]{../Images/structure1_1.PNG}}%
-}
 
 \begin{document}
 
@@ -69,26 +63,6 @@
   Créer une structure composée de ballons contenant un gaz plus léger que l’air qui soutient une partie ou la totalité du poids d'un drone.
 \end{frame}
 
-\subsection{Drone}
-
-\begin{frame}{Modèle drone}
-  \begin{multicols}{2}
-    Drone XCSOURCE~: \\
-    \begin{itemize}
-      \item 290 mm diagonale~;
-      \item 190 mm longueur~;
-      \item 70 mm hauteur~;
-      \item moteur EMAX MT2204 2300KV Brushless Motor~;
-      \item Accu Lipo Gens Ace 2200Mah 11.1V 25C 3S~;
-      \item 450 g.
-    \end{itemize}
-    \newpage
-    \begin{center}
-      \includegraphics[width=6cm]{../Images/drone.JPG}
-    \end{center}
-    \captionof{figure}{Drone XCSOURCE.}
-  \end{multicols}
-\end{frame}
 
 \section{Élévation}
 
@@ -112,6 +86,14 @@
 	\end{tabular}
 
 \end{frame}
+
+
+\subsection{Dilatation}
+
+\begin{frame}{}
+ 
+\end{frame}
+
 
 \section{Ballon}
 
@@ -167,61 +149,25 @@
   Solution~: coller la couture sur le ballon.
 \end{frame}
 
-\begin{frame}{Tests de traction et pelage sur 401}
-   \begin{center}
-    \begin{tabular}{|c|c|}
-      \hline
-      Pelage & Cisaillement \\
-      \hline
-      $0.45 N.cm^{-2}$ & $12.1 N.cm^{-2}$ \\
-      \hline
-    \end{tabular}
-  \end{center}
-  \begin{center}
-    \includegraphics[width=5cm]{../Images/test_cisaillement.png}
-    \includegraphics[width=5cm]{../Images/test_pelage.png}
-  \end{center}
-\end{frame}
-
-\subsection{Volume}
-
-\begin{frame}{Bilan de masses et volume}
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Élément & Drone & Ballon & Total \\
-			\hline
-			Masse (en g) & 450 & 300 & 750 \\
-			\hline
-		\end{tabular}
-
-	\end{center}
-
-  Volume d'helium nécessaire~: $0.75 m^3$
-  
-  Volume des ballons~: $0.25 m^3$
-\end{frame}
-
-
 \subsection{Forme}
 
 \begin{frame}{Choix et calcule de la forme}
-	Forme composée de deux cones et d'un parallèpipéde central. Angle de $60\degree$ entre les ballons.
+	Forme composée de deux cones et d'un parallèpipéde central. 
 	\begin{center}
 		\includegraphics[width=6.5cm]{../Images/ballon.png}
 		\includegraphics[width=3.5cm, angle=90]{../Images/plan_ballon.png}
 	\end{center}
+
 \end{frame}
 
 
+\subsection{Protocole}
 
-\subsection{Assemblage}
-
-\begin{frame}{Assemblage des ballons}
+\begin{frame}{Protocole de construction}
 	\begin{tabular}{cc}
 		\includegraphics[width=5cm]{../Images/assen_1.JPG} &
-		\includegraphics[width=5cm]{../Images/assen_3.JPG} \\
-		\includegraphics[width=3cm]{../Images/assen_2.JPG} & \\
+		\includegraphics[width=3cm]{../Images/assen_2.JPG} \\
+		\includegraphics[width=5cm]{../Images/assen_3.JPG} & \\
 	\end{tabular}
 
 \end{frame}
@@ -248,8 +194,7 @@
  \begin{center}
 	Drone suspendu au milieu d'un gyroscope.
   \includegraphics[width=8cm]{../Images/structure0_0.jpg}
- \end{center}
- Incovénients~: lourd et complexe.
+ \end{center} 
 \end{frame}
 
 
@@ -260,7 +205,6 @@
 	Drone suspendu entre deux tétraèdres.
   \includegraphics[width=8cm]{../Images/structure1_0.PNG}
  \end{center}
- Avantages~: léger et simple.
 \end{frame}
 
 \begin{frame}
