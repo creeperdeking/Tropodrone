@@ -12,6 +12,7 @@
 \usepackage{amssymb}
 \usepackage{textcomp}
 \usepackage{pgf}
+\usepackage{pgfplots}
 \usepackage{tikz}
 \usepackage{pgfplots}
 \usepackage{capt-of}
@@ -19,6 +20,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[babel=true]{csquotes}
 \usepackage{gensymb}
+\usepackage{listings}
 
 % \setcounter{tocdepth}{4}
 
@@ -86,7 +88,7 @@ Un ballon de gaz est donc soumis à deux forces~: son poids et sa poussée d'Arc
 Où $\vv{F_{ballon}}$ est la force d'élévation du ballon en $N$, $\vv{P_{ballon}}$ le poids du ballon en $N$, $\vv{Fa_{ballon}}$ la poussée d'Archimède éxercée sur le ballon en $N$. \\
 
 Nous pouvons remarquer que si $P_{ballon} < Fa_{ballon}$ alors il existe une force d'élévation orienté vers le haut. De même cette force sera toujours  plus petite que la poussée d'Archimède éxercée sur le ballon, comme le ballon et le gaz possède toujours une masse~: $F_{ballon} < Fa_{ballon}$.
-Par la suite on appellera capacité d'élevation la masse que peut supporter la force d'élévation d'un ballon~:
+Par la suite nous appellerons capacité d'élevation la masse que peut supporter la force d'élévation d'un ballon~:
 \begin{center}
 	\boxed{Ca_{ballon} = \frac{F_{ballon}}{g}}
 \end{center}
@@ -157,6 +159,80 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 \subsubsection{Collage}
 
 \paragraph{Résistance}
+
+\subsection{Forme}
+
+Le tropodrone est composée de trois ballon de taille indentique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
+La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallépipède avec des pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
+
+\begin{center}
+ \includegraphics[width=8cm]{../Images/ballon.png}
+\end{center}
+
+\subsubsection{Calcul de la forme}
+
+D'après le bilan maximale des masses il faudrait contenir $0.75m^3$ d'helium dans l'ensemble des ballons. Nous partons donc de l'équation du volume pour retrouver les dimensions du ballon, heureusement des contraintes sont déjà présentes~:
+
+\begin{itemize}
+ \item la longueur du parallépipède central est de 1m~;
+ \item l'angle entre les arrètes du sommets de la pyramide et la base de la pyramide est de $60 \degree$~;
+ \item le volume du ballon est de $0.25m^3$.
+\end{itemize}
+
+\bigbreak
+
+Pour $b$ la largeur du ballon, la formule du volume d'un ballon se compose du volume d'un parallépipède d'un mètre~:
+
+\begin{center}
+ \boxed{V_{pa} = b^2}
+\end{center}
+
+Les deux pyramides ont un angle de $60 \degree$, leur hauteur est donc~: $\displaystyle{h = bidiagonale \times \tan{\frac{\pi}{3}}}$, où $\displaystyle{bidiagonale = \frac{\sqrt{b^2 \times 2}}{2}}$ la moitié de la diagonale de la base de la pyramide. \\
+Le volume d'une pyramide est donc~:
+
+\begin{center}
+ \boxed{V_{py} = b^2 \times \frac{h}{3}}
+\end{center}
+
+La formule du volume d'un ballon est la suivante~:
+
+\begin{center}
+	\boxed{\displaystyle{V = 2(\frac{\sqrt{2 \times b^2}}{2} \times \tan \frac{\pi}{3} \times \frac{1}{3} \times b^2) + b^2}} \\
+\end{center}
+
+Nous simplifions la formule jusqu'à trouver un polynome nous facilitant la résolution pour un valeur nulle~:
+
+\begin{center}
+  $\displaystyle{V = \frac{\sqrt{6}}{3} \times b^3 + b^2 }$ \\
+  $\displaystyle{b^3 \frac{\sqrt{6}}{3} + b^2 - 0.25 = 0}$
+\end{center}
+
+Malheureusement ce polynome est du troisième degrée, nous ne pouvons pas le résoudre aussi facilement qu'un polynome du second degrée, la methode la plus simple dans notre cas est d'utiliser le théorème des valeurs intermédiaires, notre fonction de volume est croissante (monome de plus haut degrée positif), continue et passant par zéro.
+
+\begin{tikzpicture}[scale=1.5]
+  \begin{axis}[
+		domain=-0.1:.6,
+    xlabel=$b$,
+    ylabel={$V = 2(\frac{\sqrt{6}}{3} \times b^3) + b^2$},
+    ytick={0, 0.25, 0.5, 0.75},
+    xtick={0, 0.25, 0.43, 0.5}
+  ] 
+		\addplot {((sqrt(6)/3) * x^3) + x^2};
+		\draw (axis cs:-0.1,0.25) -- (axis cs:0.43,0.25);
+		\draw (axis cs:0.43,0) -- (axis cs:0.43,0.25);
+\end{axis}
+\end{tikzpicture}
+
+\paragraph{Résolution par bisection}
+
+Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonant une fonction continue croissante ou décroissante dans un interval donné. Pour chaque interval un echantillon de la valeur intermédiare est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'interval est réduite jusqu'à la valeur intérmédiare, dans la cas contraire où la valeur intermédiare est plus petite que la valeur souhaité, la borne inférieur de l'interval est augmenté jusqu'à la valeur intérmédiare.
+\medbreak
+Le programme python procédant à cette bisection est le suivant~:
+
+\lstset{language={Python}}
+\lstinputlisting{../Ballons/Programmes/diametreBallonLatex.py}
+
+
 
 \subsection{Structure}
 
