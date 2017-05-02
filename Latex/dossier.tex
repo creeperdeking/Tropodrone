@@ -47,6 +47,14 @@
 \subsection{Contraintes}
 
 \subsubsection{Légalité}
+Faute de juridiction quant aux appareils volants de ce type, nous nous sommes rabattus sur les contraintes légales imposées aux drones et aux ballons séparément.\\
+\begin{itemize}
+	\item Notre drone est de catégorie A~:\\
+		Il n'est soumis à aucune contrainte de vol, outre les mesures de sécurité élémentaires.
+	\item Le ballon entre dans la catégorie « léger ».\\
+		La ficelle supportant la charge utile doit casser au-dessous de 23 kg.
+		Suite à des tests, la ficelle qui servira à tenir nos ballons se rompt à une tension comprise entre 15 et 20 kg.
+\end{itemize}
 
 \subsubsection{Drone}
 
@@ -178,7 +186,9 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 \subsection{Problème des ballons}
 	3 BALLONS DE 0.25 m² CHACUN PUTAIN :pleure\\
 	Nous devons prendre en compte 3 ballons de 0.25 m², ce qui représente un volume considérable.\\
-	(...)
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/portance.jpg}
+	\end{center}
 \subsubsection{Optimisation avec la forme en triangle}
 	La forme en triangle que nous vous avons présenté précédemment (LIEN CHAP. STRUCTURE) présente de nombreux avantages.
 	\\
@@ -204,7 +214,9 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
   \end{itemize}
 
 	Notre travail a donc été de déterminer Cx afin de résoudre l'équation.
-\subsubsection{Calcul du Cx pour une sphère}
+\subsubsection{Calcul du Cx}
+
+\paragraph{Pour une sphère}
 	Nous avons dans un premier temps essayé de calculer le Cx à la main, en prenant la seule approximation dont nous avions les données : le Cx d'une sphère.\\
 	Celui-ci se calcule en fonction du nombre de Reynolds, qui définit le type d'écoulement auquel est soumis la structure :
 	\begin{center}
