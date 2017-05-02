@@ -224,7 +224,7 @@ Malheureusement ce polynome est du troisième degrée, nous ne pouvons pas le r�
     ylabel={$V = 2(\frac{\sqrt{6}}{3} \times b^3) + b^2$},
     ytick={0, 0.25, 0.5, 0.75},
     xtick={0, 0.25, 0.43, 0.5}
-  ] 
+  ]
 		\addplot {((sqrt(6)/3) * x^3) + x^2};
 		\draw (axis cs:-0.1,0.25) -- (axis cs:0.43,0.25);
 		\draw (axis cs:0.43,0) -- (axis cs:0.43,0.25);
@@ -306,7 +306,10 @@ Le programme python procédant à cette bisection est le suivant~:
    \item $\micro$ la viscosité cinématique du fluide~;
   \end{itemize}
 	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
-	\\
+
+	\lstset{language={Python}}
+	\lstinputlisting{../Aerodynamisme/Programmes/calculTrainee.py}
+
 	Toutefois, cette approximation n'était pas vraiment précise, et n'ayant pû mettre la main sur la soufflerie, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation.
 \paragraph{Simulation SW}
 	L'avantage de Solidworks est qu'il est très précis et qu'il est facile de déterminer le Cx dans plusieurs positions.\\
