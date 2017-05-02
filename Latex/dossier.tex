@@ -43,10 +43,48 @@
 \section{Introduction}
 
 \subsection{Besoins}
+Notre projet part d'un constat: Les drones sont amenés à se développer fortement dans les années à venir, notamment avec les services d'Amazon de livraison. Dans ce cadre, nous voulions apporter une amélioration significative pour répodre aux problématiques suivantes:
+\begin{itemize}
+	\item Autonomie: \\
+		Les drones, particulièrement les drones quadricoptères de petite envergure possèdent une assez faible autonomie, ce qui réduit leur rayon d'action ainsi que la charge utile qu'ils peuvent supporter.
+	\item Sécurité: \\
+		Les drones sont des dangers, pour eux mêmes comme pour leur environnement. Les drones peuvent souffrir de problèmes techniques (comme la perte de batterie) et tomber en vol. On devine les dangers qu'apportent ce genre de situation. Il faut donc qu'il reste en l'air même sans batterie. De plus, les drones rentrent parfois dans des obstacles, et les dégâts peuvent vite revenir cher. Il faut donc protéger le drone.
 
-\subsection{Applications}
+\subsection{Notre projet}
+Notre projet part de ces constats pour aboutir à une solution, novatrice, qui n'a pas de concurrence sur le marché: Proposer un hybride entre un drone et un petit dirigeable, qui offre aux passionnés et aux petites bourses une structure qui permette d'augmenter un petit drone quadricoptère de 25 cm d'envergure.
 
 \subsection{Contraintes}
+Nous avons définits des besoins, de ces besoins découlent des contraintes. Ces contraintes sont:
+\begin{itemize}
+	\item Autonomie
+		Avoir une autonomie supérieure à celle du drone, avec comme sans charge utile.
+	\item Maneuvrabilité
+	\begin{itemize}
+		\item Ballons:
+			Avoir des ballons étanches à l'hélium, qui le retiennent a moins trois jours avec des pertes de l'ordre de 30%
+		\item Retenir le drone:
+			La structure doit entacher au minimum les déplacements possibles du drone, en terme de rotation et de translation.
+		\item Navigation:
+			Le drone doit pourvoir naviguer sur un interval de 30 mètre de hauteur.
+	\end{itemize}
+	\item Sécurité
+		\item Structure:
+			Faire une structure qui enveloppe le drone et le protège des chocs.
+		\item Sustentation:
+			Faire un ballon qui évite que le drone ne tombe de manière dangeureuse en cas de problème technique.
+\end{itemize}
+
+\subsection{Applications}
+Pour répondre à ses contraintes, nous avons mis en place ces solutions:
+\begin{itemize}
+	\item Ballons:
+		Nous utilisons trois ballons de 25 m cubes de contenance pour retenir le poids d'un drone de 750g, ce qui permet d'éviter qu'il ne tombe.
+	\item Structure:
+		Les ballons sont positionnés de sortes que leur centre de gravité coincide avec celui du drone, pour plus de stabilité.
+		Le drone est relié à la structure par deux fils, ce qui lui laisse une grande liberté de mouvements.
+		Les ballons, disposés autour du drone le protègent des chocs.
+\end{itemize}
+
 
 \subsubsection{Légalité}
 Faute de juridiction quant aux appareils volants de ce type, nous nous sommes rabattus sur les contraintes légales imposées aux drones et aux ballons séparément.\\
@@ -306,10 +344,7 @@ Le programme python procédant à cette bisection est le suivant~:
    \item $\micro$ la viscosité cinématique du fluide~;
   \end{itemize}
 	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
-
-	\lstset{language={Python}}
-	\lstinputlisting{../Aerodynamisme/Programmes/calculTrainee.py}
-
+	\\
 	Toutefois, cette approximation n'était pas vraiment précise, et n'ayant pû mettre la main sur la soufflerie, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation.
 \paragraph{Simulation SW}
 	L'avantage de Solidworks est qu'il est très précis et qu'il est facile de déterminer le Cx dans plusieurs positions.\\
