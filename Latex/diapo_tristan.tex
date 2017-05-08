@@ -1,0 +1,319 @@
+\input{diapo_general.tex}
+
+\section{Calculs d'élévation}
+
+\subsection{Poussé d'archimède}
+
+\begin{frame}{Définition}
+  \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
+  \bigbreak
+  \begin{center}
+    \boxed{\vv{Pa} = -M_F \times \vv{g}}
+  \end{center}
+  \begin{itemize}
+    \item $\vv{Pa}$~: la poussé d'archimède~;
+    \item $M_F$~: la masse du fluide contenue dans le volume déplacé~;
+    \item $\vv{g}$~: la valeur du champ de pesanteur.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Application aux gaz}
+  Deux forces appliquées sur le ballon~: \\
+  \begin{center}
+    $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Pa_{ballon}}}$ \\
+  \end{center}
+  Si $P_{ballon} < Pa_{ballon}$ la force d'élévation est~:
+  \begin{center}
+    $\displaystyle{F_{ballon} = Pa_{ballon} - P_{ballon}}$ \\
+  \end{center}
+  Remarque~:\\
+  \begin{center}
+    $F_{ballon} < Pa_{ballon}$
+  \end{center}
+\end{frame}
+
+\begin{frame}{Hydrogène et hélium}
+	\begin{center}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Gaz & Air & Hydrogène & Hélium \\
+			\hline
+			Masse Volumique $(kg.m^3)$ & 1.29 & 0.08988 & 0.1785 \\
+			\hline
+			Force d'élévation $(N.m^3)$ & 0 & 11.77 & 10.90 \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{frame}
+
+
+\subsection{Dilatation des gaz}
+
+\begin{frame}{Loi de Charles}
+  \begin{center}
+    \boxed{\displaystyle{\frac{V_1}{T_1} = \frac{V_2}{T_2} = f(P, n)}} \\
+    $\displaystyle{V_3 = f(P, n) \times T_3}$
+  \end{center}
+  Avec~:
+  \begin{itemize}
+    \item $V_q$~: volume du gaz en $m^3$ à la température $T_q$ en K~;
+    \item $P$~: pression du gaz en Pa~;
+    \item $n$~: quantité de matière en mol~;
+    \item $f(P, n)$~: rapport constant entre volume et température.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Application à l'hélium}
+  Volume molaire de l'hélium~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273.25K$.
+  \begin{center}
+    $\displaystyle{f(P, n) = \frac{22.414\times 10^{-3}}{273.25} = 8.2\times 10^{-5} m^3.mol^{-1}.K^{-1}}$
+  \end{center}
+  Pour $T_{200} = 200 \degree C = 473.25 K$~:
+  \begin{center}
+    $\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} * 473.25 = 38.811 \times 10^{-3}} m^3.mol^{-1}$
+  \end{center}
+  Augmentation du volume de $1.59$.
+\end{frame}
+
+\begin{frame}{Résultat de la poussé d'archimède}
+  \begin{center}
+    $\displaystyle{F_{T_0} = Pa_{air} - P_{helium} = 10.90 N}$
+    \bigbreak
+    $\displaystyle{F_{T_{200}} = Pa_{air} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
+  \end{center}
+  Les resultats sont négligables. $F < Pa_{air}$
+\end{frame}
+
+
+\section{Ballon}
+
+\subsection{Modèle de ballon}
+
+\begin{frame}
+	\begin{itemize}
+		\item centre de gravité du drone et du ballon confondues~: pas de balancement~;
+		\item ensemble de trois ballons répartis en triangle~;
+		\item forme rigide~: control de l'aérodynamisme.
+	\end{itemize}
+\end{frame}
+
+
+\subsection{Contenance}
+
+\begin{frame}{Bilan des masses et volumes}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Élément & Drone & Ballon & Total (avec marge) \\
+			\hline
+			Masse (en g) & 450 & 250 & 750 \\
+			\hline
+		\end{tabular}
+
+	\end{center}
+
+  Volume d'helium nécessaire~: $0.75 m^3$
+  
+  Volume des ballons~: $0.25 m^3$
+\end{frame}
+
+\subsection{Forme}
+
+\begin{frame}
+  Les ballon sont formés d'un parallèlépipède de longueur 1m avec deux pyramides d'angle $60\degree$. Orientation horizontale de $45\degree$ \\
+  \begin{center}
+    \includegraphics[width=7cm]{../Images/ballon.png}
+    \includegraphics[width=4cm]{../Images/ballon3.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Calcul des dimensions}
+  Volume ballon~: volume de deux pyramides avec un parallèlépipède~:
+  \begin{center}
+	\boxed{\displaystyle{V = 2(\frac{\sqrt{2 \times b^2}}{2} \times \tan \frac{\pi}{3} \times \frac{1}{3} \times b^2) + b^2}} \\
+	$\displaystyle{V = \frac{\sqrt{6}}{3} \times b^3 + b^2 }$ \\
+	$\displaystyle{b^3 \frac{\sqrt{6}}{3} + b^2 - 0.25 = 0}$
+  \end{center}
+  Où $b$ est la largeur du parallèlépipède. \\
+  Polynome du troisième degrée, résolution par bissection ou dichotomie.
+\end{frame}
+
+\begin{frame}[fragile]{Résolution par bissection}
+  \begin{lstlisting}[frame=single]
+etape = 1
+largeur = 1
+vol = volume(largeur)
+cible = 0.25
+epsilon = 1e-4
+while abs(vol - cible) > epsilon:
+	if vol < cible:
+		largeur += etape
+	else:
+		largeur -= etape
+	etape /= 2
+	vol = volume(largeur)
+
+print("volume = %f, diametre = %f" % (vol, largeur))
+  \end{lstlisting}
+\end{frame}
+
+\begin{frame}{Patron du ballon}
+  \begin{center}
+    \includegraphics[width=6.5cm, angle=270]{../Images/plan_ballon.png}
+  \end{center}
+  Marge de 5cm pour le collage des coutures.
+\end{frame}
+
+\subsection{Enveloppe}
+
+\begin{frame}
+	\begin{tabular}{|l|p{0.35\linewidth}|p{0.35\linewidth}|}
+		\hline
+		Matériaux & Avantages & Inconvénients \\
+		\hline
+
+		\rowcolor{OrangeT}
+		Latex &
+		Facile à trouver dans le commerce &
+		Seulement en forme sphérique~; peu étanche \\
+		\hline
+
+		\rowcolor{RedT}
+		Hypalon & Étanche & Introuvable dans le commerce~; fragile aux ultraviolets \\
+		\hline
+
+		\rowcolor{GreenT}
+		Mylar &
+		Facile à trouver dans le commerce~; résistant à la traction~; peut être assemblé~; léger~: $17 g.m^{-2}$ &
+		Raide~; fragile au cisaillement et à la perforation \\
+		\hline
+
+		\rowcolor{RedT}
+		Chloroprène &
+		& Introuvable dans le commerce \\
+		\hline
+
+		\rowcolor{RedT}
+		Butyle &
+		& Introuvable dans le commerce \\
+		\hline
+	\end{tabular}
+\end{frame}
+
+\subsection{Collage}
+
+\begin{frame}
+	\begin{tabular}{|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|}
+		\hline
+		Colle & Avantages & Inconvénients \\
+		\hline
+
+		\rowcolor{OrangeT}
+		Néoprène (Polychloroprène) &
+		Étanche, élastique, adhèrent &
+		Difficile à appliquer \\
+		\hline
+
+		\rowcolor{OrangeT}
+		406 (cyanoacrylate d'ethyle) et 770 (primaire) &
+		Adhèrent, rigide, facile à appliquer &
+		Fragile à l'eau \\
+		\hline
+
+		\rowcolor{GreenT}
+		401 (cyanoacrylate d'ethyle) et 770 (primaire) &
+		Très adhèrent, rigide, facile à appliquer &
+		Fragile à l'eau \\
+		\hline
+
+		\rowcolor{RedT}
+		330 et activateur &
+		Élastique &
+		Peu adhèrent \\
+		\hline
+
+		\rowcolor{RedT}
+		Polyester &
+		Polymérisation avec catalyseur &
+		Peu adhèrent \\
+		\hline
+		
+		\rowcolor{RedT}
+		Polyuréthane &
+		& Peu adhèrent \\
+		\hline
+
+		\rowcolor{RedT}
+		Acétone &
+		& Peu adhèrent \\
+		\hline
+		
+		\rowcolor{RedT}
+		Vinylique &
+		Facile à appliquer &
+		Peu adhèrent, temps de sechage trop long \\
+		\hline
+
+		\rowcolor{RedT}
+		Acrylique &
+		Facile à appliquer &
+		Peu adhèrent \\
+		\hline
+
+	\end{tabular}
+\end{frame}
+
+\subsection{Performance d'un collage}
+
+\begin{frame}{Contrainte d'une colle}
+  Différents types de contraintes sur une colle:
+  \begin{center}
+    \includegraphics[width=10cm]{../Images/colle_contraintes.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Problème du collage}
+  Collage du ballon extérieur~: contrainte de pelage, pire situation.
+  \begin{figure}
+    \centering
+    \includegraphics[width=5cm]{../Images/colle_pelage.png}
+    \includegraphics[width=5cm]{../Images/colle_cisaillement.png}
+    \caption{À gauche collage favorisant une contrainte de pellage, à droite collage favorisant une contrainte de cisaillement}
+  \end{figure}
+  Solution~: coller la couture sur le ballon.
+\end{frame}
+
+\begin{frame}{Tests traction 401 (cyanoacrylate)}
+  \begin{figure}[!t]
+    \centering
+    \includegraphics[width=4.5cm]{../Images/test_cisaillement.png}
+    \includegraphics[width=4.5cm]{../Images/test_pelage.png}
+    
+    \caption{À gauche~: test de cisaillement, rupture du substrat. À droite~: test de pellage, rupture du collage}
+  \end{figure}
+  Résultat des tests de traction~:
+  \begin{center}
+    \begin{tabular}{|c|c|}
+      \hline
+      Pelage & Cisaillement \\
+      \hline
+      $0.45 N.cm^{-2}$ & $12.1 N.cm^{-2}$ \\
+      \hline
+    \end{tabular}
+  \end{center}
+  Augmentation de la résistance de $\times 27$.
+\end{frame}
+
+
+\subsection{Assemblage ballon}
+
+\begin{frame}
+	\begin{tabular}{cc}
+		\includegraphics[width=5cm]{../Images/assen_0.JPG} & \includegraphics[width=5cm]{../Images/assen_1.JPG} \\
+		\includegraphics[width=5cm]{../Images/assen_2.JPG} & \includegraphics[width=5cm]{../Images/assen_3.JPG} \\
+	\end{tabular}
+
+\end{frame}
+
+
+\end{document}

@@ -1,6 +1,8 @@
 *.blend1
 *.blend2
 
+*.backup
+*.vrb
 *.aux
 *.log
 *.nav

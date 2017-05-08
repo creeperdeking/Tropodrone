@@ -1,0 +1,96 @@
+\documentclass{beamer}
+
+\usepackage{gensymb}
+\input{entete_beamer_pdflatex}
+\usepackage{listings}
+\usepackage[babel=true]{csquotes}
+\lstset{language=Python, tabsize=2, breaklines=true, showstringspaces=false}
+
+\definecolor{RedT}{rgb}{1, .7, .7}
+\definecolor{GreenT}{rgb}{.7, 1, .7}
+\definecolor{OrangeT}{rgb}{1, 1, .7}
+
+\useoutertheme{infolines}
+\setbeamersize{text margin left=1cm,text margin right=1cm}
+
+\title{Rapport de projet de SI}
+\subtitle{Tropodrone}
+\author{Gueydan Noé, Manceau Thibaut, Gros Alexis, Porteries Tristan}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Sommaire}
+    \begin{multicols}{2}
+      {
+		\setcounter{tocdepth}{1}
+        \tableofcontents
+      }
+    \end{multicols}
+\end{frame}
+
+\section{Courte présentation}
+
+\subsection{But du projet}
+\begin{frame}{But du projet}
+ Créer une structure composée de ballons contenant un gaz plus léger que l’air qui soutient une partie ou la totalité du poids d'un drone.
+\end{frame}
+
+
+\subsection{Objectifs}
+\begin{frame}{Objectifs}
+ Augmenter l’autonomie, la sécurité et les possibilités d’un drone de petite taille
+\end{frame}
+
+
+\subsection{Contraintes imposées au projet}
+\begin{frame}{Contraintes imposées au projet}
+  \begin{itemize}
+    \item être simple d’utilisation, garder la manœuvrabilité du drone au possible, voler le plus longtemps possible~;
+    \item consommer le moins d’énergie possible, ne pas présenter de danger pour le public et économiser le gaz et les matériaux de fabrication~;
+    \item le modèle du drone imposé~;
+    \item rayon d’action de minimum 15 mètres~;
+    \item ballon de type dirigeable.
+  \end{itemize}
+\end{frame}
+
+\subsection{Contraintes légales supplémentaires}
+\begin{frame}{Contraintes légales supplémentaires}
+  \begin{itemize}
+    \item 1~: Le drone \\
+	    catégorie A~: limitations non contraignantes~;
+    \item 2~: Le ballon \\
+	    catégorie « Léger » \\
+	    la ficelle supportant la charge doit casser au dessus de 23 kg.
+ \end{itemize}
+\end{frame}
+
+
+\section{Drone}
+
+\subsection{Modèle}
+
+\begin{frame}
+  \begin{multicols}{2}
+    Drone XCSOURCE~: \\
+    \begin{itemize}
+      \item 290 mm diagonale~;
+      \item 190 mm longueur~;
+      \item 70 mm hauteur~;
+      \item moteur EMAX MT2204 2300KV Brushless Motor~;
+      \item Accu Lipo Gens Ace 2200Mah 11.1V 25C 3S~;
+      \item 450 g.
+    \end{itemize}
+    \newpage
+    \begin{center}
+      \includegraphics[width=6cm]{../Images/drone.JPG}
+    \end{center}
+    \captionof{figure}{Drone XCSOURCE.}
+  \end{multicols}
+\end{frame}
+
+
