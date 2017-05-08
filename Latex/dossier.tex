@@ -232,7 +232,35 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 
 \subsubsection{Collage}
 
+Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller des jointures prevus à cette effet. Nous utilisons un collage au lieu d'un thermo collage car ce dernier est plus compliqué à mettre en oeuvre, en effet le thermo collage nécessite un appareil spécifique, il produit de très mauvaise jointure ci le la feuille de PET est froissé, là ou la colle pourrais agir comme un mastique.
+
+
+
+
+Les jointure de collage sont collées par l'exterieur pour pouvoir ajuster sans diffcultés les deux bordures du collages. Malheureusement ce collage exterieur contraint la colle a un pelage, cette contrainte étant la pire pour la mojorité des colles.
+
 \paragraph{Résistance}
+
+Les différentes contraintes d'un collages sont décrites dans le tableau suivant~:
+\begin{center}
+ \includegraphics[width=15cm]{../Images/colle_contraintes.png}
+\end{center}
+
+La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remedier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisé en collant la jointure sur la un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
+
+\begin{center}
+ \includegraphics[width=7cm]{../Images/colle_cisaillement.png}
+ \includegraphics[width=7cm]{../Images/colle_pelage.png}
+\end{center}
+
+Deux tests de traction on alors était produit en pressant et collant deux feuilles de PET dans des planches en bois servant de support à la traction, ensuite les deux feuilles de PET étaient collé entre elle avec chacune des technique de collage.
+
+\begin{center}
+ \includegraphics[width=7cm]{../Images/test_pelage.png}
+ \includegraphics[width=7cm]{../Images/test_cisaillement.png}
+\end{center}
+
+% A finir.
 
 \subsection{Forme}
 
@@ -299,7 +327,7 @@ Malheureusement ce polynome est du troisième degrée, nous ne pouvons pas le r�
 
 \paragraph{Résolution par bisection}
 
-Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonant une fonction continue croissante ou décroissante dans un interval donné. Pour chaque interval un echantillon de la valeur intermédiare est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'interval est réduite jusqu'à la valeur intérmédiare, dans la cas contraire où la valeur intermédiare est plus petite que la valeur souhaité, la borne inférieur de l'interval est augmenté jusqu'à la valeur intérmédiare.
+Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonant une fonction continue croissante ou décroissante dans un interval donné. Pour chaque interval un echantillon de la valeur intermédiare est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'interval est réduite jusqu'à la valeur intérmédiare, dans la cas contraire où la valeur intermédiare est plus petite que la valeur souhaité, la borne inférieur de l'interval est augmenté jusqu'à la valeur intérmédiare. Chacune des modifications d'interval en crée un nouveau deux fois plus petit.
 \medbreak
 Le programme python procédant à cette bisection est le suivant~:
 
