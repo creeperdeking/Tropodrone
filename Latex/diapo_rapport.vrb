@@ -14,4 +14,4 @@ etape /= 2
 vol = volume(largeur)
 
 print("volume = %f, diametre = %f" % (vol, largeur))
-  \end{lstlisting}
+\end{lstlisting}

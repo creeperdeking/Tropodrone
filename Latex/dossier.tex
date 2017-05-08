@@ -43,62 +43,89 @@
 \section{Introduction}
 
 \subsection{Besoins}
-Notre projet part d'un constat: Les drones sont amenés à se développer fortement dans les années à venir, notamment avec les services d'Amazon de livraison. Dans ce cadre, nous voulions apporter une amélioration significative pour répodre aux problématiques suivantes:
+Notre projet part d'un constat: Les drones sont amenés à se développer fortement dans les années à venir, par exemple avec les services de livraison d'Amazon. Dans ce cadre, nous voulions apporter une amélioration significative pour répondre aux problématiques suivantes:
 \begin{itemize}
 	\item Autonomie: \\
 		Les drones, particulièrement les drones quadricoptères de petite envergure possèdent une assez faible autonomie, ce qui réduit leur rayon d'action ainsi que la charge utile qu'ils peuvent supporter.
 	\item Sécurité: \\
-		Les drones sont des dangers, pour eux mêmes comme pour leur environnement. Les drones peuvent souffrir de problèmes techniques (comme la perte de batterie) et tomber en vol. On devine les dangers qu'apportent ce genre de situation. Il faut donc qu'il reste en l'air même sans batterie. De plus, les drones rentrent parfois dans des obstacles, et les dégâts peuvent vite revenir cher. Il faut donc protéger le drone.
-\end{itemize}	
+		Les drones sont des dangers, pour eux mêmes comme pour leur environnement. Les drones peuvent souffrir de problèmes techniques (comme la perte de batterie) et tomber en vol. On devine les dangers inhérents à ce genre de situation. De plus, les drones rentrent parfois dans des obstacles, et les dégâts peuvent vite revenir cher.
+\end{itemize}
 
 \subsection{Notre projet}
-Notre projet part de ces constats pour aboutir à une solution, novatrice, qui n'a pas de concurrence sur le marché: Proposer un hybride entre un drone et un petit dirigeable, qui offre aux passionnés et aux petites bourses une structure qui permette d'augmenter un petit drone quadricoptère de 25 cm d'envergure.
+Notre projet part de ces constats pour aboutir à une solution, novatrice, qui n'a pas de concurrence sur le marché~: proposer aux pilotes amateurs et aux industriels un hybride entre un drone et un petit dirigeable à travers une structure qui permette d'augmenter un petit drone quadricoptère de 25 cm d'envergure.
 
 \subsection{Contraintes}
-Nous avons définits des besoins, de ces besoins découlent des contraintes. Ces contraintes sont:
+Nous avons défini des besoins, de ces besoins découlent des contraintes. Ces contraintes sont:
 \begin{itemize}
-	\item Autonomie
-		Avoir une autonomie supérieure à celle du drone, avec comme sans charge utile.
-	\item Maneuvrabilité
-	\begin{itemize}
-		\item Ballons:
-			Avoir des ballons étanches à l'hélium, qui le retiennent a moins trois jours avec des pertes de l'ordre de 30%
-		\item Retenir le drone:
-			La structure doit entacher au minimum les déplacements possibles du drone, en terme de rotation et de translation.
-		\item Navigation:
-			Le drone doit pourvoir naviguer sur un interval de 30 mètre de hauteur.
+	\item Autonomie~:
+		\begin{itemize}
+			\item Du drone~:\\
+			Avoir une autonomie supérieure à celle du drone, avec comme sans charge utile.
+			\item Des ballons~:\\
+			Avoir des ballons "étanches" à l'hélium, c'est à dire qui le retiennent au moins trois jours avec des pertes de l'ordre de 30\%.
+		\end{itemize}
+	\item Sécurité~:
+		\begin{itemize}
+			\item Structure~:\\
+				Faire une structure qui enveloppe le drone et le protège des chocs.
+			\item Sustentation~:\\
+				Éviter que le drone ne tombe de manière dangeureuse en cas de problème technique.
+		\end{itemize}
 	\end{itemize}
-	\item Sécurité
-		\item Structure:
-			Faire une structure qui enveloppe le drone et le protège des chocs.
-		\item Sustentation:
-			Faire un ballon qui évite que le drone ne tombe de manière dangeureuse en cas de problème technique.
-\end{itemize}
+	Afin que le drone reste manoeuvrable malgré sa structure, nous nous sommmes également fixé des contraintes de manoeuvrabilité~:
+	\begin{itemize}
+		\item Maneuvrabilité~:
+			\begin{itemize}
+				\item Retenir le drone~:\\
+					La structure doit entacher au minimum les déplacements possibles du drone, en rotation comme en translation.
+				\item Navigation~:\\
+					Le drone doit pourvoir naviguer sur un interval de 15 mètres de hauteur.
+			\end{itemize}
+	\end{itemize}
 
 \subsection{Applications}
 Pour répondre à ses contraintes, nous avons mis en place ces solutions:
 \begin{itemize}
-	\item Ballons:
-		Nous utilisons trois ballons de 25 m cubes de contenance pour retenir le poids d'un drone de 750g, ce qui permet d'éviter qu'il ne tombe.
-	\item Structure:
-		Les ballons sont positionnés de sortes que leur centre de gravité coincide avec celui du drone, pour plus de stabilité.
-		Le drone est relié à la structure par deux fils, ce qui lui laisse une grande liberté de mouvements.
-		Les ballons, disposés autour du drone le protègent des chocs.
+	\item Ballons~:\\
+		Nous utilisons trois ballons de 25m3 de contenance pour retenir le poids d'un drone de 750g, ce qui permet de très fortement ralentir sa chute.
+	\item Structure~:
+		\begin{itemize}
+			\item Les ballons sont positionnés de sorte que leur centre de gravité coïncide avec celui du drone, pour plus de stabilité~;
+			\item Le drone est relié à la structure par deux fils, ce qui lui laisse une grande liberté de mouvements~;
+			\item Les ballons, disposés autour du drone, le protègent des chocs.
+		\end{itemize}
 \end{itemize}
 
 
 \subsubsection{Légalité}
 Faute de juridiction quant aux appareils volants de ce type, nous nous sommes rabattus sur les contraintes légales imposées aux drones et aux ballons séparément.\\
 \begin{itemize}
-	\item Notre drone est de catégorie A~:\\
-		Il n'est soumis à aucune contrainte de vol, outre les mesures de sécurité élémentaires.
-	\item Le ballon entre dans la catégorie « léger ».\\
+	\item Notre drone est de catégorie A (- de 25 kg)~:\\
+		Il n'est soumis à aucune contrainte qui nous limiterait dans le choix de nos solutions techniques, ou qui limiterait nos objectifs.
+		Cependant, nous restons soumis aux mesures de sécurité élémentaires (ne pas trop s'approcher durant la phase de décollage et d'atterissage, ne pas survoler les terrains militaires...).
+	\item Le ballon entre dans la catégorie « léger »~:\\
 		La ficelle supportant la charge utile doit casser au-dessous de 23 kg.
 		Suite à des tests, la ficelle qui servira à tenir nos ballons se rompt à une tension comprise entre 15 et 20 kg.
 \end{itemize}
 
 \subsubsection{Drone}
+\begin{multicols}{2}
+	Drone XCSOURCE~: \\
+	\begin{itemize}
+		\item 290 mm diagonale~;
+		\item 190 mm longueur~;
+		\item 70 mm hauteur~;
+		\item moteur EMAX MT2204 2300KV Brushless Motor~;
+		\item Accu Lipo Gens Ace 2200Mah 11.1V 25C 3S~;
+		\item 450 g.
+	\end{itemize}
+	\begin{center}
+		\includegraphics[width=6cm]{../Images/drone.JPG}
+	\end{center}
+	\captionof{figure}{Drone XCSOURCE.}
+\end{multicols}
 
+\newpage
 
 \section{Étude de conception}
 
@@ -293,44 +320,52 @@ Le programme python procédant à cette bisection est le suivant~:
 
 \paragraph{2ème modèle}
 
+\newpage
 
 \section{Aérodynamisme}
 	Notre but a été dans cette partie de chercher une solution technique permettant de réduire la force de traînée que le drone subira quand il se déplacera, et quand il subira l'effet du vent. \\
 	Il nous manquait de nombreuses notions en aérodynamisme, que nous avons pû rapidement acquérir grâce au TPE d'élèves de notre classe qui ont fait un remarquable travail sur le sujet, et grâce à un professeur de Prépa qui nous a consacré un peu de son temps.\\
 	Nous les remercions ici.
-\subsection{Problème des ballons}
-	3 BALLONS DE 0.25 m² CHACUN PUTAIN :pleure\\
-	Nous devons prendre en compte 3 ballons de 0.25 m², ce qui représente un volume considérable.\\
+\subsection{Équation de trainée}
 	\begin{center}
 		\includegraphics[width=5cm]{../Images/portance.jpg}
 	\end{center}
-\subsubsection{Optimisation avec la forme en triangle}
-	La forme en triangle que nous vous avons présenté précédemment (LIEN CHAP. STRUCTURE) présente de nombreux avantages.
-	\\
-	Le premier est qu'elle permet de créer un couloir dans lequel le vent s'engouffre ; cette forme permet de réduire la force de traînée et a l'avantage de ne présenter aucune position dans laquelle le vent aurait un trop grand effet.
-	De plus, nous avons trouvé une solution technique permettant de profiter de ce couloir d'air le plus souvent possible : installer un gouvernail.
-\subsubsection{Gouvernail}
-	[IMAGE SW]
-	Le gouvernail nous permet d'orienter les ballons en fonction de la direction du drone, ce qui force la structure a garder une position théoriquement plus favorable que les autres.
-	Nous pouvons faire une analogie avec les différentes conformations d'une molécule : le gouvernail nous permet de garder la position la moins dépensière d'énergie.\\
-	\\
-  Cette solution a toutefois un désavantage : elle réduit la manoeuvrabilité immédiate du drone en faisant apparaître une force supplémentaire. Toutefois, nos calculs montreront que cette force est négligeable en comparaison du gain.
-\subsection{Équation de trainée}
-	La force de traînée est matérialisée par l'équation\\
+	La force de traînée, qui représente la résistance au mouvement, est matérialisée par l'équation~:\\
   \begin{center}
    \boxed{\displaystyle{F = \frac12 \times \rho \times S \times Cx \times V^2}}
   \end{center}
   Avec~:
   \begin{itemize}
    \item $\rho$ la masse volumique du fluide dans lequel a lieu le déplacement en $kg.m^{-3}$~;
-   \item S la surface~;
+   \item S la surface soumise au flux d'air~;
    \item Cx le coefficient de traînée~;
    \item V la vitesse relative du mobile par rapport au fluide en $m.s^{-1}$.
   \end{itemize}
 
-	Notre travail a donc été de déterminer Cx afin de résoudre l'équation.
-\subsubsection{Calcul du Cx}
+		Notre travail a donc été de déterminer Cx afin de résoudre l'équation.
+\subsection{Optimisations techniques}
+\subsubsection{Problème des ballons}
+	3 ballons de 0.25 m³ créent une surface soumise au flux d'air conséquente.\\
+	De plus, suivant la position des ballons, le coefficient Cx sera plus ou moins conséquent.\\
+	\\
+	Il nous faut donc trouver une forme favorable, c'est à dire réduisant la surface et ayant un faible coefficient de traînée.
 
+\subsubsection{La forme en triangle}
+	La forme en triangle que nous vous avons présenté précédemment (LIEN CHAP. STRUCTURE) présente de nombreux avantages.
+	\\
+	Le premier est qu'elle permet de créer un couloir dans lequel le vent s'engouffre ; cette forme permet de réduire la force de traînée et a l'avantage de ne présenter aucune position dans laquelle le vent aurait un trop grand effet.
+	De plus, nous avons trouvé une solution technique permettant de profiter de ce couloir d'air le plus souvent possible : installer un gouvernail.
+\subsubsection{Gouvernail}
+	\begin{center}
+		\includegraphics[width=14cm]{../Images/Capture.PNG}
+	\end{center}
+	Le gouvernail nous permet d'orienter les ballons en fonction de la direction du drone, ce qui force la structure a garder une position théoriquement plus favorable que les autres.
+	Nous pouvons faire une analogie avec les différentes conformations d'une molécule : le gouvernail nous permet de garder la position la moins dépensière d'énergie.\\
+	\\
+  Cette solution a toutefois un désavantage : elle réduit la manoeuvrabilité immédiate du drone en faisant apparaître une force supplémentaire. Toutefois, nos calculs montreront que cette force est négligeable en comparaison du gain sur de longues distances.
+
+
+\subsection{Calcul du Cx}
 \paragraph{Pour une sphère}
 	Nous avons dans un premier temps essayé de calculer le Cx à la main, en prenant la seule approximation dont nous avions les données : le Cx d'une sphère.\\
 	Celui-ci se calcule en fonction du nombre de Reynolds, qui définit le type d'écoulement auquel est soumis la structure :
@@ -349,8 +384,12 @@ Le programme python procédant à cette bisection est le suivant~:
 	Toutefois, cette approximation n'était pas vraiment précise, et n'ayant pû mettre la main sur la soufflerie, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation.
 \paragraph{Simulation SW}
 	L'avantage de Solidworks est qu'il est très précis et qu'il est facile de déterminer le Cx dans plusieurs positions.\\
-	(...)
-\subsection{Simulation tableur et équation}
+	\begin{center}
+		\includegraphics[width=15cm]{../Images/expressionCX.png}
+		\captionof{figure}{Objectif de calcul pour déterminer Cx.}
+	\end{center}
+
+\subsubsection{Simulation tableur et équation}
 	La simulation a été réalisée plusieurs fois dans plusieurs positions selon l'axe Z.\\
 	Ces données ont été rentrées dans un tableur, et nous ont permis de confirmer l'intérêt du gouvernail.\\
 	\\
@@ -360,5 +399,14 @@ Le programme python procédant à cette bisection est le suivant~:
 	Chaque moteur fournit 2 N.\\
 	(...) TRIGO ().
 \section{Réalisation}
+\begin{center}
+	\includegraphics[width=15cm]{../Images/assen_1.JPG}
+\end{center}
+\begin{center}
+	\includegraphics[width=15cm]{../Images/assen_2.JPG}
+\end{center}
+\begin{center}
+	\includegraphics[width=15cm]{../Images/assen_3.JPG}
+\end{center}
 
 \end{document}
