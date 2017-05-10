@@ -17,7 +17,7 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Application aux gaz}
+\begin{frame}{Application aux ballons}
   Deux forces appliquées sur le ballon~: \\
   \begin{center}
     $\displaystyle{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Pa_{ballon}}}$ \\
@@ -47,7 +47,16 @@
 \end{frame}
 
 
+
 \subsection{Dilatation des gaz}
+
+\begin{frame}{Ballon chauffé}
+	Combiner une montgolfière et un gaz plus léger.
+	
+	Reduire la masse volumique du gaz en le chauffant~: augmentation de la force d'élévation car moins de poids.
+\end{frame}
+
+
 
 \begin{frame}{Loi de Charles}
   \begin{center}
@@ -97,7 +106,6 @@
 	\end{itemize}
 \end{frame}
 
-
 \subsection{Contenance}
 
 \begin{frame}{Bilan des masses et volumes}
@@ -119,12 +127,18 @@
 
 \subsection{Forme}
 
-\begin{frame}
-  Les ballon sont formés d'un parallèlépipède de longueur 1m avec deux pyramides d'angle $60\degree$. Orientation horizontale de $45\degree$ \\
+\begin{frame}{Contraintes des ballons}
+  Les ballons sont formés d'un parallèlépipède de longueur 1m avec deux pyramides d'angle $60\degree$. Orientation horizontale de $45\degree$ \\
   \begin{center}
     \includegraphics[width=7cm]{../Images/ballon.png}
     \includegraphics[width=4cm]{../Images/ballon3.png}
   \end{center}
+\end{frame}
+
+\begin{frame}{Vue d'ensemble}
+ \begin{center}
+		\includegraphics[width=10cm]{../Images/structure1_0.PNG}
+ \end{center}
 \end{frame}
 
 \begin{frame}{Calcul des dimensions}
@@ -135,7 +149,7 @@
 	$\displaystyle{b^3 \frac{\sqrt{6}}{3} + b^2 - 0.25 = 0}$
   \end{center}
   Où $b$ est la largeur du parallèlépipède. \\
-  Polynome du troisième degrée, résolution par bissection ou dichotomie.
+  Polynôme du troisième degré, résolution par bissection ou dichotomie.
 \end{frame}
 
 \begin{frame}[fragile]{Résolution par bissection}
@@ -251,7 +265,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 		\rowcolor{RedT}
 		Vinylique &
 		Facile à appliquer &
-		Peu adhèrent, temps de sechage trop long \\
+		Peu adhèrent, temps de séchage trop long \\
 		\hline
 
 		\rowcolor{RedT}
@@ -278,7 +292,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \centering
     \includegraphics[width=5cm]{../Images/colle_pelage.png}
     \includegraphics[width=5cm]{../Images/colle_cisaillement.png}
-    \caption{À gauche collage favorisant une contrainte de pellage, à droite collage favorisant une contrainte de cisaillement}
+    \caption{À gauche collage favorisant une contrainte de pelage, à droite collage favorisant une contrainte de cisaillement}
   \end{figure}
   Solution~: coller la couture sur le ballon.
 \end{frame}
@@ -289,9 +303,9 @@ print("volume = %f, diametre = %f" % (vol, largeur))
     \includegraphics[width=4.5cm]{../Images/test_cisaillement.png}
     \includegraphics[width=4.5cm]{../Images/test_pelage.png}
     
-    \caption{À gauche~: test de cisaillement, rupture du substrat. À droite~: test de pellage, rupture du collage}
+    \caption{À gauche~: test de cisaillement, rupture du substrat. À droite~: test de pelage, rupture du collage}
   \end{figure}
-  Résultat des tests de traction~:
+  Résultats des tests de traction~:
   \begin{center}
     \begin{tabular}{|c|c|}
       \hline
