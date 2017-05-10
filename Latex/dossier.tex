@@ -69,17 +69,17 @@ Nous avons défini des besoins, de ces besoins découlent des contraintes. Ces c
 			\item Structure~:\\
 				Faire une structure qui enveloppe le drone et le protège des chocs.
 			\item Sustentation~:\\
-				Éviter que le drone ne tombe de manière dangeureuse en cas de problème technique.
+				Éviter que le drone ne tombe de manière dangereuse en cas de problème technique.
 		\end{itemize}
 	\end{itemize}
-	Afin que le drone reste manoeuvrable malgré sa structure, nous nous sommmes également fixé des contraintes de manoeuvrabilité~:
+	Afin que le drone reste manœuvrable malgré sa structure, nous nous sommes également fixé des contraintes de manœuvrabilité~:
 	\begin{itemize}
 		\item Maneuvrabilité~:
 			\begin{itemize}
 				\item Retenir le drone~:\\
 					La structure doit entacher au minimum les déplacements possibles du drone, en rotation comme en translation.
 				\item Navigation~:\\
-					Le drone doit pourvoir naviguer sur un interval de 15 mètres de hauteur.
+					Le drone doit pourvoir naviguer sur un intervalle de 15 mètres de hauteur.
 			\end{itemize}
 	\end{itemize}
 
@@ -102,7 +102,7 @@ Faute de juridiction quant aux appareils volants de ce type, nous nous sommes ra
 \begin{itemize}
 	\item Notre drone est de catégorie A (- de 25 kg)~:\\
 		Il n'est soumis à aucune contrainte qui nous limiterait dans le choix de nos solutions techniques, ou qui limiterait nos objectifs.
-		Cependant, nous restons soumis aux mesures de sécurité élémentaires (ne pas trop s'approcher durant la phase de décollage et d'atterissage, ne pas survoler les terrains militaires...).
+		Cependant, nous restons soumis aux mesures de sécurité élémentaires (ne pas trop s'approcher durant la phase de décollage et d'atterrissage, ne pas survoler les terrains militaires...).
 	\item Le ballon entre dans la catégorie « léger »~:\\
 		La ficelle supportant la charge utile doit casser au-dessous de 23 kg.
 		Suite à des tests, la ficelle qui servira à tenir nos ballons se rompt à une tension comprise entre 15 et 20 kg.
@@ -133,11 +133,11 @@ Faute de juridiction quant aux appareils volants de ce type, nous nous sommes ra
 
 \subsubsection{Élévation}
 
-Le tropodrone doit utiliser un moyen de supporter une partie du poids du drone sans dépenser d'énérgie dans le but d'augmenter l'autonomie, pour ce faire nous utilisons la poussée d'Archimède d'un gaz plus léger que l'air. Comme ce gaz est plus léger que l'air la somme de son poids et de sa poussée d'Archimède forment une force verticale orienté vers le haut.
+Le Tropodrone doit utiliser un moyen de supporter une partie du poids du drone sans dépenser d'énergie dans le but d'augmenter l'autonomie, pour ce faire nous utilisons la poussée d'Archimède d'un gaz plus léger que l'air. Comme ce gaz est plus léger que l'air la somme de son poids et de sa poussée d'Archimède forment une force verticale orienté vers le haut.
 
 \paragraph{Archimède}
 
-La poussée d'archimède est définie par~:
+La poussée d'Archimède est définie par~:
 
 \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
 
@@ -151,7 +151,7 @@ Cette force se calcule avec la formule~:
   \boxed{\vv{Fa} = -M_F \times \vv{g}}
 \end{center}
 
-Où $\vv{Fa}$ est la poussée d'archimède en $N$, $M_F$ la masse du fluide contenue dans le volume déplacé en $kg$, $\vv{g}$ la valeur du champ de pesanteur en $N.kg^{-1}$. \\
+Où $\vv{Fa}$ est la poussée d'Archimède en $N$, $M_F$ la masse du fluide contenue dans le volume déplacé en $kg$, $\vv{g}$ la valeur du champ de pesanteur en $N.kg^{-1}$. \\
 
 Un ballon de gaz est donc soumis à deux forces~: son poids et sa poussée d'Archimède~:
 
@@ -159,10 +159,10 @@ Un ballon de gaz est donc soumis à deux forces~: son poids et sa poussée d'Arc
   \boxed{\vv{F_{ballon}} = \vv{P_{ballon}} + \vv{Fa_{ballon}}}
 \end{center}
 
-Où $\vv{F_{ballon}}$ est la force d'élévation du ballon en $N$, $\vv{P_{ballon}}$ le poids du ballon en $N$, $\vv{Fa_{ballon}}$ la poussée d'Archimède éxercée sur le ballon en $N$. \\
+Où $\vv{F_{ballon}}$ est la force d'élévation du ballon en $N$, $\vv{P_{ballon}}$ le poids du ballon en $N$, $\vv{Fa_{ballon}}$ la poussée d'Archimède exercée sur le ballon en $N$. \\
 
-Nous pouvons remarquer que si $P_{ballon} < Fa_{ballon}$ alors il existe une force d'élévation orienté vers le haut. De même cette force sera toujours  plus petite que la poussée d'Archimède éxercée sur le ballon, comme le ballon et le gaz possède toujours une masse~: $F_{ballon} < Fa_{ballon}$.
-Par la suite nous appellerons capacité d'élevation la masse que peut supporter la force d'élévation d'un ballon~:
+Nous pouvons remarquer que si $P_{ballon} < Fa_{ballon}$ alors il existe une force d'élévation orienté vers le haut. De même cette force sera toujours  plus petite que la poussée d'Archimède exercée sur le ballon, comme le ballon et le gaz possède toujours une masse~: $F_{ballon} < Fa_{ballon}$.
+Par la suite nous appellerons capacité d'élévation la masse que peut supporter la force d'élévation d'un ballon~:
 \begin{center}
 	\boxed{Ca_{ballon} = \frac{F_{ballon}}{g}}
 \end{center}
@@ -171,7 +171,7 @@ Où $Ca_{ballon}$ est la capacité d'élévation en $kg$, $F_{ballon}$ la force 
 
 \paragraph{Gaz}
 
-Pour avoir un gaz plus léger que l'air il faut qu'il est une masse volumique inférieur à celle de l'air~: $1.29kg.m^3$. Plusieurs gazs remplissent cette condition, les plus courants sont l'hélium est l'hydrogène dont les masse volumique et les capacités d'élévation calculées sont~:
+Pour avoir un gaz plus léger que l'air il faut qu'il est une masse volumique inférieur à celle de l'air~: $1.29kg.m^3$. Plusieurs gaz remplissent cette condition, les plus courants sont l'hélium est l'hydrogène dont les masse volumique et les capacités d'élévation calculées sont~:
 
 \begin{center}
 	\begin{tabular}{|l|c|c|c|}
@@ -185,11 +185,11 @@ Pour avoir un gaz plus léger que l'air il faut qu'il est une masse volumique in
 	\end{tabular}
 \end{center}
 
-Le gaz retenu et l'hélium car il ne présente pas de rique de combustion contrairement à l'hydrogène, même si sa masse volumique est plus importante et que sa procuration est plus compliquée.
+Le gaz retenu et l'hélium car il ne présente pas de risque de combustion contrairement à l'hydrogène, même si sa masse volumique est plus importante et que sa procuration est plus compliquée.
 
 \paragraph{Dilatation}
 
-En prenant exemple sur les montgolfières nous avons cherché à connaitre le gain de volume que pourrait avoir l'hélium à une température élevée. Ce gain de volume apporte directement une reduction de la masse volumique et donc l'augmentation de la force d'élévation.
+En prenant exemple sur les montgolfières nous avons cherché à connaitre le gain de volume que pourrait avoir l'hélium à une température élevée. Ce gain de volume apporte directement une réduction de la masse volumique et donc l'augmentation de la force d'élévation.
 
 La loi de Charles permet de calculer la dilatation d'un gaz. D'après Charles il existe un rapport volume température constant dépendent seulement de la pression du gaz et de la quantité de matière du gaz étudié.
 
@@ -212,7 +212,7 @@ Le volume molaire de l'hélium est~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273
 	$\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} \times 473.25 = 38.811 \times 10^{-3}} m^3.mol^{-1}$
 \end{center}
 
-Donc à $200 \degree C$ l'hélium a un volume molaire de $38.811 \times 10^{-3} m^3.mol^{-1}$ équivalent à 1.59 fois son volume molaire d'origine. Malgrés cette augmentation de volume, la force d'élévation varie peu car la poids de l'hélium est très faible et que la reduction de celui ci ne fera que ce rapprocher de la poussée d'Archimède~: \\
+Donc à $200 \degree C$ l'hélium a un volume molaire de $38.811 \times 10^{-3} m^3.mol^{-1}$ équivalent à 1.59 fois son volume molaire d'origine. Malgré cette augmentation de volume, la force d'élévation varie peu car la poids de l'hélium est très faible et que la réduction de celui ci ne fera que ce rapprocher de la poussée d'Archimède~: \\
 
 \begin{center}
   $\displaystyle{F_{T_0} = Fa_{air} - P_{helium} = 10.90 N}$
@@ -222,7 +222,7 @@ Donc à $200 \degree C$ l'hélium a un volume molaire de $38.811 \times 10^{-3} 
 
 $F_{T_{200}} = 1.06 \times F_{T_0}$
 
-À cause des faibles résultats obtenus et des problèmes introduits par la mise en oeuvre du chauffage d'un gaz~: résistance de l'enveloppe du ballon~; résistance de chauffage~; alimentation de la résistance. Cette idée est donc abandonnée.
+À cause des faibles résultats obtenus et des problèmes introduits par la mise en œuvre du chauffage d'un gaz~: résistance de l'enveloppe du ballon~; résistance de chauffage~; alimentation de la résistance. Cette idée est donc abandonnée.
 
 \subsubsection{Enveloppe}
 
@@ -232,12 +232,12 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 
 \subsubsection{Collage}
 
-Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller des jointures prevus à cette effet. Nous utilisons un collage au lieu d'un thermo collage car ce dernier est plus compliqué à mettre en oeuvre, en effet le thermo collage nécessite un appareil spécifique, il produit de très mauvaise jointure ci le la feuille de PET est froissé, là ou la colle pourrais agir comme un mastique.
+Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller des jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique, il produit de très mauvaise jointure ci le la feuille de PET est froissé, là ou la colle pourrais agir comme un mastique.
 
 
 
 
-Les jointure de collage sont collées par l'exterieur pour pouvoir ajuster sans diffcultés les deux bordures du collages. Malheureusement ce collage exterieur contraint la colle a un pelage, cette contrainte étant la pire pour la mojorité des colles.
+Les jointure de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures du collages. Malheureusement ce collage extérieur contraint la colle a un pelage, cette contrainte étant la pire pour la majorité des colles.
 
 \paragraph{Résistance}
 
@@ -246,7 +246,7 @@ Les différentes contraintes d'un collages sont décrites dans le tableau suivan
  \includegraphics[width=15cm]{../Images/colle_contraintes.png}
 \end{center}
 
-La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remedier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisé en collant la jointure sur la un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
+La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisé en collant la jointure sur la un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
 
 \begin{center}
  \includegraphics[width=7cm]{../Images/colle_cisaillement.png}
@@ -264,8 +264,8 @@ Deux tests de traction on alors était produit en pressant et collant deux feuil
 
 \subsection{Forme}
 
-Le tropodrone est composée de trois ballon de taille indentique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
-La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallépipède avec des pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
+Le Tropodrone est composée de trois ballon de taille identique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
+La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallélépipède avec des pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
 
 \begin{center}
  \includegraphics[width=8cm]{../Images/ballon.png}
@@ -273,17 +273,17 @@ La disposition la plus optimisée pour trois ballons est en triangle autour du d
 
 \subsubsection{Calcul de la forme}
 
-D'après le bilan maximale des masses il faudrait contenir $0.75m^3$ d'helium dans l'ensemble des ballons. Nous partons donc de l'équation du volume pour retrouver les dimensions du ballon, heureusement des contraintes sont déjà présentes~:
+D'après le bilan maximale des masses il faudrait contenir $0.75m^3$ d'hélium dans l'ensemble des ballons. Nous partons donc de l'équation du volume pour retrouver les dimensions du ballon, heureusement des contraintes sont déjà présentes~:
 
 \begin{itemize}
- \item la longueur du parallépipède central est de 1m~;
- \item l'angle entre les arrètes du sommets de la pyramide et la base de la pyramide est de $60 \degree$~;
+ \item la longueur du parallélépipède central est de 1m~;
+ \item l'angle entre les arrêtes du sommets de la pyramide et la base de la pyramide est de $60 \degree$~;
  \item le volume du ballon est de $0.25m^3$.
 \end{itemize}
 
 \bigbreak
 
-Pour $b$ la largeur du ballon, la formule du volume d'un ballon se compose du volume d'un parallépipède d'un mètre~:
+Pour $b$ la largeur du ballon, la formule du volume d'un ballon se compose du volume d'un parallélépipède d'un mètre~:
 
 \begin{center}
  \boxed{V_{pa} = b^2}
@@ -309,7 +309,7 @@ Nous simplifions la formule jusqu'à trouver un polynome nous facilitant la rés
   $\displaystyle{b^3 \frac{\sqrt{6}}{3} + b^2 - 0.25 = 0}$
 \end{center}
 
-Malheureusement ce polynome est du troisième degrée, nous ne pouvons pas le résoudre aussi facilement qu'un polynome du second degrée, la methode la plus simple dans notre cas est d'utiliser le théorème des valeurs intermédiaires, notre fonction de volume est croissante (monome de plus haut degrée positif), continue et passant par zéro.
+Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le résoudre aussi facilement qu'un polynôme du second degré, la méthode la plus simple dans notre cas est d'utiliser le théorème des valeurs intermédiaires, notre fonction de volume est croissante (monôme de plus haut degré positif), continue et passant par zéro.
 
 \begin{tikzpicture}[scale=1.5]
   \begin{axis}[
@@ -327,9 +327,9 @@ Malheureusement ce polynome est du troisième degrée, nous ne pouvons pas le r�
 
 \paragraph{Résolution par bisection}
 
-Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonant une fonction continue croissante ou décroissante dans un interval donné. Pour chaque interval un echantillon de la valeur intermédiare est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'interval est réduite jusqu'à la valeur intérmédiare, dans la cas contraire où la valeur intermédiare est plus petite que la valeur souhaité, la borne inférieur de l'interval est augmenté jusqu'à la valeur intérmédiare. Chacune des modifications d'interval en crée un nouveau deux fois plus petit.
+Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonnant une fonction continue croissante ou décroissante dans un intervalle donné. Pour chaque intervalle un échantillon de la valeur intermédiaire est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'intervalle est réduite jusqu'à la valeur intermédiaire, dans la cas contraire où la valeur intermédiaire est plus petite que la valeur souhaité, la borne inférieur de l'intervalle est augmenté jusqu'à la valeur intermédiaire. Chacune des modifications d'intervalle en crée un nouveau deux fois plus petit.
 \medbreak
-Le programme python procédant à cette bisection est le suivant~:
+Le programme python procédant à cette bissection est le suivant~:
 
 \lstset{language={Python}}
 \lstinputlisting{../Ballons/Programmes/diametreBallonLatex.py}
@@ -390,7 +390,7 @@ Le programme python procédant à cette bisection est le suivant~:
 	Le gouvernail nous permet d'orienter les ballons en fonction de la direction du drone, ce qui force la structure a garder une position théoriquement plus favorable que les autres.
 	Nous pouvons faire une analogie avec les différentes conformations d'une molécule : le gouvernail nous permet de garder la position la moins dépensière d'énergie.\\
 	\\
-  Cette solution a toutefois un désavantage : elle réduit la manoeuvrabilité immédiate du drone en faisant apparaître une force supplémentaire. Toutefois, nos calculs montreront que cette force est négligeable en comparaison du gain sur de longues distances.
+  Cette solution a toutefois un désavantage : elle réduit la manœuvrabilité immédiate du drone en faisant apparaître une force supplémentaire. Toutefois, nos calculs montreront que cette force est négligeable en comparaison du gain sur de longues distances.
 
 
 \subsection{Calcul du Cx}
@@ -421,7 +421,7 @@ Le programme python procédant à cette bisection est le suivant~:
 	La simulation a été réalisée plusieurs fois dans plusieurs positions selon l'axe Z.\\
 	Ces données ont été rentrées dans un tableur, et nous ont permis de confirmer l'intérêt du gouvernail.\\
 	\\
-	Nous avons également pû relever la force théorique maximale auxquel le drone peut être soumis.\\
+	Nous avons également pû relever la force théorique maximale auquel le drone peut être soumis.\\
 	(...)
 \subsection{Vitesse de vent maximum}
 	Chaque moteur fournit 2 N.\\
