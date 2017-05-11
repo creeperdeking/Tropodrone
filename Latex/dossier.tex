@@ -350,7 +350,7 @@ Deuxièmement un ballon est assemblé avec la méthode d'étanchéification étu
 
 Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller les jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique et il produit de très mauvaises jointures ci la feuille de PET est froissée, là ou la colle pourrais agir comme un mastique.
 
-Comme nous l'avons précédemment expliqué le PET est un matériaux très difficilement collable, en contrepartie de nombreuses colles ont été testé avec aux final bien plus de colles inefficaces que utilisables. 
+Comme nous l'avons précédemment expliqué le PET est un matériaux très difficilement collable, en contrepartie de nombreuses colles ont été testé avec aux final bien plus de colles inefficaces que utilisables.
 
 Ci dessous l'ensemble de colles testées~:
 
@@ -389,7 +389,7 @@ Ci dessous l'ensemble de colles testées~:
 		Polymérisation avec catalyseur &
 		Peu adhèrent \\
 		\hline
-		
+
 		\rowcolor{RedT}
 		Polyuréthane &
 		& Peu adhèrent \\
@@ -399,7 +399,7 @@ Ci dessous l'ensemble de colles testées~:
 		Acétone &
 		& Peu adhèrent \\
 		\hline
-		
+
 		\rowcolor{RedT}
 		Vinylique &
 		Facile à appliquer &
@@ -634,7 +634,6 @@ La structure est ainsi composée de~:
    \item V la vitesse relative du mobile par rapport au fluide en $m.s^{-1}$.
   \end{itemize}
 
-		Notre travail a donc été de déterminer Cx afin de résoudre l'équation.
 \subsection{Optimisations techniques}
 \subsubsection{Problème des ballons}
 	3 ballons de 0.25 m³ créent une surface soumise au flux d'air conséquente, ce qui influe directement sur la force de traînée, la surface S étant un facteur direct.\\
@@ -707,12 +706,16 @@ La structure est ainsi composée de~:
 	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
 	\lstset{language={Python}}
 	\lstinputlisting{../Aerodynamisme/Programmes/calculTrainee.py}
-	Toutefois, cette approximation n'étant pas vraiment précise, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation pour avoir une idée plus exacte.
+	Toutefois, ce calcul restant une très grosse approximation, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation pour avoir un résultat plus précis.
 \subsubsection{Simulation SW}
-	L'avantage de Solidworks est qu'il est très précis et qu'il est facile de déterminer le Cx dans plusieurs positions.\\
+	L'avantage de Solidworks est que le flux d'air généré pour les calculs épouse parfaitement la forme de la structure, ce qui nous permet d'avoir un résultat bien plus fiable. De plus, il rend possible la quantification du gain promis par le gouvernail.\\
+	\begin{center}
+		\includegraphics[width=15cm]{../Images/objectifsSW.png}
+		\captionof{figure}{Objectifs de calcul.}
+	\end{center}
 	\begin{center}
 		\includegraphics[width=10cm]{../Images/expressionCX.png}
-		\captionof{figure}{Objectif de calcul pour déterminer Cx.}
+		\captionof{figure}{Expression de Cx dans Solidworks.}
 	\end{center}
 
 \subsection{Simulation tableur et équation}
@@ -742,7 +745,7 @@ Le drone peut donc résister à un vent de 34 $km.h^{-1}$.
 
 \section{Réalisation}
 
-Nous avons en premier lieu assemblé des ballons au échelle 1/5 et 1/2, ceux ci utilisé de la néoprène car les bordures de collages était très courte et ne posées pas de problèmes pour appliquer la colle, la laisser sécher puis presser. 
+Nous avons en premier lieu assemblé des ballons au échelle 1/5 et 1/2, ceux ci utilisé de la néoprène car les bordures de collages était très courte et ne posées pas de problèmes pour appliquer la colle, la laisser sécher puis presser.
 
 \begin{figure}[H]
  \centering
