@@ -722,12 +722,23 @@ La structure est ainsi composée de~:
     \includegraphics[width=10cm]{../Images/resultatsSW.png} \\
 	\end{center}
 
-\subsection{Vitesse de vent maximum}
-\iffalse
-	Nous avons également pû relever la force théorique maximale auquel le drone peut être soumis, qui est de
-	Chaque moteur supporte 4.3 N
-	ENCORE EN CONSTRUCTION
-\fi
+\subsection{Vitesse du vent maximum}
+Pour déterminer la vitesse du vent maximale pouvant être atteinte, il faut se pencher sur les caractéristiques du drone, et en particulier sur la force de traction générée par les moteurs~:\\
+Un moteur crée au maximum une force de 4.3 Newtons~; ce qui fait que le drone tout entier (avec les 4 Moteurs) crée une force de traction de 17.2 Newtons.\\
+\\
+Il nous faut faire un peu de trigonométrie~:
+\begin{center}
+	\includegraphics[width=10cm]{../Images/vitesseVent.png}
+	\captionof{figure}{Schéma de la situation.}
+\end{center}
+Les moteurs (en rouge) génèrent une force de traction (en vert) qui est décalée de 60° par rapport au vent (en violet).\\
+\\
+$A = cos(60) \times 17.2$\\
+$A = 8.6 N$\\
+Nous avons donc une force de 8.6 N.\\
+\\
+Après avoir simulé à différentes vitesses, nous trouvons une résistance maximale de 34 $km.h^{-1}$.\\
+Le drone peut donc résister à un vent de 34 $km.h^{-1}$.
 
 \section{Réalisation}
 
