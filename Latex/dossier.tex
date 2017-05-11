@@ -400,36 +400,44 @@ Ce programme de bisection nous permet de trouver une largueur de ballon équival
 
 \subsubsection{Étude des mouvements}
 
-Les 4 moteurs du drone lui confèrent 4 axes de liberté, que la structure ne doit en aucun cas supprimer.
+Les 4 moteurs du drone lui confèrent 3 axes de liberté, une de nos contraintes était de permettre de sauvegarder ces libertés pour perdre un minimum de liberté de mouvement, pour celà nous avons choisis une structure triangulaire. Dans cette structure, le centre de gravité du drone est le même que le centre de gravité du ballon, ce qui permet de controller le tropodrone dans toutes les directions. Cette structure permet d'optimiser le nombre de ballons (3) nécessaires pour avoir une pénétration uniforme dans l'air quel que soit la direction prise par le drone.
+
+Le premier modèle a été conçu pour recréer artificiellement les 3 axes de liberté au moyen de disques tournant sur eux-mêmes et autour les uns des autres. Les pièces de liaison ont été réalisées sous Solidworks et imprimées en 3D.
+[PHOTO]
+Toutefois, ce modèle s'est avérré ne pas être applicable car il était très complexe à mettre en oeuvre, nécessitant une modélisation de pièces en 3D complexes, devant en plus être retravaillés après impression et l'ajout de petits roulement pour résoudre des problèmes de frottements des pièces en plastiques. Celà aurait augmenté le cout du produit final, sa fragilité et sa complexité. De plus le nombre de pièces à créer rendait la structure trop lourde.
+
+C'est pourquoi nous avons préférés adopter un système plus simple:
+Le drone est suspendu par le haut et par le bas par un fil de pèche au centre d'un octaèdre inscrit dans la structure triangulaire des ballons. Cette solution présente les avantages suivants:
+	- Simplicité
+	- Economie, cette solution est moins chère
+	- Légerté
+
+De plus, elle conserve tous les avantages de la solution précédente:
+	- Solidité
+	- Liberté de mouvement
+
+Nous avons calculés toutes les mensurations de notre structure pour faire des pièces adaptés. Nous avons apportés une attention particulière à l'espace réservé au drone pour qu'il ne percute pas le bord de la structure. Pour que la structure puisse se déformer légèrement afin de laisser le drone pivoter sur lui même, nous avons mis notre octaèdre en tension vers l'extérieur pour que la structure ne gêne pas le drone en cas de fortes contraintes.
 
 \subsection{Support}
+
+Nous avons modélisés une première version des pièces du support, qui se sont avérés être un peu trop lourde. Nous aurions aimé pouvoir optimiser le design de ces pièces pour obtenir un bien meilleur rapport solidité/poids.
+
+Nous avons fait un travail de perçage sur nos pièces pour compenser l'imprecision de l'impression 3D.
 
 \subsubsection{Attaches des ballons}
 
 Les ballons doivent être attachés avec une corde se cassant à plus de 230N (voir Chap. contrainte légale).
 
-\subsubsection{Matériau du support}
-Notre principale contrainte est la masse : la structure doit faire moins de 250g. Nous gardons
-Nous avions en réserve des tiges de carbone, qui nous ont aidées lors de tests de structure ; et nous avons pû en retirer quelques informations~:
-\begin{itemize}
-        \item Tout d'abord, l'idée de mettre des tiges autour des ballons correspond parfaitement à ce que nous recherchons~: celles-ci permettent en effet d'accroître la solidité de l'ensemble tout en permettant une certaine flexibilité.
-        \item Ensuite, le matériau que nous choisirons pour nos tiges sera décisif. Il nous faut un matériau élastique et résistant, qui garde une masse raisonnable
-\end{itemize}
+Les matériaux:
+
+Conaissant les contraintes du projet, nous avons optés pour des tiges en carbonne, car elles étaient facile à trouver et présentaient un très bon rapport solitité/poids, face aux différentes attaches en métal par exemple. Malheureuxement, elles coutaient assez cher (4€ le mètre en moyenne), mais nous avions besoins d'une structure à la fois flexible (pour résister au choc) et rigide (pour le triangle principale, pour éviter les collisionsentre le drone et la structure). En jouant sur les tailles des tiges et les versions creuses/pleines, nous avons obtenus le matériel de base de notre structure.
+
 Les quelques recherches que nous avons menés par la suite nous ont menées vers les tiges de carbone, et en particulier les tiges creuses, qui permettent d'allier résistance et faible poids.
-La structure sera ainsi composée de~:
+La structure est ainsi composée de~:
 \begin{itemize}
-        \item Tiges de carbone de 6mm creuses de 4mm
-        \item A COMPLETER
+        \item Tiges de carbone de 6/4mm creuses et pleines
+        \item Pièces de liaisons imprimées en 3D
 \end{itemize}
-
-\paragraph{1er modèle}
-
-Le premier modèle a été conçu pour recréer artificiellement les 3 axes de liberté au moyen de disques tournant sur eux-mêmes et autour les uns des autres. Les pièces de liaison ont été réalisées sous Solidworks et imprimées en 3D.
-[PHOTO]
-Toutefois, 
-
-\paragraph{2ème modèle}
-
 
 \newpage
 
@@ -531,7 +539,13 @@ Le protocole d'assemblage trouver lors de l'assemblage du premier ballon final e
  \item recommencer le procédé de collage pour chacune des jointures.
 \end{itemize}
 
+\section{Conclusion}
 
+\paragraph{}Ce projet était parti d'une idée un peu folle, mais surtout originale. Nous voulions comprendre et essayer de fabriquer ce modèle de drone que nous désirions vour voler un jour dans le ciel, pour affiner nos compétences techniques et notre maitrise de la gestion d'un projet. Nous avons tous beaucoup appris, que ce soit dans les nombreux domaines scientifiques parcourus ou dans notre expérience gagné au contact de la réalisation et du concret. Pour nous tous, ce fut une expérience riche d'enseignements qui laissera des souvenirs de nos premières expériences.
+
+\paragraph{}Pour conclure, nous remercions nos professeurs de science de l'ingénieur qui nous ont aidés à mener ce projet le plus loin possible. Nous nous remercions également mutuellement pour avoir accomplis ce travail jusqu'au bout et sans qu'aucun d'entre nous n'ai jamais été laissé derrière. Et enfin nous vous remercions vous, qui avez pris la peine de lire ce document jusqu'au bout.
+
+\section{Images Annexes}
 
 \begin{center}
 	\includegraphics[width=15cm]{../Images/assen_1.JPG}
