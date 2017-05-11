@@ -426,7 +426,7 @@ La structure sera ainsi composée de~:
 
 Le premier modèle a été conçu pour recréer artificiellement les 3 axes de liberté au moyen de disques tournant sur eux-mêmes et autour les uns des autres. Les pièces de liaison ont été réalisées sous Solidworks et imprimées en 3D.
 [PHOTO]
-Toutefois, 
+Toutefois,
 
 \paragraph{2ème modèle}
 
@@ -440,6 +440,7 @@ Toutefois,
 \subsection{Équation de trainée}
 	\begin{center}
 		\includegraphics[width=5cm]{../Images/portance.jpg}
+		\captionof{figure}{Force de traînée}
 	\end{center}
 	La force de traînée, qui représente la résistance au mouvement, est matérialisée par l'équation~:\\
   \begin{center}
@@ -456,15 +457,19 @@ Toutefois,
 		Notre travail a donc été de déterminer Cx afin de résoudre l'équation.
 \subsection{Optimisations techniques}
 \subsubsection{Problème des ballons}
-	3 ballons de 0.25 m³ créent une surface soumise au flux d'air conséquente.\\
-	De plus, suivant la position des ballons, le coefficient Cx sera plus ou moins conséquent.\\
+	3 ballons de 0.25 m³ créent une surface soumise au flux d'air conséquente, ce qui influe directement sur la force de traînée, la surface S étant un facteur direct.\\
+	De plus, suivant la position des ballons, le coefficient de traînée Cx sera plus ou moins conséquent.\\
 	\\
-	Il nous faut donc trouver une forme favorable, c'est à dire réduisant la surface et ayant un faible coefficient de traînée.
+	Il nous faut donc trouver une forme favorable, c'est à dire réduisant la surface et ayant un faible coefficient de traînée.\\
+	\\
+	La réduction du coefficient Cx est difficile à mettre en oeuvre. Elle implique en effet un profil et un angle d'attaque qu'il est difficile de réaliser, notamment par rapport au volume des ballons.\\
+	C'est pourquoi nos efforts se sont concentrés sur la réduction de la surface rencontrée.
 
 \subsubsection{La forme en triangle}
 	La forme en triangle que nous vous avons présenté précédemment (LIEN CHAP. STRUCTURE) présente de nombreux avantages.
 	\\
-	Le premier est qu'elle permet de créer un couloir dans lequel le vent s'engouffre ; cette forme permet de réduire la force de traînée et a l'avantage de ne présenter aucune position dans laquelle le vent aurait un trop grand effet.
+	Le premier est qu'elle permet de créer un couloir dans lequel le vent s'engouffre. Ce couloir permet de réduire la force de traînée en limitant la surface des ballons offerte au vent. \\
+	Le second avantage est que cette forme ne présente aucune position dans laquelle le vent aurait un trop grand effet.\\
 	De plus, nous avons trouvé une solution technique permettant de profiter de ce couloir d'air le plus souvent possible : installer un gouvernail.
 \subsubsection{Gouvernail}
 	\begin{center}
@@ -472,14 +477,20 @@ Toutefois,
 	\end{center}
 	Le gouvernail nous permet d'orienter les ballons en fonction de la direction du drone, ce qui force la structure a garder une position théoriquement plus favorable que les autres.
 	Nous pouvons faire une analogie avec les différentes conformations d'une molécule : le gouvernail nous permet de garder la position la moins dépensière d'énergie.\\
-	\\
+	\begin{center}
+		\includegraphics[width=10cm]{../Images/conformations.png}
+		\captionof{figure}{Les molécules dépensent moins d'énergie lorsqu'elles sont dans une conformation stable}
+	\end{center}
   Cette solution a toutefois un désavantage : elle réduit la manœuvrabilité immédiate du drone en faisant apparaître une force supplémentaire. Toutefois, nos calculs montreront que cette force est négligeable en comparaison du gain sur de longues distances.
 
-
 \subsection{Calcul du Cx}
-\paragraph{Pour une sphère}
-	Nous avons dans un premier temps essayé de calculer le Cx à la main, en prenant la seule approximation dont nous avions les données : le Cx d'une sphère.\\
-	Celui-ci se calcule en fonction du nombre de Reynolds, qui définit le type d'écoulement auquel est soumis la structure :
+	Nous avons dans un premier temps essayé de calculer le Cx à la main, en prenant la seule approximation dont nous avions les données : le Cx d'une sphère.
+\subsubsection{Pour une sphère}
+\paragraph{Nombre de Reynolds}
+	Le coefficient de traînée d'une sphère se calcule en fonction du nombre de Reynolds, qui définit le type d'écoulement auquel est soumis la structure~:
+
+
+\paragraph Formule :
 	\begin{center}
    \boxed{\displaystyle{Re = \frac{V \times L}{\nu}}}
   \end{center}
@@ -490,25 +501,55 @@ Toutefois,
    \item L la dimension caractéristique (ici le diamètre de la sphère)~;
    \item $\micro$ la viscosité cinématique du fluide~;
   \end{itemize}
-	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
+
+\paragraph Influence sur les courants créés :
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/re0.jpg}
+		\captionof{figure}{Re < 1}
+	\end{center}
+	Quand Re < 1, le flux suit un écoulement de Stokes. L'air s'écoule de façon rectiligne.
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/re1.jpg}
+		\captionof{figure}{1 < Re < 10³}
+	\end{center}
+	Quand Re augmente, des tourbillons apparaîssent à l’arrière de la sphère. Ces tourbillons sont à prendre en compte car ils génèrent un courant au centre du support qui augmente la force de traînée.
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/re2.jpg}
+		\captionof{figure}{Re > 10³}
+	\end{center}
+	Quand Re augmente encore, il se crée un sillage qui supprime les tourbillons.\\
+	Toutefois, il faut que le flux ait une certaine vitesse pour qu'il se crée un sillage perceptible.\\
 	\\
-	Toutefois, cette approximation n'était pas vraiment précise, et n'ayant pû mettre la main sur la soufflerie, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation.
-\paragraph{Simulation SW}
+	On comprend bien que le type d'écoulement va considérablement influencer la force de traînée.
+
+
+\subsubsection{Calculs et limites}
+	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
+	\lstset{language={Python}}
+	\lstinputlisting{../Aerodynamisme/Programmes/calculTrainee.py}
+	Toutefois, cette approximation n'étant pas vraiment précise, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation pour avoir une idée plus exacte.
+\subsubsection{Simulation SW}
 	L'avantage de Solidworks est qu'il est très précis et qu'il est facile de déterminer le Cx dans plusieurs positions.\\
 	\begin{center}
-		\includegraphics[width=15cm]{../Images/expressionCX.png}
+		\includegraphics[width=10cm]{../Images/expressionCX.png}
 		\captionof{figure}{Objectif de calcul pour déterminer Cx.}
 	\end{center}
 
-\subsubsection{Simulation tableur et équation}
+\subsection{Simulation tableur et équation}
 	La simulation a été réalisée plusieurs fois dans plusieurs positions selon l'axe Z.\\
 	Ces données ont été rentrées dans un tableur, et nous ont permis de confirmer l'intérêt du gouvernail.\\
-	\\
-	Nous avons également pû relever la force théorique maximale auquel le drone peut être soumis.\\
-	(...)
+	\begin{center}
+    \includegraphics[width=10cm]{../Images/resultatsSW.png} \\
+	\end{center}
+
 \subsection{Vitesse de vent maximum}
-	Chaque moteur fournit 2 N.\\
-	(...) TRIGO ().
+\iffalse
+	Nous avons également pû relever la force théorique maximale auquel le drone peut être soumis, qui est de
+	Chaque moteur supporte 4.3 N
+	ENCORE EN CONSTRUCTION
+\fi
+\newpage
+
 \section{Réalisation}
 
 Le protocole d'assemblage trouver lors de l'assemblage du premier ballon final est le suivant~:
