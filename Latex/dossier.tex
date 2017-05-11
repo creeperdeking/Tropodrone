@@ -288,8 +288,16 @@ Lors de l'assemblage des ballons de nombreux problèmes d'étanchéité ont ét�
 
 La perméabilité du PET à rapidement était mise en doute, en effet les feuilles que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
 
-Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisé ou encore la température en rendu l'usage de ces formules erroné.
+Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisée ou encore la température ont rendu l'usage de ces formules erroné.
 Malgré tout nous pouvons expliquer la perméabilité du PET par son taux de cristallisation. Les cristaux étant considéré comme parfaitement imperméable, l'air ne peux passer que entre ces cristaux, donc l'épaisseur du filme et la taux de cristallisation impactent directement la perméabilité du filme.
+
+Les seul chiffres que nous possédons sont ceux d'un film de PET alimentaires le Mylar 850 déjà énoncé précédemment~:
+
+\begin{center}
+ \includegraphics[width=15cm]{../Images/permeabilite.png}
+\end{center}
+
+Le film s'approchant le plus du notre et de $15\mu m$ ayant une fuite de 1.12L par $m^2$ de surface par jour et par atmosphère, 1 dans notre cas.
 
 Sans rentrer dans les détails des calculs de perméabilité, nous sommes passé à des test d'étanchéité à l'air, pour cela nous devons éliminer tout usage de collage même si nous pouvons dans l'absolu garantir leur étanchéité.
 Nous avons alors créé une cloche contenant une feuille de PET légèrement plié pour rentrer dans la cloche, la cloche est percée sur le haut et plongée dans l'eau à l'aide de quelque masse. Enfin sur le haut de la feuille de PET nous disposons une petit masse d'environs 10g.
@@ -298,7 +306,7 @@ Le but de cette expérience est d'observer le passage de l'air à travers la feu
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=7cm]{../Images/etancheite.png}
-	\caption{Test d'étanchéité du PET, le PET et maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
+	\caption{Test d'étanchéité du PET, le PET est maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
 \end{figure}
 
 Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constatée mais rien ne pouvant justifier les fuites assez importantes des ballons assemblés.
@@ -306,7 +314,7 @@ Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible 
 \begin{figure}[H]
  \centering
  \includegraphics[width=7cm]{../Images/cloche_pet.JPG}
- \caption{Cloche utilisé pour tester l'étanchéité du PET.}
+ \caption{Cloche utilisée pour tester l'étanchéité du PET.}
 \end{figure}
 
 
@@ -408,7 +416,7 @@ Ci dessous l'ensemble de colles testées~:
 
 La colle retenu est la cyanoacrylate d'éthyle ou 401, cette colle est une des plus adhérentes au PET, elle à un temps de séchage assez court et surtout ne dépend pas d'une polymérisation à l'air mais à l'eau de surface, en effet les feuilles de PET étant très imperméable le temps de séchage pour une colle polymérisé à l'air peu prendre plusieurs heures, certaine ne sèchent presque jamais comme la colle vinylique.
 
-Les jointure de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
+Les jointures de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
 
 \paragraph{Résistance}
 
@@ -450,7 +458,11 @@ Les mesures de forces lors des test de tractions sont présentes ci dessous~:
   \end{tabular}
 \end{center}
 
-Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage, cette techique de collage sera retenue pour l'assemblage de tout les futur ballons.
+Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage.
+De plus les données constructeur de la colle indiquent une résistance de la colle en traction de 7 à 11 $N.mm-2$ ce qui largement supérieur au .12 $N.mm-2$ des tests, ce qui laisse penser que seul le PET et limitant dans la résistance des collages maintenant.
+
+
+Cette technique de collage sera retenue pour l'assemblage de tout les futur ballons.
 
 \subsection{Forme}
 
@@ -462,8 +474,6 @@ La disposition la plus optimisée pour trois ballons est en triangle autour du d
  \includegraphics[width=12cm]{../Images/ballon.png}
  \caption{Vue d'ensemble d'un ballon.}
 \end{figure}
-
-Refaire l'image : TODO
 
 \subsubsection{Calcul de la forme}
 
@@ -520,7 +530,7 @@ Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le r�
 \end{tikzpicture}
 
 
-\paragraph{Résolution par bisection}
+\paragraph{Résolution par bissection}
 
 Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonnant une fonction continue croissante ou décroissante dans un intervalle donné. Pour chaque intervalle un échantillon de la valeur intermédiaire est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'intervalle est réduite jusqu'à la valeur intermédiaire, dans la cas contraire où la valeur intermédiaire est plus petite que la valeur souhaité, la borne inférieur de l'intervalle est augmenté jusqu'à la valeur intermédiaire. Chacune des modifications d'intervalle en crée un nouveau deux fois plus petit.
 \medbreak
@@ -529,7 +539,7 @@ Le programme python procédant à cette bissection est le suivant~:
 \lstset{language={Python}}
 \lstinputlisting{../Ballons/Programmes/diametreBallonLatex.py}
 
-Ce programme de bisection nous permet de trouver une largueur de ballon équivalente à $0.43m$, si nous recalculons le volume pour cette largeur~:
+Ce programme de bissection nous permet de trouver une largueur de ballon équivalente à $0.43m$, si nous recalculons le volume pour cette largeur~:
 
 \begin{center}
   $\displaystyle{V = \frac{\sqrt{6}}{3} \times 0.43^3 + 0.43^2 }$ \\
@@ -551,9 +561,16 @@ Le remplissage des ballons se fait par l'usage d'une valve de roue de vélo, cet
 
 La valve de vélo est découpé en laissant un rond de caoutchouc autour pour faciliter le collage sur le PET. Elle est collé sur une des face les plus longue du parallélépipède et non sur une bordure de collage car elle pourrait créer des plis et donc de potentielle fuites.
 
-Photo valve * 2 : TODO
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5cm]{../Images/valve.JPG}
+  \caption{Valve de remplissage des ballons.}
+\end{figure}
+
 
 Malgré cela, nous n'avons pas pu tester ces valve avec une bouteille d'hélium.
+
+
 \section{Structure}
 
 \subsubsection{Étude des mouvements}
@@ -750,5 +767,40 @@ Le protocole d'assemblage trouvé lors de l'assemblage du premier ballon final e
 \begin{center}
 	\includegraphics[width=15cm]{../Images/assen_3.JPG}
 \end{center}
+
+\section{Références}
+\begin{itemize}
+  \item \emph{https://media-pim.group-iph.com/medias/products/09/14/8824090001409/technicaldatasheet-fr0.pdf?v=170116093857+0100?attachment=true}
+  \item \emph{$https://fr.wikipedia.org/wiki/Pouss\%C3\%A9e_d\%27Archim\%C3\%A8de$}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+  \item \emph{}
+\end{itemize}
 
 \end{document}

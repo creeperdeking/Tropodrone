@@ -2,7 +2,7 @@
 
 \section{Calculs d'élévation}
 
-\subsection{Poussé d'archimède}
+\subsection{Poussé d'Archimède}
 
 \begin{frame}{Définition}
   \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
@@ -11,7 +11,7 @@
     \boxed{\vv{Pa} = -M_F \times \vv{g}}
   \end{center}
   \begin{itemize}
-    \item $\vv{Pa}$~: la poussé d'archimède~;
+    \item $\vv{Pa}$~: la poussé d'Archimède~;
     \item $M_F$~: la masse du fluide contenue dans le volume déplacé~;
     \item $\vv{g}$~: la valeur du champ de pesanteur.
   \end{itemize}
@@ -53,7 +53,7 @@
 \begin{frame}{Ballon chauffé}
 	Combiner une montgolfière et un gaz plus léger.
 	
-	Reduire la masse volumique du gaz en le chauffant~: augmentation de la force d'élévation car moins de poids.
+	Réduire la masse volumique du gaz en le chauffant~: augmentation de la force d'élévation car moins de poids.
 \end{frame}
 
 
@@ -84,13 +84,13 @@
   Augmentation du volume de $1.59$.
 \end{frame}
 
-\begin{frame}{Résultat de la poussé d'archimède}
+\begin{frame}{Résultat de la poussé d'Archimède}
   \begin{center}
     $\displaystyle{F_{T_0} = Pa_{air} - P_{helium} = 10.90 N}$
     \bigbreak
     $\displaystyle{F_{T_{200}} = Pa_{air} - \frac{P_{helium}}{1.59} = 11.57 N}$ \\
   \end{center}
-  Les resultats sont négligables. $F < Pa_{air}$
+  Les résultats sont négligeables. $F < Pa_{air}$
 \end{frame}
 
 
@@ -98,11 +98,11 @@
 
 \subsection{Modèle de ballon}
 
-\begin{frame}
+\begin{frame}{Contrainte des ballons}
 	\begin{itemize}
 		\item centre de gravité du drone et du ballon confondues~: pas de balancement~;
 		\item ensemble de trois ballons répartis en triangle~;
-		\item forme rigide~: control de l'aérodynamisme.
+		\item forme rigide~: contrôle de l'aérodynamisme.
 	\end{itemize}
 \end{frame}
 
@@ -120,15 +120,15 @@
 
 	\end{center}
 
-  Volume d'helium nécessaire~: $0.75 m^3$
+  Volume d'hélium nécessaire~: $0.75 m^3$
   
   Volume des ballons~: $0.25 m^3$
 \end{frame}
 
 \subsection{Forme}
 
-\begin{frame}{Contraintes des ballons}
-  Les ballons sont formés d'un parallèlépipède de longueur 1m avec deux pyramides d'angle $60\degree$. Orientation horizontale de $45\degree$ \\
+\begin{frame}{Contraintes de la forme des ballons}
+  Les ballons sont formés d'un parallélépipède de longueur 1m avec deux pyramides d'angle $60\degree$. Orientation horizontale de $45\degree$ \\
   \begin{center}
     \includegraphics[width=7cm]{../Images/ballon.png}
     \includegraphics[width=4cm]{../Images/ballon3.png}
@@ -142,13 +142,13 @@
 \end{frame}
 
 \begin{frame}{Calcul des dimensions}
-  Volume ballon~: volume de deux pyramides avec un parallèlépipède~:
+  Volume ballon~: volume de deux pyramides avec un parallélépipède~:
   \begin{center}
 	\boxed{\displaystyle{V = 2(\frac{\sqrt{2 \times b^2}}{2} \times \tan \frac{\pi}{3} \times \frac{1}{3} \times b^2) + b^2}} \\
 	$\displaystyle{V = \frac{\sqrt{6}}{3} \times b^3 + b^2 }$ \\
 	$\displaystyle{b^3 \frac{\sqrt{6}}{3} + b^2 - 0.25 = 0}$
   \end{center}
-  Où $b$ est la largeur du parallèlépipède. \\
+  Où $b$ est la largeur du parallélépipède. \\
   Polynôme du troisième degré, résolution par bissection ou dichotomie.
 \end{frame}
 
@@ -180,7 +180,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 \subsection{Enveloppe}
 
-\begin{frame}
+\begin{frame}{Liste des matériaux}
 	\begin{tabular}{|l|p{0.35\linewidth}|p{0.35\linewidth}|}
 		\hline
 		Matériaux & Avantages & Inconvénients \\
@@ -197,7 +197,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 		\hline
 
 		\rowcolor{GreenT}
-		Mylar &
+		Mylar (PET) &
 		Facile à trouver dans le commerce~; résistant à la traction~; peut être assemblé~; léger~: $17 g.m^{-2}$ &
 		Raide~; fragile au cisaillement et à la perforation \\
 		\hline
@@ -216,7 +216,7 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 \subsection{Collage}
 
-\begin{frame}
+\begin{frame}{Liste des colles testées}
 	\begin{tabular}{|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|}
 		\hline
 		Colle & Avantages & Inconvénients \\
@@ -277,8 +277,6 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 	\end{tabular}
 \end{frame}
 
-\subsection{Performance d'un collage}
-
 \begin{frame}{Contrainte d'une colle}
   Différents types de contraintes sur une colle:
   \begin{center}
@@ -319,14 +317,46 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 \end{frame}
 
 
+\subsection{Étanchéité}
+\begin{frame}{Protocole de test d'étanchéité}
+ Étanchéité du PET et des collages. Détection des fuites avec de l'eau savonneuse. Colle acrylique pour boucher les fuites.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=4.5cm]{../Images/etancheite.png}
+	\caption{Test d'étanchéité du PET, le PET est maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposée au dessus du PET.}
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Tests d'étanchéité}
+
+\begin{center}
+    \includegraphics[width=3.5cm]{../Images/cloche_pet.JPG}
+    \includegraphics[width=3.5cm]{../Images/cloche_colle.JPG}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=4cm]{../Images/ballon_etanche.JPG}
+    \captionof{figure}{Ballon de test d'étanchéité.}
+\end{center}
+
+Présence de fuites non détectables.
+
+\end{frame}
+
+
 \subsection{Assemblage ballon}
 
-\begin{frame}
+\begin{frame}{Assemblage des ballons}
+  \begin{center}
 	\begin{tabular}{cc}
-		\includegraphics[width=5cm]{../Images/assen_0.JPG} & \includegraphics[width=5cm]{../Images/assen_1.JPG} \\
-		\includegraphics[width=5cm]{../Images/assen_2.JPG} & \includegraphics[width=5cm]{../Images/assen_3.JPG} \\
+		\includegraphics[width=4.5cm]{../Images/assen_0.JPG} &
+		\includegraphics[width=4.5cm]{../Images/assen_1.JPG} \\
+		\includegraphics[width=3cm]{../Images/assen_2.JPG} &
+		\includegraphics[width=4.5cm]{../Images/assen_3.JPG} \\
 	\end{tabular}
-
+  \end{center}
 \end{frame}
 
 
