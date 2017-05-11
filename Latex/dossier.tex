@@ -133,7 +133,7 @@ Faute de juridiction quant aux appareils volants de ce type, nous nous sommes ra
 
 \subsubsection{Élévation}
 
-Le Tropodrone doit utiliser un moyen de supporter une partie du poids du drone sans dépenser d'énergie dans le but d'augmenter l'autonomie, pour ce faire nous utilisons la poussée d'Archimède d'un gaz plus léger que l'air. Comme ce gaz est plus léger que l'air la somme de son poids et de sa poussée d'Archimède forment une force verticale orienté vers le haut.
+Le Tropodrone doit utiliser un moyen de supporter une partie du poids du drone sans dépenser d'énergie dans le but d'augmenter l'autonomie du drone en le permettant de faire tourner ses hélices à un régime plus faible. Pour ce faire nous utilisons la poussée d'Archimède d'un gaz plus léger que l'air. Comme ce gaz est plus léger que l'air la somme de son poids et de sa poussée d'Archimède forment une force verticale orienté vers le haut.
 
 \paragraph{Archimède}
 
@@ -226,18 +226,43 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 
 \subsubsection{Enveloppe}
 
-\paragraph{Materiaux}
+\paragraph{Matériaux}
 
 \paragraph{Étanchéité}
 
+Lors de l'assemblage des ballons de nombreux problèmes d'étanchéité ont été rencontré, plusieurs piste étaient alors possible~: le manque de imperméabilité du matériau choisi ou des collages. Pour verifier ces deux hypothèse des tests on était réalisé sure des ballons finis et sur de simple feuille de PET sans assemblage et collage.
+
+
+La perméabilité du PET à rapidement était mise en doute, en effet les feuille que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
+
+Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisé ou encore la temperature en rendu l'usage de ces formules erroné.
+Malgré tout nous pouvons expliquer la perméabilité du PET par son taux de cristallisation. Les cristaux étant considéré comme parfaitement imperméable, l'air ne peux passer que entre ces cristaux, donc l'épaisseur du filme et la taux de cristallisation impactent directement la pérmeabilité du filme.
+
+Sans rentrer dans les détails des calculs de perméabilité, nous sommes passé à des test d'étanchéité à l'air, pour cela nous devons éliminer tout usage de collage même si nous pouvons dans l'absolu garantir leur étanchéité.
+Nous avons alors créé une cloche contenant une feuille de PET légèrement plié pour rentrer dans la cloche, la cloche est percée sur le haut et plongée dans l'eau à l'aide de quelque masse. Enfin sur le haut de la feuille de PET nous disposons une petit masse d'environs 10g.
+Le but de cette expérience est d'observer le passage de l'air à travers la feuille de PET, si l'air passe a travers la feuille alors la masse disposée au dessus tombera avec le temps, de plus l'eau permet de faire un très bon bouchon de cloche.
+
+\begin{center}
+%  \includegraphics[]{×}
+  image
+\end{center}
+
+Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constaté mais rien ne pouvant justifier les fuite assez importantes des ballons assemblé. Nous nous sommes alors penché sur l'impérméabilité des jointures de collage, ainsi nous avons pu observer que le moindre plis lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhèsif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisé plus aisement que de l'eau. Nous l'avons alors remplacé par de la colle acrylique que nous trouvons pour les collage en décoration, cette colle à le fort avantage d'être epaisse et de ne pas se retracter au séchage, ainsi nous pouvons boucher tout le volume d'un plis.
+
+Protocole etanchéité : TODO
+
+
+photo colle acrylique: TODO
+
+
 \subsubsection{Collage}
 
-Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller des jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique, il produit de très mauvaise jointure ci le la feuille de PET est froissé, là ou la colle pourrais agir comme un mastique.
+Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller les jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique et il produit de très mauvaises jointures ci la feuille de PET est froissée, là ou la colle pourrais agir comme un mastique.
 
 
 
 
-Les jointure de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures du collages. Malheureusement ce collage extérieur contraint la colle a un pelage, cette contrainte étant la pire pour la majorité des colles.
+Les jointure de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
 
 \paragraph{Résistance}
 
@@ -246,7 +271,7 @@ Les différentes contraintes d'un collages sont décrites dans le tableau suivan
  \includegraphics[width=15cm]{../Images/colle_contraintes.png}
 \end{center}
 
-La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisé en collant la jointure sur la un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
+La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisable en collant la jointure sur l'un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
 
 \begin{center}
  \includegraphics[width=7cm]{../Images/colle_cisaillement.png}
@@ -260,7 +285,22 @@ Deux tests de traction on alors était produit en pressant et collant deux feuil
  \includegraphics[width=7cm]{../Images/test_cisaillement.png}
 \end{center}
 
-% A finir.
+Lors de ces test nous pouvons remarquer que la contrainte de pelage à tendance à créer une rupture du subsrat par le déchirement du PET et une rupture de la colle, celle ci se brise en restant sur un des deux côté du substrat.
+En ce qui concerne le test favorisant cisaillement il y a rupture de substrat mais cette fois ci avec un étirement de la feuille avant son déchirement, ainsi le collage reste intact.
+
+Les mesures de forces lors des test de tractions sont présentes ci dessous~:
+
+\begin{center}
+  \begin{tabular}{|c|c|}
+    \hline
+    Pelage & Cisaillement \\
+    \hline
+    $0.45 N.cm^{-2}$ & $12.1 N.cm^{-2}$ \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage, cette techique de collage sera retenue pour l'assemblage de tout les futur ballons.
 
 \subsection{Forme}
 
@@ -325,6 +365,7 @@ Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le r�
 \end{axis}
 \end{tikzpicture}
 
+
 \paragraph{Résolution par bisection}
 
 Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonnant une fonction continue croissante ou décroissante dans un intervalle donné. Pour chaque intervalle un échantillon de la valeur intermédiaire est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'intervalle est réduite jusqu'à la valeur intermédiaire, dans la cas contraire où la valeur intermédiaire est plus petite que la valeur souhaité, la borne inférieur de l'intervalle est augmenté jusqu'à la valeur intermédiaire. Chacune des modifications d'intervalle en crée un nouveau deux fois plus petit.
@@ -333,6 +374,15 @@ Le programme python procédant à cette bissection est le suivant~:
 
 \lstset{language={Python}}
 \lstinputlisting{../Ballons/Programmes/diametreBallonLatex.py}
+
+Ce programme de bisection nous permet de trouver une largueur de ballon équivalente à $0.43m$, si nous recalculons le volume pour cette largeur~:
+
+\begin{center}
+  $\displaystyle{V = \frac{\sqrt{6}}{3} \times 0.43^3 + 0.43^2 }$ \\
+	$\displaystyle{V = 0.0649 + 0.1849 \approx 0.25}$
+\end{center}
+
+\subsection{Remplissage}
 
 
 
@@ -434,6 +484,29 @@ Toutefois,
 	Chaque moteur fournit 2 N.\\
 	(...) TRIGO ().
 \section{Réalisation}
+
+Le protocole d'assemblage trouver lors de l'assemblage du premier ballon final est le suivant~:
+\begin{itemize}
+ \item coller de l'adhésif double face sur une planche d'un longueur de plus de 2m (longueur des feuilles de PET)~;
+ \item polluer l'adhésif si celui ci est trop adhérent et empêche de décoller correctement le PET~;
+ \item presser une feuille de PET sur le bord de l'adhésif~;
+ \item nettoyer les surfaces de PET avec de l'acétone pour enlever le revêtement jaune gênant au collage~;
+ \item appliquer la colle 401 sur la feuille de PET posé sur l'adhésif le plus proche du bord de la feuille~;
+ \item étaler très rapidement à l'aide d'une petit spatule la colle, il faut que celle ci déborde légèrement lors du pressage~;
+ \item presser la deuxième feuille de PET sur la première~;
+ \item décoller l'ensemble de l'adhésif sans détériorer le collage~;
+ \item appliquer de la colle acrylique autour le long de la bordure de collage~;
+ \item percer un trou dans le PET de diamètre 8mm avec un emporte pièce~;
+ \item appliquer la colle 401 autour du trou~;
+ \item presser une valve à travers le trou~;
+ \item appliquer de la colle acrylique autour du trou~;
+ \item mesurer et tracer le patron de découpe~;
+ \item découper le patron avec un cutter en coupant toujours vers l'extérieur du patron pour éviter les déchirement du PET~;
+ \item recommencer le procédé de collage pour chacune des jointures.
+\end{itemize}
+
+
+
 \begin{center}
 	\includegraphics[width=15cm]{../Images/assen_1.JPG}
 \end{center}
