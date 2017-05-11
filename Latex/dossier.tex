@@ -140,7 +140,7 @@ Faute de juridiction quant aux appareils volants de ce type, nous nous sommes ra
 
 \subsubsection{Élévation}
 
-Le Tropodrone doit utiliser un moyen de supporter une partie du poids du drone sans dépenser d'énergie dans le but d'augmenter l'autonomie du drone en le permettant de faire tourner ses hélices à un régime plus faible. Pour ce faire nous utilisons la poussée d'Archimède d'un gaz plus léger que l'air. Comme ce gaz est plus léger que l'air la somme de son poids et de sa poussée d'Archimède forment une force verticale orienté vers le haut.
+Le Tropodrone doit utiliser un moyen de supporter une partie du poids du drone sans dépenser d'énergie dans le but d'augmenter l'autonomie du drone en le permettant de faire tourner ses hélices à un régime plus faible. Pour ce faire nous utilisons la poussée d'Archimède d'un gaz plus léger que l'air. Comme ce gaz est plus léger que l'air la somme de son poids et de sa poussée d'Archimède forment une force verticale orientée vers le haut.
 
 \paragraph{Archimède}
 
@@ -154,7 +154,7 @@ La poussée d'Archimède est définie par~:
 	\caption{Représentation de la poussée d'Archimède}
 \end{figure}
 
-Cette force se calcule avec la formule~:
+Cette force se calcule grâce à la formule~:
 
 \begin{center}
   \boxed{\vv{Fa} = -M_F \times \vv{g}}
@@ -170,8 +170,8 @@ Un ballon de gaz est donc soumis à deux forces~: son poids et sa poussée d'Arc
 
 Où $\vv{F_{ballon}}$ est la force d'élévation du ballon en $N$, $\vv{P_{ballon}}$ le poids du ballon en $N$, $\vv{Fa_{ballon}}$ la poussée d'Archimède exercée sur le ballon en $N$. \\
 
-Nous pouvons remarquer que si $P_{ballon} < Fa_{ballon}$ alors il existe une force d'élévation orienté vers le haut. De même cette force sera toujours  plus petite que la poussée d'Archimède exercée sur le ballon, comme le ballon et le gaz possède toujours une masse~: $F_{ballon} < Fa_{ballon}$.
-Par la suite nous appellerons capacité d'élévation la masse que peut supporter la force d'élévation d'un ballon~:
+Nous pouvons remarquer que si $P_{ballon} < Fa_{ballon}$ alors il existe une force d'élévation orientée vers le haut. De même cette force sera toujours plus petite que la poussée d'Archimède exercée sur le ballon, car le ballon et le gaz possèdent toujours une masse~: $F_{ballon} < Fa_{ballon}$.
+Par la suite nous appellerons capacité d'élévation la masse que peut soulever la force d'élévation d'un ballon~:
 \begin{center}
 	\boxed{Ca_{ballon} = \frac{F_{ballon}}{g}}
 \end{center}
@@ -180,7 +180,7 @@ Où $Ca_{ballon}$ est la capacité d'élévation en $kg$, $F_{ballon}$ la force 
 
 \paragraph{Gaz}
 
-Pour avoir un gaz plus léger que l'air il faut qu'il est une masse volumique inférieur à celle de l'air~: $1.29kg.m^3$. Plusieurs gaz remplissent cette condition, les plus courants sont l'hélium est l'hydrogène dont les masse volumique et les capacités d'élévation calculées sont~:
+Pour avoir un gaz plus léger que l'air il faut qu'il possède une masse volumique inférieur à celle de l'air~: $1.29kg.m^3$. Plusieurs gaz remplissent cette condition, les plus courants sont l'hélium est l'hydrogène dont les masses volumiques et les capacités d'élévation calculées sont~:
 
 \begin{center}
 	\begin{tabular}{|l|c|c|c|}
@@ -221,7 +221,7 @@ Le volume molaire de l'hélium est~: $22.414\times 10^{-3} m^3.mol^{-1}$ à $273
 	$\displaystyle{V_{T_{200}} = 8.2\times 10^{-5} \times 473.25 = 38.811 \times 10^{-3}} m^3.mol^{-1}$
 \end{center}
 
-Donc à $200 \degree C$ l'hélium a un volume molaire de $38.811 \times 10^{-3} m^3.mol^{-1}$ équivalent à 1.59 fois son volume molaire d'origine. Malgré cette augmentation de volume, la force d'élévation varie peu car la poids de l'hélium est très faible et que la réduction de celui ci ne fera que ce rapprocher de la poussée d'Archimède~: \\
+Donc à $200 \degree C$ l'hélium a un volume molaire de $38.811 \times 10^{-3} m^3.mol^{-1}$ équivalent à 1.59 fois son volume molaire d'origine. Malgré cette augmentation de volume, la force d'élévation varie peu car le poids de l'hélium est très faible et que la réduction de celui ci ne fera que se rapprocher de la valeur de la poussée d'Archimède~: \\
 
 \begin{center}
   $\displaystyle{F_{T_0} = Fa_{air} - P_{helium} = 10.90 N}$
@@ -237,9 +237,9 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 
 \paragraph{Matériaux}
 
-Lors de la sélection des matériaux à utiliser pour l'enveloppe des ballons nous avons chercher les matériaux déjà utilisez dans le domaine des ballons dirigeables et des sondes. Le plus utilisé est le latex mais celui ci ne se trouvais qu'en forme de ballon sphérique (ballon de baudruche) ce qui empêche tout contrôle de la forme.
+Lors de la sélection des matériaux à utiliser pour l'enveloppe des ballons nous avons cherché les matériaux déjà utilisés dans le domaine des ballons dirigeables et des sondes. Le plus utilisé est le latex mais celui ci ne se trouvait qu'en forme de ballon sphérique (ballon de baudruche) ce qui empêche tout contrôle de la forme.
 
-Ci dessous sont listés les matériaux comparés lors de notre choix.
+Ci dessous sont listés les matériaux comparés lors de notre choix~:
 
 \begin{center}
 \begin{tabular}{|p{0.2\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}
@@ -277,21 +277,21 @@ Ci dessous sont listés les matériaux comparés lors de notre choix.
 
 Le matériaux retenue et le polyéthylène téréphtalate (PET) ou de nom commercial Mylar. Ce matériaux est un polymère très léger et solide à la traction, mais il à aussi ses désavantages, il est fragile à la perforation et comme la plupart des polyéthylène très difficile à coller.
 
-Lors de nos test d'assemblage nous avons utilisé du PET provenant de couverture de survie car peu cher, mais après quelque test d'étanchéité nous mettons clairement un doute sur le qualité du PET de couverture de survie. D'autre sources de PET sont possible notamment dans les films alimentaires, un exemple et le Mylar 850, mais malgré sa très grande qualité affichée (perméabilité, épaisseur, masse) celui ci ne se vend que en bobine de 2500 mètre.
+Lors de nos test d'assemblage nous avons utilisé du PET provenant de couvertures de survie car peu cher, mais après quelque tests d'étanchéité nous mettons clairement en doute la qualité du PET des couvertures de survie. D'autre sources de PET sont possible notamment dans les films alimentaires, un exemple et le Mylar 850, mais malgré sa très grande qualité affichée (perméabilité, épaisseur, masse) celui ci ne se vend que en bobine de 2500 mètre.
 
 \paragraph{Étanchéité}
 
-L'étanchéité du PET est important pour garder le gaz à l'intérieur des ballons et ainsi autoriser le drone à voler plus longtemps avec l'assistance des ballons. Pour ce faire une étude théorique de la perméabilité du PET a été réalisé ainsi que des tests d'étanchéité à l'air.
+L'étanchéité du PET est importante pour garder le gaz à l'intérieur des ballons et ainsi autoriser le drone à voler plus longtemps avec l'assistance des ballons. Pour ce faire une recherche théorique de la perméabilité du PET a été réalisé ainsi que des tests d'étanchéité à l'air.
 
-Lors de l'assemblage des ballons de nombreux problèmes d'étanchéité ont été rencontré, plusieurs piste étaient alors possible~: le manque de imperméabilité du matériau choisi ou des collages. Pour vérifier ces deux hypothèse des tests on était réalisé sure des ballons finis et sur de simple feuille de PET sans assemblage et collage.
+Lors de l'assemblage des ballons de nombreux problèmes d'étanchéité ont été rencontré, plusieurs pistes étaient alors possibles~: le manque de imperméabilité du matériau choisi ou des collages. Pour vérifier ces deux hypothèses des tests ont été réalisé sure des ballons finis et sur de simple feuille de PET sans assemblage et collage.
 
 
-La perméabilité du PET à rapidement était mise en doute, en effet les feuilles que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
+La perméabilité du PET a rapidement été mise en doute, en effet les feuilles que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couvertures de survie.
 
-Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisée ou encore la température ont rendu l'usage de ces formules erroné.
-Malgré tout nous pouvons expliquer la perméabilité du PET par son taux de cristallisation. Les cristaux étant considéré comme parfaitement imperméable, l'air ne peux passer que entre ces cristaux, donc l'épaisseur du filme et la taux de cristallisation impactent directement la perméabilité du filme.
+Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium ont été trouvé mais le manque de valeurs pour l'épaisseur de notre film, la pression utilisée ou encore la température ont rendu l'usage de ces formules erroné et des ces données.
+Malgré tout nous pouvons expliquer la perméabilité du PET par son taux de cristallisation. Les cristaux étant considérés comme parfaitement imperméable, l'air ne peut passer que entre ces cristaux, donc l'épaisseur du film et le taux de cristallisation impacte directement la perméabilité du film.
 
-Les seul chiffres que nous possédons sont ceux d'un film de PET alimentaires le Mylar 850 déjà énoncé précédemment~:
+Les seuls chiffres que nous possédons sont ceux d'un film de PET alimentaires le Mylar 850 déjà énoncé précédemment~:
 
 \begin{center}
  \includegraphics[width=15cm]{../Images/permeabilite.png}
@@ -299,14 +299,14 @@ Les seul chiffres que nous possédons sont ceux d'un film de PET alimentaires le
 
 Le film s'approchant le plus du notre et de $15\mu m$ ayant une fuite de 1.12L par $m^2$ de surface par jour et par atmosphère, 1 dans notre cas.
 
-Sans rentrer dans les détails des calculs de perméabilité, nous sommes passé à des test d'étanchéité à l'air, pour cela nous devons éliminer tout usage de collage même si nous pouvons dans l'absolu garantir leur étanchéité.
-Nous avons alors créé une cloche contenant une feuille de PET légèrement plié pour rentrer dans la cloche, la cloche est percée sur le haut et plongée dans l'eau à l'aide de quelque masse. Enfin sur le haut de la feuille de PET nous disposons une petit masse d'environs 10g.
-Le but de cette expérience est d'observer le passage de l'air à travers la feuille de PET, si l'air passe a travers la feuille alors la masse disposée au dessus tombera avec le temps, de plus l'eau permet de faire un très bon bouchon de cloche.
+Sans rentrer dans les détails des calculs de perméabilité, nous sommes passé à des tests d'étanchéité à l'air, pour cela nous devons éliminer tout usage de collage même si nous pouvons dans l'absolu garantir leur étanchéité.
+Nous avons alors créé une cloche maintenant une feuille de PET légèrement plié pour rentrer dans la cloche, la cloche est percée sur le haut et plongée dans l'eau à l'aide de quelques masses. Enfin sur le haut de la feuille de PET nous disposons une petite masse d'environs 10g.
+Le but de cette expérience est d'observer le passage de l'air à travers la feuille de PET, si l'air passe à travers la feuille alors la masse disposée au dessus tombera avec le temps, de plus l'eau permet de faire un très bon bouchon avec le bas de la cloche.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=7cm]{../Images/etancheite.png}
-	\caption{Test d'étanchéité du PET, le PET est maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
+	\caption{Test d'étanchéité du PET, le PET est maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposée au dessus du PET.}
 \end{figure}
 
 Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constatée mais rien ne pouvant justifier les fuites assez importantes des ballons assemblés.
@@ -319,7 +319,7 @@ Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible 
 
 
 
-Nous nous sommes alors penché sur l’imperméabilité des jointures de collage, ainsi nous avons pu observer que le moindre pli lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhésif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisée plus aisément que de l'eau. Nous l'avons alors remplacée par de la colle acrylique que nous trouvons pour les collages en décoration, cette colle à le fort avantage d'être épaisse et de ne pas se rétracter au séchage, ainsi nous pouvons boucher tout le volume d'un pli.
+Nous nous sommes alors penché sur l’imperméabilité des jointures de collage, ainsi nous avons pu observer que le moindre pli lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhésif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisée plus aisément que de l'eau. Nous l'avons alors remplacé par de la colle acrylique que nous trouvons pour les collages en décoration, cette colle a le fort avantage d'être épaisse et de ne pas se rétracter au séchage, ainsi nous pouvons boucher tout le volume d'un pli.
 
 \begin{figure}[H]
  \centering
@@ -328,15 +328,15 @@ Nous nous sommes alors penché sur l’imperméabilité des jointures de collage
 \end{figure}
 
 
-Les différentes méthodes d'étanchéification des jointure on était testé de deux façons.
-Premièrement deux triangles de PET sont découpé puis collé sur deux de leurs bords, l'ensemble forme ainsi un cône que nous pouvons tester de la même manière que le PET seul avec une cloche plongée dans l'eau.
-Deuxièmement un ballon est assemblé avec la méthode d'étanchéification étudié, le ballon est gonflé à une faible pression et de l'eau savonneuse est passé autour de l'enveloppe extérieur du ballon, ainsi la moindre bulle nous signal une fuite, nous pouvons faire de même en plongeant le ballon dans l'eau. Malheureusement ce dernier test compromet les résultats car l'eau à tendance à boucher les fuites par sa viscosité, c'est ainsi que nous pouvons remarquer que nos ballons les plus étanches présentent toujours des fuites car nous constatons une baisse de volume mais sans détecter la moindre bulle d'air au savon ou avec un ballon plongé dans l'eau.
+Les différentes méthodes d'étanchéification des jointure ont été testé de deux façons.
+Premièrement deux triangles de PET sont découpés puis collés sur deux de leurs bords, l'ensemble forme ainsi un cône que nous pouvons tester de la même manière que le PET seul avec une cloche plongée dans l'eau.
+Deuxièmement un ballon est assemblé avec la méthode d'étanchéification étudiée, le ballon est gonflé à une pression moyenne et de l'eau savonneuse est passé autour de l'enveloppe extérieur du ballon, ainsi la moindre bulle nous signal une fuite, nous pouvons faire de même en plongeant le ballon dans l'eau. Malheureusement ce dernier test compromet les résultats car l'eau a tendance à boucher les fuites par sa viscosité, c'est ainsi que nous pouvons remarquer que nos ballons les plus étanches présentent toujours des fuites car nous constatons une baisse de volume mais sans pouvoir détecter la moindre bulle d'air au savon ou en plongeant le ballon dans l'eau.
 
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=7cm]{../Images/cloche_colle.JPG}
- \caption{Cloche utilisé pour tester l'étanchéité des collages.}
+ \caption{Cloche utilisée pour tester l'étanchéité des collages.}
 \end{figure}
 
 \begin{figure}[H]
@@ -350,7 +350,7 @@ Deuxièmement un ballon est assemblé avec la méthode d'étanchéification étu
 
 Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller les jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique et il produit de très mauvaises jointures ci la feuille de PET est froissée, là ou la colle pourrais agir comme un mastique.
 
-Comme nous l'avons précédemment expliqué le PET est un matériaux très difficilement collable, en contrepartie de nombreuses colles ont était testé avec aux final bien plus de colle inefficace que utilisable. 
+Comme nous l'avons précédemment expliqué le PET est un matériaux très difficilement collable, en contrepartie de nombreuses colles ont été testé avec aux final bien plus de colles inefficaces que utilisables. 
 
 Ci dessous l'ensemble de colles testées~:
 
@@ -414,7 +414,7 @@ Ci dessous l'ensemble de colles testées~:
   \end{tabular}
 \end{center}
 
-La colle retenu est la cyanoacrylate d'éthyle ou 401, cette colle est une des plus adhérentes au PET, elle à un temps de séchage assez court et surtout ne dépend pas d'une polymérisation à l'air mais à l'eau de surface, en effet les feuilles de PET étant très imperméable le temps de séchage pour une colle polymérisé à l'air peu prendre plusieurs heures, certaine ne sèchent presque jamais comme la colle vinylique.
+La colle retenu est la cyanoacrylate d'éthyle ou 401, cette colle est une des plus adhérentes au PET, elle a un temps de séchage assez court et surtout ne dépend pas d'une polymérisation à l'air mais à l'eau de surface, en effet les feuilles de PET étant très imperméables le temps de séchage pour une colle polymérisé à l'air peu prendre plusieurs heures, certaine ne sèchent presque jamais comme la colle vinylique.
 
 Les jointures de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
 
@@ -425,7 +425,7 @@ Les différentes contraintes d'un collages sont décrites dans le tableau suivan
  \includegraphics[width=15cm]{../Images/colle_contraintes.png}
 \end{center}
 
-La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisable en collant la jointure sur l'un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
+La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène à un déchirement du collage qui fragilise les zones voisines de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisable en collant la jointure sur l'un des côtés du ballon, formant ainsi un collage plat au lieu d'une forme en T.
 
 \begin{figure}[H]
 	\centering
@@ -434,17 +434,17 @@ La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur 
  \caption{À gauche le schéma d'un collage favorisant les contraintes de pelage, à droite le schéma d'un collage favorisant les contraintes de cisaillement.}
 \end{figure}
 
-Deux tests de traction on alors était produit en pressant et collant deux feuilles de PET dans des planches en bois servant de support à la traction, ensuite les deux feuilles de PET étaient collé entre elle avec chacune des technique de collage.
+Deux tests de traction on alors était produit en pressant et collant deux feuilles de PET dans des planches en bois servant de support à la traction, ensuite les deux feuilles de PET étaient collées entre elle avec chacune des techniques de collage.
 
 \begin{figure}[H]
 	\centering
  \includegraphics[width=7cm]{../Images/test_pelage.png}
  \includegraphics[width=7cm]{../Images/test_cisaillement.png}
- \caption{À gauche la photo après les contrainte de pelage, remarquons la rupture du substrat par déchirement et la rupture de la colle, à droite la photo après les contraintes de cisaillement, remarquons la seul rupture du substrat après étirement de la feuille de PET.}
+ \caption{À gauche la photo après la contrainte de pelage, remarquons la rupture du substrat par déchirement et la rupture de la colle, à droite la photo après la contraintes de cisaillement, remarquons la seul rupture du substrat après étirement de la feuille de PET.}
 \end{figure}
 
-Lors de ces test nous pouvons remarquer que la contrainte de pelage à tendance à créer une rupture du substrat par le déchirement du PET et une rupture de la colle, celle ci se brise en restant sur un des deux côté du substrat.
-En ce qui concerne le test favorisant cisaillement il y a rupture de substrat mais cette fois ci avec un étirement de la feuille avant son déchirement, ainsi le collage reste intact.
+Lors de ces tests nous pouvons remarquer que la contrainte de pelage à tendance à créer une rupture du substrat par le déchirement du PET et une rupture de la colle, celle ci se brise en restant sur un des deux côtés du substrat.
+En ce qui concerne le test favorisant le cisaillement, il y a rupture du substrat mais cette fois ci avec un étirement de la feuille avant son déchirement, ainsi le collage reste intact.
 
 Les mesures de forces lors des test de tractions sont présentes ci dessous~:
 
@@ -459,15 +459,15 @@ Les mesures de forces lors des test de tractions sont présentes ci dessous~:
 \end{center}
 
 Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage.
-De plus les données constructeur de la colle indiquent une résistance de la colle en traction de 7 à 11 $N.mm-2$ ce qui largement supérieur au .12 $N.mm-2$ des tests, ce qui laisse penser que seul le PET et limitant dans la résistance des collages maintenant.
+De plus les données constructeur de la colle indiquent une résistance en cisaillement de 7 à 11 $N.mm-2$ ce qui largement supérieur au 0.12 $N.mm-2$ des tests, ce qui laisse penser que seul le PET est limitant dans la résistance des collages actuellement.
 
 
-Cette technique de collage sera retenue pour l'assemblage de tout les futur ballons.
+Cette technique de collage sera retenue pour l'assemblage de tous les futurs ballons.
 
 \subsection{Forme}
 
-Le Tropodrone est composée de trois ballon de taille identique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
-La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallélépipède avec des pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
+Le Tropodrone est composée de trois ballons de taille identique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
+La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallélépipède avec deux pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
 
 \begin{figure}[H]
 	\centering
@@ -482,6 +482,7 @@ D'après le bilan maximale des masses il faudrait contenir $0.75m^3$ d'hélium d
 \begin{itemize}
  \item la longueur du parallélépipède central est de 1m~;
  \item l'angle entre les arrêtes du sommets de la pyramide et la base de la pyramide est de $60 \degree$~;
+ \item les ballons ont une orientation horizontale de $45 \degree$~;
  \item le volume du ballon est de $0.25m^3$.
 \end{itemize}
 
@@ -513,7 +514,7 @@ Nous simplifions la formule jusqu'à trouver un polynome nous facilitant la rés
   $\displaystyle{b^3 \frac{\sqrt{6}}{3} + b^2 - 0.25 = 0}$
 \end{center}
 
-Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le résoudre aussi facilement qu'un polynôme du second degré, la méthode la plus simple dans notre cas est d'utiliser le théorème des valeurs intermédiaires, notre fonction de volume est croissante (monôme de plus haut degré positif), continue et passant par zéro.
+Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le résoudre aussi facilement qu'un polynôme du second degré, la méthode la plus simple dans notre cas est d'utiliser le théorème des valeurs intermédiaires, notre fonction de volume est croissante, continue et passant par zéro.
 
 \begin{tikzpicture}[scale=1.5]
   \begin{axis}[
@@ -532,7 +533,7 @@ Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le r�
 
 \paragraph{Résolution par bissection}
 
-Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonnant une fonction continue croissante ou décroissante dans un intervalle donné. Pour chaque intervalle un échantillon de la valeur intermédiaire est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'intervalle est réduite jusqu'à la valeur intermédiaire, dans la cas contraire où la valeur intermédiaire est plus petite que la valeur souhaité, la borne inférieur de l'intervalle est augmenté jusqu'à la valeur intermédiaire. Chacune des modifications d'intervalle en crée un nouveau deux fois plus petit.
+Pour trouver la largeur souhaitée pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécutée par un programme python. Une bissection est une méthode échantillonnant une fonction continue croissante ou décroissante dans un intervalle donné. Pour chaque intervalle un échantillon de la valeur intermédiaire est calculé, si sa valeur est supérieur à la valeur souhaitée, la borne supérieur de l'intervalle est réduite jusqu'à la valeur intermédiaire, dans la cas contraire où la valeur intermédiaire est plus petite que la valeur souhaité, la borne inférieur de l'intervalle est augmentée jusqu'à la valeur intermédiaire. Chacune des modifications d'intervalle en crée un nouveau deux fois plus petit.
 \medbreak
 Le programme python procédant à cette bissection est le suivant~:
 
@@ -559,17 +560,13 @@ Le patron du ballon à une point de découpage sur une des arrêtes longue du pa
 
 Le remplissage des ballons se fait par l'usage d'une valve de roue de vélo, cette valve et la plus légère pour l'usage de faibles pressions et possède un clapet anti-retour. D'autre solutions était d'utiliser une valve standard pour air comprimé, mais celle ci était bien trop lourde.
 
-La valve de vélo est découpé en laissant un rond de caoutchouc autour pour faciliter le collage sur le PET. Elle est collé sur une des face les plus longue du parallélépipède et non sur une bordure de collage car elle pourrait créer des plis et donc de potentielle fuites.
+La valve de vélo est découpé en laissant un rond de caoutchouc autour pour faciliter le collage sur le PET. Elle est collé sur une des face les plus longue du parallélépipède et non sur une bordure de collage car elle pourrait créer des plis et donc de potentielles fuites.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=5cm]{../Images/valve.JPG}
   \caption{Valve de remplissage des ballons.}
 \end{figure}
-
-
-Malgré cela, nous n'avons pas pu tester ces valve avec une bouteille d'hélium.
-
 
 \section{Structure}
 
@@ -792,6 +789,7 @@ Le protocole d'assemblage trouvé lors de l'assemblage du premier ballon final e
   \item \emph{$http://aeroballongaz.chez-alice.fr/Enveloppe2.htm$}
   \item \emph{$http://www.airshoot-technologie.com/contents/fr/d38_ballons-photos-helium.html$}
   \item \emph{$http://ballonsolaire.pagesperso-orange.fr/reglementation4m.htm$}
+  \item \emph{$http://www.doganak.com/wp-content/uploads/2014/07/Mylar-850.pdf$}
 %   \item \emph{}
 \end{itemize}
 
