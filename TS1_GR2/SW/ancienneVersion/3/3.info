@@ -1,0 +1,115 @@
+
+    Informations système
+                Etat:   Calcul terminé.
+                Produit:   Flow Simulation 2016 SP2.0. Build: 3350
+                Nom de l'ordinateur:   THIBAUT-PC
+                Nom d'utilisateur:   Thibaut
+                Processeurs:   Intel(R) Pentium(R) CPU 3550M @ 2.30GHz
+                Mémoire:   4016 Mo / 8388607 Mo
+                Système d'exploitation:   Windows 7 Service Pack 1 (Build 7601)
+                Version CAO:   SOLIDWORKS 2016 SP2.0
+                Vitesse UC:   2300 MHz
+
+    Informations générales
+                Modèle:   Assemblage1.SLDASM
+                Nom du projet:   Vent 10 km.h-1 ballon de 60°
+                Chemin du projet:   C:\Users\Thibaut\Desktop\Tropodrone\3
+                Système d'unités:   SI (m-kg-s)
+                Type d'analyse:   Externe (exclure les espaces intérieurs)
+                Exclure les cavités sans conditions d'écoulement :   Désactivé
+                Système de coordonnées:   Système de coordonnées global
+                Axe de référence:   Z
+
+    Caractéristiques physiques
+                Conduction thermique dans les solides:   Désactivé
+                Transitoire:   Désactivé
+                Effets gravitationnels:   Désactivé
+                Type d'écoulement:   Laminaire et turbulent
+                Ecoulement à nombre de Mach élevé:   Désactivé
+                Humidité:   Désactivé
+                Rugosité par défaut:   0 micromètre
+                Conditions par défaut des parois:   Paroi adiabatique
+
+    Domaine de calcul
+
+        Taille
+                X min:   -1.287 m
+                X max:   0.544 m
+                Y min:   1.778 m
+                Y max:   4.555 m
+                Z min:   -0.358 m
+                Z max:   2.946 m
+
+    Calcul du maillage
+
+        Dimensions du maillage basique
+                Nombre de cellules suivant X:   17
+                Nombre de cellules suivant Y:   24
+                Nombre de cellules suivant Z:   28
+
+        Nombre de cellules
+                Cellules:   13449
+                Cellules fluides:   11728
+                Cellules solides:   1721
+                Cellules irrégulières:   0
+                Cellules ajustées:   0
+                Niveau de raffinement maximal:   1
+
+    Objectifs
+
+        Objectifs globaux
+
+            Force de traînée
+                Type:   Objectif global
+                Type d'objectif:   Force (Z)
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+            GG Min Vitesse (Z) 1
+                Type:   Objectif global
+                Type d'objectif:   Vitesse (Z)
+                Calculer:   Valeur minimale
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+            GG Moy. Vitesse (Z) 1
+                Type:   Objectif global
+                Type d'objectif:   Vitesse (Z)
+                Calculer:   Valeur moyenne
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+            GG Max Vitesse (Z) 1
+                Type:   Objectif global
+                Type d'objectif:   Vitesse (Z)
+                Calculer:   Valeur maximale
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+        Equations d'objectifs
+
+            Cx
+                Type:   Equation d'objectifs
+                Formule:   (2*Force de traînée)/(1,204 * 2.7^2 * 0.92868486)
+                Dimension:   Sans unité
+                Utiliser pour la convergence :   Activé
+
+    Objectifs
+                
+                Nom                     	Unité   	Valeur      	Progression   	Critères       	Delta          	Utiliser pour la convergence 
+                Force de traînée        	N       	2.467       	100           	0.561534468    	0.0792954253   	Activé                       
+                GG Min Vitesse (Z) 1    	m/s     	-0.517      	100           	0.0996490183   	0.0824744772   	Activé                       
+                GG Moy. Vitesse (Z) 1   	m/s     	2.374       	100           	0.024736683    	0.0195148561   	Activé                       
+                GG Max Vitesse (Z) 1    	m/s     	3.637       	100           	0.0324129972   	0.01643237     	Activé                       
+                Cx                      	        	0.6052916   	100           	0.137779319    	0.0194560981   	Activé                       
+
+    Informations générales
+                Itérations:   64
+                Temps de calcul:   401 s
+
+        Log
+                Préparation des données pour le calcul:   16:58:03 , Feb 12
+                Calcul démarré	0:   16:58:06 , Feb 12
+                Le calcul a convergé puisque les critères suivants sont respectés:	63:   17:04:45 , Feb 12
+                    Les objectifs ont convergé	63:   
+                Calcul terminé	64:   17:04:45 , Feb 12

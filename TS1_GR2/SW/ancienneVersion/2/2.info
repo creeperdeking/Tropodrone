@@ -1,0 +1,84 @@
+
+    Informations système
+                Etat:   Calcul terminé.
+                Produit:   Flow Simulation 2016 SP2.0. Build: 3350
+                Nom de l'ordinateur:   THIBAUT-PC
+                Nom d'utilisateur:   Thibaut
+                Processeurs:   Intel(R) Pentium(R) CPU 3550M @ 2.30GHz
+                Mémoire:   4016 Mo / 8388607 Mo
+                Système d'exploitation:   Windows 7 Service Pack 1 (Build 7601)
+                Version CAO:   SOLIDWORKS 2016 SP2.0
+                Vitesse UC:   2300 MHz
+
+    Informations générales
+                Modèle:   Assemblage1.SLDASM
+                Nom du projet:   Projet(1)
+                Chemin du projet:   C:\Users\Thibaut\Desktop\Tropodrone\2
+                Système d'unités:   SI (m-kg-s)
+                Type d'analyse:   Externe (exclure les espaces intérieurs)
+                Exclure les cavités sans conditions d'écoulement :   Désactivé
+                Système de coordonnées:   Système de coordonnées global
+                Axe de référence:   Z
+
+    Caractéristiques physiques
+                Conduction thermique dans les solides:   Désactivé
+                Transitoire:   Désactivé
+                Effets gravitationnels:   Désactivé
+                Type d'écoulement:   Laminaire et turbulent
+                Ecoulement à nombre de Mach élevé:   Désactivé
+                Humidité:   Désactivé
+                Rugosité par défaut:   0 micromètre
+                Conditions par défaut des parois:   Paroi adiabatique
+
+    Domaine de calcul
+
+        Taille
+                X min:   -0.844 m
+                X max:   0.383 m
+                Y min:   1.632 m
+                Y max:   4.465 m
+                Z min:   -0.771 m
+                Z max:   3.587 m
+
+    Calcul du maillage
+
+        Dimensions du maillage basique
+                Nombre de cellules suivant X:   12
+                Nombre de cellules suivant Y:   25
+                Nombre de cellules suivant Z:   36
+
+        Nombre de cellules
+                Cellules:   13078
+                Cellules fluides:   11234
+                Cellules solides:   1844
+                Cellules irrégulières:   0
+                Cellules ajustées:   0
+                Niveau de raffinement maximal:   1
+
+    Objectifs
+
+        Objectifs globaux
+
+            Force de traînée
+                Type:   Objectif global
+                Type d'objectif:   Force (Z)
+                Système de coordonnées:   Système de coordonnées global
+                Utiliser pour la convergence :   Activé
+
+    Objectifs
+                
+                Nom                	Unité   	Valeur   	Progression   	Critères      	Delta         	Utiliser pour la convergence 
+                Force de traînée   	N       	2.640    	100           	0.768224628   	0.689072922   	Activé                       
+
+    Informations générales
+                Itérations:   46
+                Temps de calcul:   263 s
+
+        Log
+                Génération du maillage démarrée:   15:06:27 , Feb 07
+                Génération du maillage terminée avec succès:   15:06:33 , Feb 07
+                Préparation des données pour le calcul:   15:06:33 , Feb 07
+                Calcul démarré	0:   15:06:36 , Feb 07
+                Le calcul a convergé puisque les critères suivants sont respectés:	45:   15:10:57 , Feb 07
+                    Les objectifs ont convergé	45:   
+                Calcul terminé	46:   15:10:58 , Feb 07
