@@ -31,4 +31,4 @@ elif int(Re) > pow(10,3):
     Cx = 0.44
 
 Fx = 0.5 * P * S * pow(V,2) * Cx
-print("Trainee = "+str(Fx)+" Newtons")
+print("Force de trainee = "+str(Fx)+" Newtons")

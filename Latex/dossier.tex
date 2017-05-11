@@ -1,5 +1,6 @@
 \documentclass[a4paper,11pt]{article}
 
+\usepackage[table]{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
 \usepackage[frenchb]{babel}
@@ -21,6 +22,12 @@
 \usepackage[babel=true]{csquotes}
 \usepackage{gensymb}
 \usepackage{listings}
+\usepackage{colortbl}
+\usepackage{float}
+
+\definecolor{RedT}{rgb}{1, .7, .7}
+\definecolor{GreenT}{rgb}{.7, 1, .7}
+\definecolor{OrangeT}{rgb}{1, 1, .7}
 
 % \setcounter{tocdepth}{4}
 
@@ -141,7 +148,8 @@ La poussée d'Archimède est définie par~:
 
 \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
 
-\begin{figure}
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=5cm]{../Images/pousse_archimede.png}
 	\caption{Représentation de la poussée d'Archimède}
 \end{figure}
@@ -229,43 +237,186 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 
 \paragraph{Matériaux}
 
+Lors de la sélection des matériaux à utiliser pour l'enveloppe des ballons nous avons chercher les matériaux déjà utilisez dans le domaine des ballons dirigeables et des sondes. Le plus utilisé est le latex mais celui ci ne se trouvais qu'en forme de ballon sphérique (ballon de baudruche) ce qui empêche tout contrôle de la forme.
+
+Ci dessous sont listés les matériaux comparés lors de notre choix.
+
+\begin{center}
+\begin{tabular}{|p{0.2\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}
+		\hline
+		Matériaux & Avantages & Inconvénients \\
+		\hline
+
+		\rowcolor{OrangeT}
+		Latex &
+		Facile à trouver dans le commerce &
+		Seulement en forme sphérique~; peu étanche \\
+		\hline
+
+		\rowcolor{RedT}
+		Hypalon & Étanche & Introuvable dans le commerce~; fragile aux ultraviolets \\
+		\hline
+
+		\rowcolor{GreenT}
+		Mylar (PET) &
+		Facile à trouver dans le commerce~; résistant à la traction~; peut être assemblé~; léger~: $17 g.m^{-2}$ &
+		Raide~; fragile au cisaillement et à la perforation \\
+		\hline
+
+		\rowcolor{RedT}
+		Chloroprène &
+		& Introuvable dans le commerce \\
+		\hline
+
+		\rowcolor{RedT}
+		Butyle &
+		& Introuvable dans le commerce \\
+		\hline
+\end{tabular}
+\end{center}
+
+Le matériaux retenue et le polyéthylène téréphtalate (PET) ou de nom commercial Mylar. Ce matériaux est un polymère très léger et solide à la traction, mais il à aussi ses désavantages, il est fragile à la perforation et comme la plupart des polyéthylène très difficile à coller.
+
+Lors de nos test d'assemblage nous avons utilisé du PET provenant de couverture de survie car peu cher, mais après quelque test d'étanchéité nous mettons clairement un doute sur le qualité du PET de couverture de survie. D'autre sources de PET sont possible notamment dans les films alimentaires, un exemple et le Mylar 850, mais malgré sa très grande qualité affichée (perméabilité, épaisseur, masse) celui ci ne se vend que en bobine de 2500 mètre.
+
 \paragraph{Étanchéité}
+
+L'étanchéité du PET est important pour garder le gaz à l'intérieur des ballons et ainsi autoriser le drone à voler plus longtemps avec l'assistance des ballons. Pour ce faire une étude théorique de la perméabilité du PET a été réalisé ainsi que des tests d'étanchéité à l'air.
 
 Lors de l'assemblage des ballons de nombreux problèmes d'étanchéité ont été rencontré, plusieurs piste étaient alors possible~: le manque de imperméabilité du matériau choisi ou des collages. Pour vérifier ces deux hypothèse des tests on était réalisé sure des ballons finis et sur de simple feuille de PET sans assemblage et collage.
 
 
-La perméabilité du PET à rapidement était mise en doute, en effet les feuille que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
+La perméabilité du PET à rapidement était mise en doute, en effet les feuilles que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
 
-Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisé ou encore la température en rendu l'usage de ces formules erroné.
+Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisée ou encore la température ont rendu l'usage de ces formules erroné.
 Malgré tout nous pouvons expliquer la perméabilité du PET par son taux de cristallisation. Les cristaux étant considéré comme parfaitement imperméable, l'air ne peux passer que entre ces cristaux, donc l'épaisseur du filme et la taux de cristallisation impactent directement la perméabilité du filme.
+
+Les seul chiffres que nous possédons sont ceux d'un film de PET alimentaires le Mylar 850 déjà énoncé précédemment~:
+
+\begin{center}
+ \includegraphics[width=15cm]{../Images/permeabilite.png}
+\end{center}
+
+Le film s'approchant le plus du notre et de $15\mu m$ ayant une fuite de 1.12L par $m^2$ de surface par jour et par atmosphère, 1 dans notre cas.
 
 Sans rentrer dans les détails des calculs de perméabilité, nous sommes passé à des test d'étanchéité à l'air, pour cela nous devons éliminer tout usage de collage même si nous pouvons dans l'absolu garantir leur étanchéité.
 Nous avons alors créé une cloche contenant une feuille de PET légèrement plié pour rentrer dans la cloche, la cloche est percée sur le haut et plongée dans l'eau à l'aide de quelque masse. Enfin sur le haut de la feuille de PET nous disposons une petit masse d'environs 10g.
 Le but de cette expérience est d'observer le passage de l'air à travers la feuille de PET, si l'air passe a travers la feuille alors la masse disposée au dessus tombera avec le temps, de plus l'eau permet de faire un très bon bouchon de cloche.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=7cm]{../Images/etancheite.png}
-	\caption{Test d'étanchéité du PET, le PET et maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
+	\caption{Test d'étanchéité du PET, le PET est maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
 \end{figure}
 
-Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constatée mais rien ne pouvant justifier les fuites assez importantes des ballons assemblés. Nous nous sommes alors penché sur l’imperméabilité des jointures de collage, ainsi nous avons pu observer que le moindre pli lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhésif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisée plus aisément que de l'eau. Nous l'avons alors remplacée par de la colle acrylique que nous trouvons pour les collages en décoration, cette colle à le fort avantage d'être épaisse et de ne pas se rétracter au séchage, ainsi nous pouvons boucher tout le volume d'un pli.
+Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constatée mais rien ne pouvant justifier les fuites assez importantes des ballons assemblés.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=7cm]{../Images/cloche_pet.JPG}
+ \caption{Cloche utilisée pour tester l'étanchéité du PET.}
+\end{figure}
 
 
-Les différentes méthodes d'étanchéification des jointure on était testé de deux façons. Premièrement deux triangles de PET sont découpé puis collé sur deux de leurs bords, l'ensemble forme ainsi un cône que nous pouvons tester de la même manière que le PET seul avec une cloche plongée dans l'eau.
+
+Nous nous sommes alors penché sur l’imperméabilité des jointures de collage, ainsi nous avons pu observer que le moindre pli lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhésif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisée plus aisément que de l'eau. Nous l'avons alors remplacée par de la colle acrylique que nous trouvons pour les collages en décoration, cette colle à le fort avantage d'être épaisse et de ne pas se rétracter au séchage, ainsi nous pouvons boucher tout le volume d'un pli.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=3cm]{../Images/colle_acrylique.JPG}
+ \caption{Colle acrylique utilisée pour boucher les fuites.}
+\end{figure}
 
 
-photo colle acrylique: TODO
+Les différentes méthodes d'étanchéification des jointure on était testé de deux façons.
+Premièrement deux triangles de PET sont découpé puis collé sur deux de leurs bords, l'ensemble forme ainsi un cône que nous pouvons tester de la même manière que le PET seul avec une cloche plongée dans l'eau.
+Deuxièmement un ballon est assemblé avec la méthode d'étanchéification étudié, le ballon est gonflé à une faible pression et de l'eau savonneuse est passé autour de l'enveloppe extérieur du ballon, ainsi la moindre bulle nous signal une fuite, nous pouvons faire de même en plongeant le ballon dans l'eau. Malheureusement ce dernier test compromet les résultats car l'eau à tendance à boucher les fuites par sa viscosité, c'est ainsi que nous pouvons remarquer que nos ballons les plus étanches présentent toujours des fuites car nous constatons une baisse de volume mais sans détecter la moindre bulle d'air au savon ou avec un ballon plongé dans l'eau.
+
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=7cm]{../Images/cloche_colle.JPG}
+ \caption{Cloche utilisé pour tester l'étanchéité des collages.}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=10cm]{../Images/ballon_etanche.JPG}
+ \caption{Ballon de test d'étanchéité, formé de deux feuilles de PET.}
+\end{figure}
 
 
 \subsubsection{Collage}
 
 Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller les jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique et il produit de très mauvaises jointures ci la feuille de PET est froissée, là ou la colle pourrais agir comme un mastique.
 
+Comme nous l'avons précédemment expliqué le PET est un matériaux très difficilement collable, en contrepartie de nombreuses colles ont était testé avec aux final bien plus de colle inefficace que utilisable. 
 
+Ci dessous l'ensemble de colles testées~:
 
+\begin{center}
+  \begin{tabular}{|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|}
+		\hline
+		Colle & Avantages & Inconvénients \\
+		\hline
 
-Les jointure de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
+		\rowcolor{OrangeT}
+		Néoprène (Polychloroprène) &
+		Étanche, élastique, adhèrent &
+		Difficile à appliquer \\
+		\hline
+
+		\rowcolor{OrangeT}
+		406 (cyanoacrylate d'ethyle) et 770 (primaire) &
+		Adhèrent, rigide, facile à appliquer &
+		Fragile à l'eau \\
+		\hline
+
+		\rowcolor{GreenT}
+		401 (cyanoacrylate d'ethyle) et 770 (primaire) &
+		Très adhèrent, rigide, facile à appliquer &
+		Fragile à l'eau \\
+		\hline
+
+		\rowcolor{RedT}
+		330 et activateur &
+		Élastique &
+		Peu adhèrent \\
+		\hline
+
+		\rowcolor{RedT}
+		Polyester &
+		Polymérisation avec catalyseur &
+		Peu adhèrent \\
+		\hline
+		
+		\rowcolor{RedT}
+		Polyuréthane &
+		& Peu adhèrent \\
+		\hline
+
+		\rowcolor{RedT}
+		Acétone &
+		& Peu adhèrent \\
+		\hline
+		
+		\rowcolor{RedT}
+		Vinylique &
+		Facile à appliquer &
+		Peu adhèrent, temps de séchage trop long \\
+		\hline
+
+		\rowcolor{RedT}
+		Acrylique &
+		Facile à appliquer &
+		Peu adhèrent \\
+		\hline
+  \end{tabular}
+\end{center}
+
+La colle retenu est la cyanoacrylate d'éthyle ou 401, cette colle est une des plus adhérentes au PET, elle à un temps de séchage assez court et surtout ne dépend pas d'une polymérisation à l'air mais à l'eau de surface, en effet les feuilles de PET étant très imperméable le temps de séchage pour une colle polymérisé à l'air peu prendre plusieurs heures, certaine ne sèchent presque jamais comme la colle vinylique.
+
+Les jointures de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
 
 \paragraph{Résistance}
 
@@ -276,7 +427,7 @@ Les différentes contraintes d'un collages sont décrites dans le tableau suivan
 
 La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisable en collant la jointure sur l'un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
  \includegraphics[width=7cm]{../Images/colle_cisaillement.png}
  \includegraphics[width=7cm]{../Images/colle_pelage.png}
@@ -285,7 +436,7 @@ La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur 
 
 Deux tests de traction on alors était produit en pressant et collant deux feuilles de PET dans des planches en bois servant de support à la traction, ensuite les deux feuilles de PET étaient collé entre elle avec chacune des technique de collage.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
  \includegraphics[width=7cm]{../Images/test_pelage.png}
  \includegraphics[width=7cm]{../Images/test_cisaillement.png}
@@ -307,20 +458,22 @@ Les mesures de forces lors des test de tractions sont présentes ci dessous~:
   \end{tabular}
 \end{center}
 
-Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage, cette techique de collage sera retenue pour l'assemblage de tout les futur ballons.
+Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage.
+De plus les données constructeur de la colle indiquent une résistance de la colle en traction de 7 à 11 $N.mm-2$ ce qui largement supérieur au .12 $N.mm-2$ des tests, ce qui laisse penser que seul le PET et limitant dans la résistance des collages maintenant.
+
+
+Cette technique de collage sera retenue pour l'assemblage de tout les futur ballons.
 
 \subsection{Forme}
 
 Le Tropodrone est composée de trois ballon de taille identique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
 La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallélépipède avec des pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
  \includegraphics[width=12cm]{../Images/ballon.png}
  \caption{Vue d'ensemble d'un ballon.}
 \end{figure}
-
-Refaire l'image : TODO
 
 \subsubsection{Calcul de la forme}
 
@@ -377,7 +530,7 @@ Malheureusement ce polynôme est du troisième degré, nous ne pouvons pas le r�
 \end{tikzpicture}
 
 
-\paragraph{Résolution par bisection}
+\paragraph{Résolution par bissection}
 
 Pour trouver la largeur souhaité pour un volume de $0.25m^3$ nous utilisons une résolution par bissection exécuté par un programme python. Une bissection est une méthode échantillonnant une fonction continue croissante ou décroissante dans un intervalle donné. Pour chaque intervalle un échantillon de la valeur intermédiaire est calculé, si sa valeur est supérieur à la valeur souhaité, la borne supérieur de l'intervalle est réduite jusqu'à la valeur intermédiaire, dans la cas contraire où la valeur intermédiaire est plus petite que la valeur souhaité, la borne inférieur de l'intervalle est augmenté jusqu'à la valeur intermédiaire. Chacune des modifications d'intervalle en crée un nouveau deux fois plus petit.
 \medbreak
@@ -386,14 +539,36 @@ Le programme python procédant à cette bissection est le suivant~:
 \lstset{language={Python}}
 \lstinputlisting{../Ballons/Programmes/diametreBallonLatex.py}
 
-Ce programme de bisection nous permet de trouver une largueur de ballon équivalente à $0.43m$, si nous recalculons le volume pour cette largeur~:
+Ce programme de bissection nous permet de trouver une largueur de ballon équivalente à $0.43m$, si nous recalculons le volume pour cette largeur~:
 
 \begin{center}
   $\displaystyle{V = \frac{\sqrt{6}}{3} \times 0.43^3 + 0.43^2 }$ \\
 	$\displaystyle{V = 0.0649 + 0.1849 \approx 0.25}$
 \end{center}
 
+\paragraph{Patron de découpe}
+
+Le patron du ballon à une point de découpage sur une des arrêtes longue du parallélépipède et une découpe à chaque arrêtes des pyramides reliant le sommet des pyramides. Une marge de 5cm est incluse pour le collage, cette marge sera réduite par la suite car trop grande et gênant lors de l'étalage de la colle.
+
+\begin{center}
+ \includegraphics[width=10cm]{../Images/plan_ballon.png}
+\end{center}
+
+
 \subsection{Remplissage}
+
+Le remplissage des ballons se fait par l'usage d'une valve de roue de vélo, cette valve et la plus légère pour l'usage de faibles pressions et possède un clapet anti-retour. D'autre solutions était d'utiliser une valve standard pour air comprimé, mais celle ci était bien trop lourde.
+
+La valve de vélo est découpé en laissant un rond de caoutchouc autour pour faciliter le collage sur le PET. Elle est collé sur une des face les plus longue du parallélépipède et non sur une bordure de collage car elle pourrait créer des plis et donc de potentielle fuites.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=5cm]{../Images/valve.JPG}
+  \caption{Valve de remplissage des ballons.}
+\end{figure}
+
+
+Malgré cela, nous n'avons pas pu tester ces valve avec une bouteille d'hélium.
 
 
 \section{Structure}
@@ -448,6 +623,7 @@ La structure est ainsi composée de~:
 \subsection{Équation de trainée}
 	\begin{center}
 		\includegraphics[width=5cm]{../Images/portance.jpg}
+		\captionof{figure}{Force de traînée}
 	\end{center}
 	La force de traînée, qui représente la résistance au mouvement, est matérialisée par l'équation~:\\
   \begin{center}
@@ -464,30 +640,40 @@ La structure est ainsi composée de~:
 		Notre travail a donc été de déterminer Cx afin de résoudre l'équation.
 \subsection{Optimisations techniques}
 \subsubsection{Problème des ballons}
-	3 ballons de 0.25 m³ créent une surface soumise au flux d'air conséquente.\\
-	De plus, suivant la position des ballons, le coefficient Cx sera plus ou moins conséquent.\\
+	3 ballons de 0.25 m³ créent une surface soumise au flux d'air conséquente, ce qui influe directement sur la force de traînée, la surface S étant un facteur direct.\\
+	De plus, suivant la position des ballons, le coefficient de traînée Cx sera plus ou moins conséquent.\\
 	\\
-	Il nous faut donc trouver une forme favorable, c'est à dire réduisant la surface et ayant un faible coefficient de traînée.
+	Il nous faut donc trouver une forme favorable, c'est à dire réduisant la surface et ayant un faible coefficient de traînée.\\
+	\\
+	La réduction du coefficient Cx est difficile à mettre en oeuvre. Elle implique en effet un profil et un angle d'attaque qu'il est difficile de réaliser, notamment par rapport au volume des ballons.\\
+	C'est pourquoi nos efforts se sont concentrés sur la réduction de la surface rencontrée.
 
 \subsubsection{La forme en triangle}
-	La forme en triangle que nous vous avons présenté précédemment (LIEN CHAP. STRUCTURE) présente de nombreux avantages.
+	La forme en triangle que nous vous avons présenté précédemment (voir chapitre sur la structure) présente de nombreux avantages.
 	\\
-	Le premier est qu'elle permet de créer un couloir dans lequel le vent s'engouffre ; cette forme permet de réduire la force de traînée et a l'avantage de ne présenter aucune position dans laquelle le vent aurait un trop grand effet.
+	Le premier est qu'elle permet de créer un couloir dans lequel le vent s'engouffre. Ce couloir permet de réduire la force de traînée en limitant la surface des ballons offerte au vent. \\
+	Le second avantage est que cette forme ne présente aucune position dans laquelle le vent aurait un trop grand effet.\\
 	De plus, nous avons trouvé une solution technique permettant de profiter de ce couloir d'air le plus souvent possible : installer un gouvernail.
 \subsubsection{Gouvernail}
 	\begin{center}
 		\includegraphics[width=14cm]{../Images/Capture.PNG}
 	\end{center}
-	Le gouvernail nous permet d'orienter les ballons en fonction de la direction du drone, ce qui force la structure a garder une position théoriquement plus favorable que les autres.
+	Le gouvernail nous permet d'orienter les ballons en fonction de la direction du drone, ce qui force la structure à garder une position théoriquement plus favorable que les autres.
 	Nous pouvons faire une analogie avec les différentes conformations d'une molécule : le gouvernail nous permet de garder la position la moins dépensière d'énergie.\\
-	\\
+	\begin{center}
+		\includegraphics[width=10cm]{../Images/conformations.png}
+		\captionof{figure}{Les molécules dépensent moins d'énergie lorsqu'elles sont dans une conformation stable}
+	\end{center}
   Cette solution a toutefois un désavantage : elle réduit la manœuvrabilité immédiate du drone en faisant apparaître une force supplémentaire. Toutefois, nos calculs montreront que cette force est négligeable en comparaison du gain sur de longues distances.
 
-
 \subsection{Calcul du Cx}
-\paragraph{Pour une sphère}
-	Nous avons dans un premier temps essayé de calculer le Cx à la main, en prenant la seule approximation dont nous avions les données : le Cx d'une sphère.\\
-	Celui-ci se calcule en fonction du nombre de Reynolds, qui définit le type d'écoulement auquel est soumis la structure :
+	Nous avons dans un premier temps essayé de calculer le Cx à la main, en prenant la seule approximation dont nous avions les données : le Cx d'une sphère.
+\subsubsection{Pour une sphère}
+\paragraph{Nombre de Reynolds}
+	Le coefficient de traînée d'une sphère se calcule en fonction du nombre de Reynolds, qui définit le type d'écoulement auquel est soumis la structure~:
+
+
+\paragraph{Formule}
 	\begin{center}
    \boxed{\displaystyle{Re = \frac{V \times L}{\nu}}}
   \end{center}
@@ -498,28 +684,66 @@ La structure est ainsi composée de~:
    \item L la dimension caractéristique (ici le diamètre de la sphère)~;
    \item $\micro$ la viscosité cinématique du fluide~;
   \end{itemize}
-	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
+
+\paragraph{Influence sur les courants créés}
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/re0.jpg}
+		\captionof{figure}{Re < 1}
+	\end{center}
+	Quand Re < 1, le flux suit un écoulement de Stokes. L'air s'écoule de façon rectiligne.
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/re1.jpg}
+		\captionof{figure}{1 < Re < 10³}
+	\end{center}
+	Quand Re augmente, des tourbillons apparaîssent à l’arrière de la sphère. Ces tourbillons sont à prendre en compte car ils génèrent un courant au centre du support qui augmente la force de traînée.
+	\begin{center}
+		\includegraphics[width=5cm]{../Images/re2.jpg}
+		\captionof{figure}{Re > 10³}
+	\end{center}
+	Quand Re augmente encore, il se crée un sillage qui supprime les tourbillons.\\
+	Toutefois, il faut que le flux ait une certaine vitesse pour qu'il se crée un sillage perceptible.\\
 	\\
-	Toutefois, cette approximation n'était pas vraiment précise, et n'ayant pû mettre la main sur la soufflerie, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation.
-\paragraph{Simulation SW}
+	On comprend bien que le type d'écoulement va considérablement influencer la force de traînée.
+
+
+\subsubsection{Calculs et limites}
+	Nous avons réalisé grâce à cette formule un algorithme python permettant de calculer la force de traînée du ballon.\\
+	\lstset{language={Python}}
+	\lstinputlisting{../Aerodynamisme/Programmes/calculTrainee.py}
+	Toutefois, cette approximation n'étant pas vraiment précise, nous nous sommes rabattus sur Solidworks et sur son module complémentaire FlowSimulation pour avoir une idée plus exacte.
+\subsubsection{Simulation SW}
 	L'avantage de Solidworks est qu'il est très précis et qu'il est facile de déterminer le Cx dans plusieurs positions.\\
 	\begin{center}
-		\includegraphics[width=15cm]{../Images/expressionCX.png}
+		\includegraphics[width=10cm]{../Images/expressionCX.png}
 		\captionof{figure}{Objectif de calcul pour déterminer Cx.}
 	\end{center}
 
-\subsubsection{Simulation tableur et équation}
+\subsection{Simulation tableur et équation}
 	La simulation a été réalisée plusieurs fois dans plusieurs positions selon l'axe Z.\\
 	Ces données ont été rentrées dans un tableur, et nous ont permis de confirmer l'intérêt du gouvernail.\\
-	\\
-	Nous avons également pû relever la force théorique maximale auquel le drone peut être soumis.\\
-	(...)
+	\begin{center}
+    \includegraphics[width=10cm]{../Images/resultatsSW.png} \\
+	\end{center}
+
 \subsection{Vitesse de vent maximum}
-	Chaque moteur fournit 2 N.\\
-	(...) TRIGO ().
+\iffalse
+	Nous avons également pû relever la force théorique maximale auquel le drone peut être soumis, qui est de
+	Chaque moteur supporte 4.3 N
+	ENCORE EN CONSTRUCTION
+\fi
+
 \section{Réalisation}
 
-Le protocole d'assemblage trouver lors de l'assemblage du premier ballon final est le suivant~:
+Nous avons en premier lieu assemblé des ballons au échelle 1/5 et 1/2, ceux ci utilisé de la néoprène car les bordures de collages était très courte et ne posées pas de problèmes pour appliquer la colle, la laisser sécher puis presser. 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=10cm, angle=90]{../Images/ballon2.jpg}
+\end{figure}
+
+
+
+Le protocole d'assemblage trouvé lors de l'assemblage du premier ballon final est le suivant~:
 \begin{itemize}
  \item coller de l'adhésif double face sur une planche d'un longueur de plus de 2m (longueur des feuilles de PET)~;
  \item polluer l'adhésif si celui ci est trop adhérent et empêche de décoller correctement le PET~;
@@ -556,5 +780,19 @@ Le protocole d'assemblage trouver lors de l'assemblage du premier ballon final e
 \begin{center}
 	\includegraphics[width=15cm]{../Images/assen_3.JPG}
 \end{center}
+
+\section{Références}
+\begin{itemize}
+  \item \emph{https://media-pim.group-iph.com/medias/products/09/14/8824090001409/technicaldatasheet-fr0.pdf?v=170116093857+0100?attachment=true}
+  \item \emph{$https://fr.wikipedia.org/wiki/Pouss\%C3\%A9e_d\%27Archim\%C3\%A8de$}
+  \item \emph{http://meteophysique.free.fr/pousse.htm}
+  \item \emph{$https://fr.wikipedia.org/wiki/Hydrog\%C3\%A8ne$}
+  \item \emph{$https://fr.wikipedia.org/wiki/H\%C3\%A9lium$}
+  \item \emph{$https://fr.wikipedia.org/wiki/Loi_de_Charles$}
+  \item \emph{$http://aeroballongaz.chez-alice.fr/Enveloppe2.htm$}
+  \item \emph{$http://www.airshoot-technologie.com/contents/fr/d38_ballons-photos-helium.html$}
+  \item \emph{$http://ballonsolaire.pagesperso-orange.fr/reglementation4m.htm$}
+%   \item \emph{}
+\end{itemize}
 
 \end{document}
