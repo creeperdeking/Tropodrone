@@ -148,7 +148,8 @@ La poussée d'Archimède est définie par~:
 
 \enquote{Tout corps plongé dans un fluide au repos, entièrement mouillé par celui-ci ou traversant sa surface libre, subit une force verticale, dirigée de bas en haut et opposée au poids du volume de fluide déplacé ; cette force est appelée poussée d'Archimède.}
 
-\begin{figure}
+\begin{figure}[H]
+	\centering
 	\includegraphics[width=5cm]{../Images/pousse_archimede.png}
 	\caption{Représentation de la poussée d'Archimède}
 \end{figure}
@@ -294,7 +295,7 @@ Sans rentrer dans les détails des calculs de perméabilité, nous sommes passé
 Nous avons alors créé une cloche contenant une feuille de PET légèrement plié pour rentrer dans la cloche, la cloche est percée sur le haut et plongée dans l'eau à l'aide de quelque masse. Enfin sur le haut de la feuille de PET nous disposons une petit masse d'environs 10g.
 Le but de cette expérience est d'observer le passage de l'air à travers la feuille de PET, si l'air passe a travers la feuille alors la masse disposée au dessus tombera avec le temps, de plus l'eau permet de faire un très bon bouchon de cloche.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=7cm]{../Images/etancheite.png}
 	\caption{Test d'étanchéité du PET, le PET et maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
@@ -418,7 +419,7 @@ Les différentes contraintes d'un collages sont décrites dans le tableau suivan
 
 La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur un très petite zone de collage ce qui amène a un déchirement du collage qui fragilise les zone voisine de collage. Pour remédier à ce problème, il faut changer de type de contrainte, dans notre cas passer d'un pelage à un cisaillement. Ceci est réalisable en collant la jointure sur l'un des côté du ballon, formant ainsi un collage plat au lieu d'une forme en T.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
  \includegraphics[width=7cm]{../Images/colle_cisaillement.png}
  \includegraphics[width=7cm]{../Images/colle_pelage.png}
@@ -427,7 +428,7 @@ La contrainte de pelage ici est la pire car elle exerce le maximum d'effort sur 
 
 Deux tests de traction on alors était produit en pressant et collant deux feuilles de PET dans des planches en bois servant de support à la traction, ensuite les deux feuilles de PET étaient collé entre elle avec chacune des technique de collage.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
  \includegraphics[width=7cm]{../Images/test_pelage.png}
  \includegraphics[width=7cm]{../Images/test_cisaillement.png}
@@ -456,7 +457,7 @@ Nous remarquons que le collage à une résistance à la traction 27 fois supéri
 Le Tropodrone est composée de trois ballon de taille identique dans le but d'avoir un centre de gravité confondus entre le drone et la structure, ce choix sera détaillé dans la partie montrant la conception de la structure.
 La disposition la plus optimisée pour trois ballons est en triangle autour du drone, les ballons ressembleront donc à des parallélépipède avec des pyramides à chacun de leurs sommets pour assurer une jointure entre les ballons.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
  \includegraphics[width=12cm]{../Images/ballon.png}
  \caption{Vue d'ensemble d'un ballon.}
@@ -535,9 +536,24 @@ Ce programme de bisection nous permet de trouver une largueur de ballon équival
 	$\displaystyle{V = 0.0649 + 0.1849 \approx 0.25}$
 \end{center}
 
+\paragraph{Patron de découpe}
+
+Le patron du ballon à une point de découpage sur une des arrêtes longue du parallélépipède et une découpe à chaque arrêtes des pyramides reliant le sommet des pyramides. Une marge de 5cm est incluse pour le collage, cette marge sera réduite par la suite car trop grande et gênant lors de l'étalage de la colle.
+
+\begin{center}
+ \includegraphics[width=10cm]{../Images/plan_ballon.png}
+\end{center}
+
+
 \subsection{Remplissage}
 
+Le remplissage des ballons se fait par l'usage d'une valve de roue de vélo, cette valve et la plus légère pour l'usage de faibles pressions et possède un clapet anti-retour. D'autre solutions était d'utiliser une valve standard pour air comprimé, mais celle ci était bien trop lourde.
 
+La valve de vélo est découpé en laissant un rond de caoutchouc autour pour faciliter le collage sur le PET. Elle est collé sur une des face les plus longue du parallélépipède et non sur une bordure de collage car elle pourrait créer des plis et donc de potentielle fuites.
+
+Photo valve * 2 : TODO
+
+Malgré cela, nous n'avons pas pu tester ces valve avec une bouteille d'hélium.
 \section{Structure}
 
 \subsubsection{Étude des mouvements}
@@ -653,7 +669,16 @@ Toutefois,
 	(...) TRIGO ().
 \section{Réalisation}
 
-Le protocole d'assemblage trouver lors de l'assemblage du premier ballon final est le suivant~:
+Nous avons en premier lieu assemblé des ballons au échelle 1/5 et 1/2, ceux ci utilisé de la néoprène car les bordures de collages était très courte et ne posées pas de problèmes pour appliquer la colle, la laisser sécher puis presser. 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=10cm, angle=90]{../Images/ballon2.jpg}
+\end{figure}
+
+
+
+Le protocole d'assemblage trouvé lors de l'assemblage du premier ballon final est le suivant~:
 \begin{itemize}
  \item coller de l'adhésif double face sur une planche d'un longueur de plus de 2m (longueur des feuilles de PET)~;
  \item polluer l'adhésif si celui ci est trop adhérent et empêche de décoller correctement le PET~;
