@@ -1,5 +1,6 @@
 \documentclass[a4paper,11pt]{article}
 
+\usepackage[table]{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[a4paper, left=3cm, right=3cm, top=3cm, bottom=3cm]{geometry}
 \usepackage[frenchb]{babel}
@@ -21,6 +22,12 @@
 \usepackage[babel=true]{csquotes}
 \usepackage{gensymb}
 \usepackage{listings}
+\usepackage{colortbl}
+\usepackage{float}
+
+\definecolor{RedT}{rgb}{1, .7, .7}
+\definecolor{GreenT}{rgb}{.7, 1, .7}
+\definecolor{OrangeT}{rgb}{1, 1, .7}
 
 % \setcounter{tocdepth}{4}
 
@@ -229,12 +236,56 @@ $F_{T_{200}} = 1.06 \times F_{T_0}$
 
 \paragraph{Matériaux}
 
+Lors de la sélection des matériaux à utiliser pour l'enveloppe des ballons nous avons chercher les matériaux déjà utilisez dans le domaine des ballons dirigeables et des sondes. Le plus utilisé est le latex mais celui ci ne se trouvais qu'en forme de ballon sphérique (ballon de baudruche) ce qui empêche tout contrôle de la forme.
+
+Ci dessous sont listés les matériaux comparés lors de notre choix.
+
+\begin{center}
+\begin{tabular}{|p{0.2\linewidth}|p{0.35\linewidth}|p{0.35\linewidth}|}
+		\hline
+		Matériaux & Avantages & Inconvénients \\
+		\hline
+
+		\rowcolor{OrangeT}
+		Latex &
+		Facile à trouver dans le commerce &
+		Seulement en forme sphérique~; peu étanche \\
+		\hline
+
+		\rowcolor{RedT}
+		Hypalon & Étanche & Introuvable dans le commerce~; fragile aux ultraviolets \\
+		\hline
+
+		\rowcolor{GreenT}
+		Mylar (PET) &
+		Facile à trouver dans le commerce~; résistant à la traction~; peut être assemblé~; léger~: $17 g.m^{-2}$ &
+		Raide~; fragile au cisaillement et à la perforation \\
+		\hline
+
+		\rowcolor{RedT}
+		Chloroprène &
+		& Introuvable dans le commerce \\
+		\hline
+
+		\rowcolor{RedT}
+		Butyle &
+		& Introuvable dans le commerce \\
+		\hline
+\end{tabular}
+\end{center}
+
+Le matériaux retenue et le polyéthylène téréphtalate (PET) ou de nom commercial Mylar. Ce matériaux est un polymère très léger et solide à la traction, mais il à aussi ses désavantages, il est fragile à la perforation et comme la plupart des polyéthylène très difficile à coller.
+
+Lors de nos test d'assemblage nous avons utilisé du PET provenant de couverture de survie car peu cher, mais après quelque test d'étanchéité nous mettons clairement un doute sur le qualité du PET de couverture de survie. D'autre sources de PET sont possible notamment dans les films alimentaires, un exemple et le Mylar 850, mais malgré sa très grande qualité affichée (perméabilité, épaisseur, masse) celui ci ne se vend que en bobine de 2500 mètre.
+
 \paragraph{Étanchéité}
+
+L'étanchéité du PET est important pour garder le gaz à l'intérieur des ballons et ainsi autoriser le drone à voler plus longtemps avec l'assistance des ballons. Pour ce faire une étude théorique de la perméabilité du PET a été réalisé ainsi que des tests d'étanchéité à l'air.
 
 Lors de l'assemblage des ballons de nombreux problèmes d'étanchéité ont été rencontré, plusieurs piste étaient alors possible~: le manque de imperméabilité du matériau choisi ou des collages. Pour vérifier ces deux hypothèse des tests on était réalisé sure des ballons finis et sur de simple feuille de PET sans assemblage et collage.
 
 
-La perméabilité du PET à rapidement était mise en doute, en effet les feuille que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
+La perméabilité du PET à rapidement était mise en doute, en effet les feuilles que nous utilisions était d'une très faible épaisseur ($12\mu m$) et sa qualité était incertaine car nous utilisions du PET de couverture de survie.
 
 Plusieurs thèses étudiant la perméabilité des polymères au gaz comme l'hélium on était trouvé mais la manque de valeurs pour l'épaisseur de notre filme, la pression utilisé ou encore la température en rendu l'usage de ces formules erroné.
 Malgré tout nous pouvons expliquer la perméabilité du PET par son taux de cristallisation. Les cristaux étant considéré comme parfaitement imperméable, l'air ne peux passer que entre ces cristaux, donc l'épaisseur du filme et la taux de cristallisation impactent directement la perméabilité du filme.
@@ -249,21 +300,112 @@ Le but de cette expérience est d'observer le passage de l'air à travers la feu
 	\caption{Test d'étanchéité du PET, le PET et maintenu par la cloche dans l'eau, nous mesurons la chute de la masse disposé au dessus du PET.}
 \end{figure}
 
-Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constatée mais rien ne pouvant justifier les fuites assez importantes des ballons assemblés. Nous nous sommes alors penché sur l’imperméabilité des jointures de collage, ainsi nous avons pu observer que le moindre pli lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhésif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisée plus aisément que de l'eau. Nous l'avons alors remplacée par de la colle acrylique que nous trouvons pour les collages en décoration, cette colle à le fort avantage d'être épaisse et de ne pas se rétracter au séchage, ainsi nous pouvons boucher tout le volume d'un pli.
+Après avoir laissé l'ensemble dans l'eau pendant une semaine une très faible baisse de volume à pu être constatée mais rien ne pouvant justifier les fuites assez importantes des ballons assemblés.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=7cm]{../Images/cloche_pet.JPG}
+ \caption{Cloche utilisé pour tester l'étanchéité du PET.}
+\end{figure}
 
 
-Les différentes méthodes d'étanchéification des jointure on était testé de deux façons. Premièrement deux triangles de PET sont découpé puis collé sur deux de leurs bords, l'ensemble forme ainsi un cône que nous pouvons tester de la même manière que le PET seul avec une cloche plongée dans l'eau.
+
+Nous nous sommes alors penché sur l’imperméabilité des jointures de collage, ainsi nous avons pu observer que le moindre pli lors du collage pouvait potentiellement créer une fuite, de plus un collage favorisant les contraintes de pelage avait tendance à déchirer le PET. Pour éviter ces fuites nous devons en plus d'une colle pour maintenir le PET utiliser un mastique pour boucher toutes les fuites. Le premier mastique choisi fut le latex car il avait l'avantage de toujours coller au PET comme certain adhésif en pâte. Malheureusement le latex est assez difficile à appliquer et il semble après des tests attaquer la colle utilisée plus aisément que de l'eau. Nous l'avons alors remplacée par de la colle acrylique que nous trouvons pour les collages en décoration, cette colle à le fort avantage d'être épaisse et de ne pas se rétracter au séchage, ainsi nous pouvons boucher tout le volume d'un pli.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=3cm]{../Images/colle_acrylique.JPG}
+ \caption{Colle acrylique utilisée pour boucher les fuites.}
+\end{figure}
 
 
-photo colle acrylique: TODO
+Les différentes méthodes d'étanchéification des jointure on était testé de deux façons.
+Premièrement deux triangles de PET sont découpé puis collé sur deux de leurs bords, l'ensemble forme ainsi un cône que nous pouvons tester de la même manière que le PET seul avec une cloche plongée dans l'eau.
+Deuxièmement un ballon est assemblé avec la méthode d'étanchéification étudié, le ballon est gonflé à une faible pression et de l'eau savonneuse est passé autour de l'enveloppe extérieur du ballon, ainsi la moindre bulle nous signal une fuite, nous pouvons faire de même en plongeant le ballon dans l'eau. Malheureusement ce dernier test compromet les résultats car l'eau à tendance à boucher les fuites par sa viscosité, c'est ainsi que nous pouvons remarquer que nos ballons les plus étanches présentent toujours des fuites car nous constatons une baisse de volume mais sans détecter la moindre bulle d'air au savon ou avec un ballon plongé dans l'eau.
+
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=7cm]{../Images/cloche_colle.JPG}
+ \caption{Cloche utilisé pour tester l'étanchéité des collages.}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=10cm]{../Images/ballon_etanche.JPG}
+ \caption{Ballon de test d'étanchéité, formé de deux feuilles de PET.}
+\end{figure}
 
 
 \subsubsection{Collage}
 
 Une fois le patron du ballon découpé sur une feuille de PET, nous devons coller les jointures prévus à cette effet. Nous utilisons un collage au lieu d'un thermo-collage car ce dernier est plus compliqué à mettre en œuvre, en effet le thermo-collage nécessite un appareil spécifique et il produit de très mauvaises jointures ci la feuille de PET est froissée, là ou la colle pourrais agir comme un mastique.
 
+Comme nous l'avons précédemment expliqué le PET est un matériaux très difficilement collable, en contrepartie de nombreuses colles ont était testé avec aux final bien plus de colle inefficace que utilisable. 
 
+Ci dessous l'ensemble de colles testées~:
 
+\begin{center}
+  \begin{tabular}{|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|}
+		\hline
+		Colle & Avantages & Inconvénients \\
+		\hline
+
+		\rowcolor{OrangeT}
+		Néoprène (Polychloroprène) &
+		Étanche, élastique, adhèrent &
+		Difficile à appliquer \\
+		\hline
+
+		\rowcolor{OrangeT}
+		406 (cyanoacrylate d'ethyle) et 770 (primaire) &
+		Adhèrent, rigide, facile à appliquer &
+		Fragile à l'eau \\
+		\hline
+
+		\rowcolor{GreenT}
+		401 (cyanoacrylate d'ethyle) et 770 (primaire) &
+		Très adhèrent, rigide, facile à appliquer &
+		Fragile à l'eau \\
+		\hline
+
+		\rowcolor{RedT}
+		330 et activateur &
+		Élastique &
+		Peu adhèrent \\
+		\hline
+
+		\rowcolor{RedT}
+		Polyester &
+		Polymérisation avec catalyseur &
+		Peu adhèrent \\
+		\hline
+		
+		\rowcolor{RedT}
+		Polyuréthane &
+		& Peu adhèrent \\
+		\hline
+
+		\rowcolor{RedT}
+		Acétone &
+		& Peu adhèrent \\
+		\hline
+		
+		\rowcolor{RedT}
+		Vinylique &
+		Facile à appliquer &
+		Peu adhèrent, temps de séchage trop long \\
+		\hline
+
+		\rowcolor{RedT}
+		Acrylique &
+		Facile à appliquer &
+		Peu adhèrent \\
+		\hline
+  \end{tabular}
+\end{center}
+
+La colle retenu est la cyanoacrylate d'éthyle ou 401, cette colle est une des plus adhérentes au PET, elle à un temps de séchage assez court et surtout ne dépend pas d'une polymérisation à l'air mais à l'eau de surface, en effet les feuilles de PET étant très imperméable le temps de séchage pour une colle polymérisé à l'air peu prendre plusieurs heures, certaine ne sèchent presque jamais comme la colle vinylique.
 
 Les jointure de collage sont collées par l'extérieur pour pouvoir ajuster sans difficultés les deux bordures. Malheureusement ce collage extérieur contraint la colle à un pelage, cette contrainte étant la pire pour la majorité des colles.
 
