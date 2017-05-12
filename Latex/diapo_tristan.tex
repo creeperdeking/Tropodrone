@@ -1,5 +1,23 @@
 \input{diapo_general.tex}
 
+\section{Courte présentation}
+
+\subsection{But du projet}
+\begin{frame}{But du projet}
+ Créer une structure composée de ballons contenant un gaz plus léger que l’air qui contre une partie du poids d'un drone.
+ Augmenter l’autonomie en réduisant la vitesse des moteurs.
+\end{frame}
+
+\subsection{Contraintes imposées au projet}
+\begin{frame}{Contraintes imposées au projet}
+  \begin{itemize}
+    \item être simple d’utilisation, garder la manœuvrabilité du drone au possible, voler le plus longtemps possible~;
+    \item consommer le moins d’énergie possible, ne pas présenter de danger pour le public et économiser le gaz et les matériaux de fabrication~;
+    \item le modèle du drone imposé~;
+    \item rayon d’action de minimum 15 mètres.
+  \end{itemize}
+\end{frame}
+
 \section{Calculs d'élévation}
 
 \subsection{Poussé d'Archimède}
@@ -100,7 +118,7 @@
 
 \begin{frame}{Contrainte des ballons}
 	\begin{itemize}
-		\item centre de gravité du drone et du ballon confondues~: pas de balancement~;
+		\item centre de gravité du drone et des ballons confondues~: pas de balancement~;
 		\item ensemble de trois ballons répartis en triangle~;
 		\item forme rigide~: contrôle de l'aérodynamisme.
 	\end{itemize}
@@ -318,6 +336,15 @@ print("volume = %f, diametre = %f" % (vol, largeur))
 
 
 \subsection{Étanchéité}
+
+\begin{frame}{Problème d'étanchéité}
+	Fuites, problème d'imperméabilité à l'air et à l'hélium~:
+	\begin{itemize}
+	 \item PET~;
+	 \item collages.
+	\end{itemize}
+\end{frame}
+
 \begin{frame}{Protocole de test d'étanchéité}
  Étanchéité du PET et des collages. Détection des fuites avec de l'eau savonneuse. Colle acrylique pour boucher les fuites.
 

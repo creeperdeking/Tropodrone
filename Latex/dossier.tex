@@ -570,21 +570,34 @@ La valve de vélo est découpé en laissant un rond de caoutchouc autour pour fa
 
 \subsubsection{Étude des mouvements}
 
-Les 4 moteurs du drone lui confèrent 3 axes de liberté, une de nos contraintes était de permettre de sauvegarder ces libertés pour perdre un minimum de liberté de mouvement, pour celà nous avons choisis une structure triangulaire. Dans cette structure, le centre de gravité du drone est le même que le centre de gravité du ballon, ce qui permet de controller le tropodrone dans toutes les directions. Cette structure permet d'optimiser le nombre de ballons (3) nécessaires pour avoir une pénétration uniforme dans l'air quel que soit la direction prise par le drone.
+Les 4 moteurs du drone lui confèrent 3 axes de liberté, une de nos contraintes était de permettre de sauvegarder ces libertés pour perdre un minimum de liberté de mouvement, pour cela nous avons choisis une structure triangulaire. Dans cette structure, le centre de gravité du drone est le même que le centre de gravité du ballon, ce qui permet de contrôler le Tropodrone dans toutes les directions. Cette structure permet d'optimiser le nombre de ballons (3) nécessaires pour avoir une pénétration uniforme dans l'air quel que soit la direction prise par le drone.
 
 Le premier modèle a été conçu pour recréer artificiellement les 3 axes de liberté au moyen de disques tournant sur eux-mêmes et autour les uns des autres. Les pièces de liaison ont été réalisées sous Solidworks et imprimées en 3D.
-[PHOTO]
-Toutefois, ce modèle s'est avérré ne pas être applicable car il était très complexe à mettre en oeuvre, nécessitant une modélisation de pièces en 3D complexes, devant en plus être retravaillés après impression et l'ajout de petits roulement pour résoudre des problèmes de frottements des pièces en plastiques. Celà aurait augmenté le cout du produit final, sa fragilité et sa complexité. De plus le nombre de pièces à créer rendait la structure trop lourde.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=10cm]{../Images/structure0_0.jpg}
+ \caption{Premier modèle de la structure.}
+ \includegraphics[width=7cm]{../Images/fixation.jpg}
+ \caption{Pièce de liaison du premier modèle.} 
+\end{figure}
+
+
+Toutefois, ce modèle s'est avéré ne pas être applicable car il était très complexe à mettre en œuvre, nécessitant une modélisation de pièces en 3D complexes, devant en plus être retravaillés après impression et l'ajout de petits roulement pour résoudre des problèmes de frottements des pièces en plastiques. Cela aurait augmenté le cout du produit final, sa fragilité et sa complexité. De plus le nombre de pièces à créer rendait la structure trop lourde.
 
 C'est pourquoi nous avons préférés adopter un système plus simple:
 Le drone est suspendu par le haut et par le bas par un fil de pèche au centre d'un octaèdre inscrit dans la structure triangulaire des ballons. Cette solution présente les avantages suivants:
-	- Simplicité
-	- Economie, cette solution est moins chère
-	- Légerté
+\begin{itemize}
+	\item simplicité~;
+	\item économie, cette solution est moins chère~;
+	\item légerté.
+\end{itemize}
 
 De plus, elle conserve tous les avantages de la solution précédente:
-	- Solidité
-	- Liberté de mouvement
+\begin{itemize}
+	\item solidité~;
+	\item liberté de mouvement.
+\end{itemize}
 
 Nous avons calculés toutes les mensurations de notre structure pour faire des pièces adaptés. Nous avons apportés une attention particulière à l'espace réservé au drone pour qu'il ne percute pas le bord de la structure. Pour que la structure puisse se déformer légèrement afin de laisser le drone pivoter sur lui même, nous avons mis notre octaèdre en tension vers l'extérieur pour que la structure ne gêne pas le drone en cas de fortes contraintes.
 
@@ -598,9 +611,14 @@ Nous avons fait un travail de perçage sur nos pièces pour compenser l'imprecis
 
 Les ballons doivent être attachés avec une corde se cassant à plus de 230N (voir Chap. contrainte légale).
 
-Les matériaux:
+Connaissant les contraintes du projet, nous avons opté pour des tiges en charbonne, car elles étaient facile à trouver et présentaient un très bon rapport solidité/poids, face aux différentes attaches en métal par exemple. Malheureusement, elles coutaient assez cher (4€ le mètre en moyenne), mais nous avions besoins d'une structure à la fois flexible (pour résister au choc) et rigide (pour le triangle principale, pour éviter les collisions entre le drone et la structure). En jouant sur les tailles des tiges et les versions creuses/pleines, nous avons obtenus le matériel de base de notre structure.
 
-Conaissant les contraintes du projet, nous avons optés pour des tiges en carbonne, car elles étaient facile à trouver et présentaient un très bon rapport solitité/poids, face aux différentes attaches en métal par exemple. Malheureuxement, elles coutaient assez cher (4€ le mètre en moyenne), mais nous avions besoins d'une structure à la fois flexible (pour résister au choc) et rigide (pour le triangle principale, pour éviter les collisionsentre le drone et la structure). En jouant sur les tailles des tiges et les versions creuses/pleines, nous avons obtenus le matériel de base de notre structure.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=5cm]{../Images/tige_carbone.JPG}
+	\caption{Tiges de carbone utilisées.}
+\end{figure}
+
 
 Les quelques recherches que nous avons menés par la suite nous ont menées vers les tiges de carbone, et en particulier les tiges creuses, qui permettent d'allier résistance et faible poids.
 La structure est ainsi composée de~:
@@ -608,8 +626,6 @@ La structure est ainsi composée de~:
         \item Tiges de carbone de 6/4mm creuses et pleines
         \item Pièces de liaisons imprimées en 3D
 \end{itemize}
-
-\newpage
 
 \section{Aérodynamisme}
 	Notre but a été dans cette partie de chercher une solution technique permettant de réduire la force de traînée que le drone subira quand il se déplacera, et quand il subira l'effet du vent. \\
