@@ -116,23 +116,60 @@ Faute de juridiction quant aux appareils volants de ce type, nous nous sommes ra
 \end{itemize}
 
 \subsubsection{Drone}
-\begin{multicols}{2}
-	Drone XCSOURCE~: \\
+	Caractérisitque du drone XCSOURCE en prenant en compte les hélices~: \\
 	\begin{itemize}
 		\item 290 mm diagonale~;
 		\item 190 mm longueur~;
 		\item 70 mm hauteur~;
 		\item moteur EMAX MT2204 2300KV Brushless Motor~;
-		\item Accu Lipo Gens Ace 2200Mah 11.1V 25C 3S~;
 		\item 450 g.
 	\end{itemize}
 	\begin{center}
 		\includegraphics[width=6cm]{../Images/drone.JPG}
 	\end{center}
 	\captionof{figure}{Drone XCSOURCE.}
-\end{multicols}
 
-\newpage
+\paragraph{Caractéristiques moteur}
+
+Les moteurs sont des brushless triphasé de 2300 KV alimenté en 12 V avec une consommation nominale de 7.5 A, soit 90 W. Leur rendement est de 0.9.
+
+\paragraph{Capacité de levage}
+
+La capacité de levage dépend du nombre d'hélice du diamère des hélices, du pas des hélices et de la vitesse de roation des moteurs.
+
+\begin{center}
+ $Puissance(N) = P \times D^3 \times RPM^2  \times 10^{-10} \times 10^{-3}$
+\end{center}
+
+Où P est le pas en inch, D le diamètre en inch, et RPM la rotation par minute.
+
+\paragraph{Batterie du drone}
+
+Ci dessous les caractérisitques de la batterie~:
+\begin{itemize}
+		\item Lithium Polymère~;
+		\item Masse 135g~;
+		\item Capacité 1800mAh~;
+		\item 25C , soit 45 A max en continu~;
+		\item 11.1V en 3S~;
+		\item 135 g~;
+		\item Rapport poids puissance : 148Wh/Kg.
+\end{itemize}
+
+
+\paragraph{Autonomie}
+
+Le calcul théorique de l'autonomie est le suivant~:
+
+\begin{center}
+ $Power = P \times D^4 \times RPM^3 \times 5.33 \times 10^{-15}$ \\
+ $Thrust = P \times D^3 \times RPM^2 \times 10^{-10} \times 10^{-3}$
+\end{center}
+
+Où Power est la puissance en W fournie, Thrust le levage en N, P le pas des hélices en inch, RPM la vitesse de roation en $tr.min^{-1}$, D le diamètre des hélices en inch.
+
+Ainsi pour soulever 115 g par moteur, il faut consommer 11,2W. Le total est de 44,8W instantanées soit une autonomie théorique de $(11 \times 1,8 \times 3600)/44,8 = 1735$s ou 28 min.
+En partique 18 A sont consommés en instantané $(1,8 \times 3600)/18 = 360$ secondes d’autonomie soit 6 min. Nous pouvons conclure que le modèle théorique ignore de très nombreux paramètres influençant la consommation des moteurs.
 
 \section{Ballon}
 
@@ -457,7 +494,7 @@ Les mesures de forces lors des test de tractions sont présentes ci dessous~:
 \end{center}
 
 Nous remarquons que le collage à une résistance à la traction 27 fois supérieur si l'on favorise une contrainte de cisaillement qu'une contrainte de pelage.
-De plus les données constructeur de la colle indiquent une résistance en cisaillement de 7 à 11 $N.mm-2$ ce qui largement supérieur au 0.12 $N.mm-2$ des tests, ce qui laisse penser que seul le PET est limitant dans la résistance des collages actuellement.
+De plus les données constructeur de la colle indiquent une résistance au cisaillement de 7 à 11 $N.mm-2$ ce qui est largement supérieur au 0.12 $N.mm-2$ des tests, ce qui laisse penser que seul le PET est limitant dans la résistance des collages actuellement.
 
 
 Cette technique de collage sera retenue pour l'assemblage de tous les futurs ballons.
