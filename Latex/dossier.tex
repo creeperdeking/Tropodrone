@@ -616,7 +616,7 @@ Le premier modèle a été conçu pour recréer artificiellement les 3 axes de l
  \includegraphics[width=10cm]{../Images/structure0_0.jpg}
  \caption{Premier modèle de la structure.}
  \includegraphics[width=7cm]{../Images/fixation.jpg}
- \caption{Pièce de liaison du premier modèle.} 
+ \caption{Pièce de liaison du premier modèle.}
 \end{figure}
 
 
@@ -636,19 +636,19 @@ De plus, elle conserve tous les avantages de la solution précédente:
 	\item liberté de mouvement.
 \end{itemize}
 
-Nous avons calculés toutes les mensurations de notre structure pour faire des pièces adaptés. Nous avons apportés une attention particulière à l'espace réservé au drone pour qu'il ne percute pas le bord de la structure. Pour que la structure puisse se déformer légèrement afin de laisser le drone pivoter sur lui même, nous avons mis notre octaèdre en tension vers l'extérieur pour que la structure ne gêne pas le drone en cas de fortes contraintes.
+Nous avons calculé toutes les mensurations de notre structure pour faire des pièces adaptées. Nous avons apporté une attention particulière à l'espace réservé au drone pour qu'il ne percute pas le bord de la structure. Pour que la structure puisse se déformer légèrement afin de laisser le drone pivoter sur lui même, nous avons mis notre hexaèdre en tension vers l'extérieur pour que la structure ne gêne pas le drone en cas de fortes contraintes.
 
 \subsection{Support}
 
-Nous avons modélisés une première version des pièces du support, qui se sont avérés être un peu trop lourde. Nous aurions aimé pouvoir optimiser le design de ces pièces pour obtenir un bien meilleur rapport solidité/poids.
+Nous avons modélisé une première version des pièces du support, qui se sont avérés être un peu trop lourde. Nous aurions aimé pouvoir optimiser le design de ces pièces pour obtenir un bien meilleur rapport solidité/poids.
 
-Nous avons fait un travail de perçage sur nos pièces pour compenser l'imprecision de l'impression 3D.
+Nous avons également fait un travail de perçage sur nos pièces pour compenser l'imprécision de l'impression 3D.
 
 \subsubsection{Attaches des ballons}
 
 Les ballons doivent être attachés avec une corde se cassant à plus de 230N (voir Chap. contrainte légale).
 
-Connaissant les contraintes du projet, nous avons opté pour des tiges en charbonne, car elles étaient facile à trouver et présentaient un très bon rapport solidité/poids, face aux différentes attaches en métal par exemple. Malheureusement, elles coutaient assez cher (4€ le mètre en moyenne), mais nous avions besoins d'une structure à la fois flexible (pour résister au choc) et rigide (pour le triangle principale, pour éviter les collisions entre le drone et la structure). En jouant sur les tailles des tiges et les versions creuses/pleines, nous avons obtenus le matériel de base de notre structure.
+Étant donné les contraintes du projet, nous avons opté pour des tiges en carbonne, car elles étaient facile à trouver et présentaient un très bon rapport solidité/poids face à d'autres attaches, en métal par exemple. Malheureusement, elles coûtent assez cher (4€ le mètre en moyenne), mais nous avions besoin d'une structure à la fois flexible (pour résister au choc) et rigide (pour le triangle principale, pour éviter les collisions entre le drone et la structure). En jouant sur les tailles des tiges et les versions creuses/pleines, nous avons obtenu le matériel de base de notre structure.
 
 \begin{figure}[H]
 	\centering
@@ -657,7 +657,7 @@ Connaissant les contraintes du projet, nous avons opté pour des tiges en charbo
 \end{figure}
 
 
-Les quelques recherches que nous avons menés par la suite nous ont menées vers les tiges de carbone, et en particulier les tiges creuses, qui permettent d'allier résistance et faible poids.
+Les quelques recherches que nous avons fait par la suite nous ont mené vers les tiges de carbone, et en particulier les tiges creuses, qui permettent d'allier résistance et faible poids.
 La structure est ainsi composée de~:
 \begin{itemize}
         \item Tiges de carbone de 6/4mm creuses et pleines
@@ -666,6 +666,7 @@ La structure est ainsi composée de~:
 
 \section{Aérodynamisme}
 	Notre but a été dans cette partie de chercher une solution technique permettant de réduire la force de traînée que le drone subira quand il se déplacera, et quand il subira l'effet du vent. \\
+	Nous répondons ainsi aux contraintes de manoeuvrabilité, en particulier celle lié à la navigation.\\
 	Il nous manquait de nombreuses notions en aérodynamisme, que nous avons pû rapidement acquérir grâce au TPE d'élèves de notre classe qui ont fait un remarquable travail sur le sujet, et grâce à un professeur de Prépa qui nous a consacré un peu de son temps.\\
 	Nous les remercions ici.
 \subsection{Équation de trainée}
@@ -673,7 +674,7 @@ La structure est ainsi composée de~:
 		\includegraphics[width=5cm]{../Images/portance.jpg}
 		\captionof{figure}{Force de traînée}
 	\end{center}
-	La force de traînée, qui représente la résistance au mouvement, est matérialisée par l'équation~:\\
+	La force de traînée représente la résistance au mouvement. Elle est matérialisée par l'équation~:\\
   \begin{center}
    \boxed{\displaystyle{F = \frac12 \times \rho \times S \times Cx \times V^2}}
   \end{center}
@@ -780,7 +781,7 @@ La structure est ainsi composée de~:
 Pour déterminer la vitesse du vent maximale pouvant être atteinte, il faut se pencher sur les caractéristiques du drone, et en particulier sur la force de traction générée par les moteurs~:\\
 Un moteur crée au maximum une force de 4.3 Newtons~; ce qui fait que le drone tout entier (avec les 4 Moteurs) crée une force de traction de 17.2 Newtons.\\
 \\
-Il nous faut faire un peu de trigonométrie~:
+Il faut faire un peu de trigonométrie~:
 \begin{center}
 	\includegraphics[width=10cm]{../Images/vitesseVent.png}
 	\captionof{figure}{Schéma de la situation.}
@@ -794,21 +795,23 @@ Nous avons donc une force de 8.6 N.\\
 Après avoir simulé à différentes vitesses, nous trouvons une résistance maximale de 34 $km.h^{-1}$.\\
 Le drone peut donc résister à un vent de 34 $km.h^{-1}$.
 
+\newpage
+
 \section{Réalisation}
 
-Nous avons en premier lieu assemblé des ballons au échelle 1/5 et 1/2, ceux ci utilisé de la néoprène car les bordures de collages était très courte et ne posées pas de problèmes pour appliquer la colle, la laisser sécher puis presser.
+Nous avons en premier lieu assemblé des ballons aux échelles 1/5 et 1/2. Ceux ci utilisaient de la néoprène car les bordures de collages étaient très courtes dans la longueur. Il nous suffisait d'appliquer la colle, de la laisser sécher puis de presser.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=10cm]{../Images/ballon4.JPG}
- \caption{Modèle à l'echelle 1/5 d'un ballon.}
+ \caption{Modèle à l'échelle 1/5 d'un ballon.}
 \end{figure}
 
 \subsection{Protocole}
 
 Le protocole d'assemblage trouvé lors de l'assemblage du premier ballon final est le suivant~:
 \begin{itemize}
- \item coller de l'adhésif double face sur une planche d'un longueur de plus de 2m (longueur des feuilles de PET)~;
+ \item coller de l'adhésif double face sur une planche d'une longueur de plus de 2m (longueur des feuilles de PET)~;
  \item polluer l'adhésif si celui ci est trop adhérent et empêche de décoller correctement le PET~;
  \item presser une feuille de PET sur le bord de l'adhésif~;
  \item nettoyer les surfaces de PET avec de l'acétone pour enlever le revêtement jaune gênant au collage~;
@@ -826,11 +829,15 @@ Le protocole d'assemblage trouvé lors de l'assemblage du premier ballon final e
  \item recommencer le procédé de collage pour chacune des jointures.
 \end{itemize}
 
+\newpage
+
 \section{Conclusion}
 
-\paragraph{}Ce projet était parti d'une idée un peu folle, mais surtout originale. Nous voulions comprendre et essayer de fabriquer ce modèle de drone que nous désirions vour voler un jour dans le ciel, pour affiner nos compétences techniques et notre maitrise de la gestion d'un projet. Nous avons tous beaucoup appris, que ce soit dans les nombreux domaines scientifiques parcourus ou dans notre expérience gagné au contact de la réalisation et du concret. Pour nous tous, ce fut une expérience riche d'enseignements qui laissera des souvenirs de nos premières expériences.
+\paragraph{}Ce projet était parti d'une idée un peu folle, mais surtout originale. Nous voulions comprendre et essayer de fabriquer ce modèle de drone que nous désirions vour voler un jour dans le ciel, pour affiner nos compétences techniques et notre maitrise de la gestion d'un projet. Nous avons tous beaucoup appris, que ce soit dans les nombreux domaines scientifiques parcourus ou dans notre expérience gagnée au contact de la réalisation et du concret. Pour nous tous, ce fut une expérience riche d'enseignements qui laissera des souvenirs de nos premières expériences.\\
 
-\paragraph{}Pour conclure, nous remercions nos professeurs de science de l'ingénieur qui nous ont aidés à mener ce projet le plus loin possible. Nous nous remercions également mutuellement pour avoir accomplis ce travail jusqu'au bout et sans qu'aucun d'entre nous n'ai jamais été laissé derrière. Et enfin nous vous remercions vous, qui avez pris la peine de lire ce document jusqu'au bout.
+\paragraph{}Pour conclure, nous remercions nos professeurs de science de l'ingénieur qui nous ont aidés à mener ce projet le plus loin possible. Nous nous remercions également mutuellement pour avoir accompli ce travail jusqu'au bout et sans qu'aucun d'entre nous n'ai jamais été laissé derrière. Et enfin nous vous remercions vous, qui avez pris la peine de lire ce document jusqu'au bout.
+
+\newpage
 
 \section{Images Annexes}
 
